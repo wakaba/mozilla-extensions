@@ -14,7 +14,7 @@ package-name:
 package-guid:
 	{D091A7AB-723A-4f50-9756-2AEB4422EEEB}
 package-version-number:
-	1.0
+	1.0.1
 package-update-date:
 	%%current-date-time%%
 package-version:

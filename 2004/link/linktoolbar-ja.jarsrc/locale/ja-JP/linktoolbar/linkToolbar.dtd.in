@@ -89,7 +89,7 @@
 <!ENTITY upButton.tooltip "ウェブ・サイトの上の頁">
 <!ENTITY firstButton.tooltip "順番的に最初の頁">
 <!ENTITY prevButton.tooltip "順番的に前の頁">
-<!ENTITY nextButton.tooltip "順番的に最後の頁">
+<!ENTITY nextButton.tooltip "順番的に次の頁">
 <!ENTITY lastButton.tooltip "順番的に最後の頁">
 <!ENTITY documentButton.tooltip "誘導の補助">
 <!ENTITY moreButton.tooltip "その他の関係する頁">
