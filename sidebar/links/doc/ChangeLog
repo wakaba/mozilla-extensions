@@ -1,5 +1,9 @@
 2003-07-07  Wakaba  <w@suika.fam.cx>
 
+	* css-add.ja.xhtml: Removed.
+
+2003-07-07  Wakaba  <w@suika.fam.cx>
+
 	* index.html, addPanel.ja.xhtml: Removed.
 	* css.ja.xhtml, css-add.ja.xhtml: New documents.
 	* ChangeLog: New file.
