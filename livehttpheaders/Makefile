@@ -5,6 +5,7 @@ EXCLUDED_FILES = \
 	*.jarsrc/ *.jarsrc/* *.jarsrc/*/ *.jarsrc/*/* *.jarsrc/*/*/ *.jarsrc/*/*/* \
 	*.jarsrc/*/*/*/ *.jarsrc/*/*/*/* *.jarsrc/*/*/*/*/ *.jarsrc/*/*/*/*/* \
 	*.jarsrc/*/*/*/*/*/ *.jarsrc/*/*/*/*/*/* \
+        release/ release/* \
 	*.xpi
 REPPL_DIR = ../tool/
 REPPL_SRC = ./package-info.src
