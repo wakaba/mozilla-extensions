@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!ENTITY sidebar.panel.title             "案内頁">
-<!ENTITY sidebar.panel.add.title         "案内パネルの追加">
-<!ENTITY sidebar.panel.add.description   "次のボタンを押すと、 Sidebar に案内パネルを追加します。">
-<!ENTITY sidebar.panel.add.button.label  "追加">
-<!ENTITY sidebar.panel.add.button.description "このボタンを押すと、 Sidebar に案内パネルを追加します。">
-<!ENTITY sidebar.panel.add.success       "Sidebar に案内パネルを追加しました。">
-<!ENTITY sidebar.panel.add.failure       "Sidebar に案内パネルを追加できませんでした。既に追加されているのかもしれません。">
+<!ENTITY sidebar.panel.title             "Navigation Page">
+<!ENTITY sidebar.panel.add.title         "Add Navigation Panel (%%package-version%%)">
+<!ENTITY sidebar.panel.add.description   "Click button below to add navigation panel to your Sidebar.">
+<!ENTITY sidebar.panel.add.button.label  "Add">
+<!ENTITY sidebar.panel.add.button.description "Pushing this button make navigation sidebar panel added.">
+<!ENTITY sidebar.panel.add.success       "Navigation panel is added to your Sidebar.">
+<!ENTITY sidebar.panel.add.failure       "Navigation panel cannot be added to your Sidebar.  It might have already been there.">
 
 <!--
 ***** BEGIN LICENSE BLOCK *****
@@ -46,4 +46,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 -->
-<!-- $Date: 2003/07/06 08:32:28 $ -->
+<!-- $Date: 2003/07/06 10:08:27 $ -->

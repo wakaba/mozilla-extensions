@@ -2,6 +2,7 @@
 
 	* Makefile, package-info.src, install.js.in, replace.pl: New files.
 	* install.js: Removed.
+	* install-res.en.inf: New.
 
 2003-03-04  Wakaba  <w@offweb.ddo.jp>
 

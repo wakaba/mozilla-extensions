@@ -3,13 +3,15 @@ REPPL_SRC = $(REPPL_DIR)package-info.src
 REPPL_SCRIPT = $(REPPL_DIR)replace.pl
 REPPL = perl $(REPPL_SCRIPT) $(REPPL_SRC)
 
-GENERATED_FILES = contents.rdf
+GENERATED_FILES = contents.rdf add-panel.dtd
 
-all: contents.rdf
+all: contents.rdf add-panel.dtd
 
 %.xml: %.xml.in $(REPPL_SRC) $(REPPL_SCRIPT)
 	$(REPPL) --output-type=xml --input=$< > $@
 %.rdf: %.rdf.in $(REPPL_SRC) $(REPPL_SCRIPT)
+	$(REPPL) --output-type=xml --input=$< > $@
+%.dtd: %.dtd.in $(REPPL_SRC) $(REPPL_SCRIPT)
 	$(REPPL) --output-type=xml --input=$< > $@
 
 clean:

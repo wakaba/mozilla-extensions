@@ -9,7 +9,7 @@
 <RDF:Description about="urn:mozilla:package:%%urn-package-name%%"
   chrome:displayName="%%package-name%%"
   chrome:author="%%package-author-name%%"
-  chrome:name="%%package-basename%%">
+  chrome:name="%%urn-package-name%%">
 </RDF:Description>
 
 </RDF:RDF>
