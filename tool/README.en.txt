@@ -1,0 +1,8 @@
+Mozilla Extension Package Support Tools
+
+  See also:
+   - CVS Repository
+     <http://suika.fam.cx/gate/cvs/www/mozilla/tool/>
+   - SuikaWiki:MozillaTool//{{Packaging}}
+     <http://suika.fam.cx/~wakaba/-temp/wiki/wiki?MozillaTool%2F%2F%A5%D1%A5%C3%A5%B1%A1%BC%A5%B8%BA%EE%C0%AE>
+
