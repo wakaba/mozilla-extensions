@@ -1,55 +1,12 @@
+@import url(file:///D:/home/wakaba/style/sidebar.css);
 
-html {
-	margin: 0;
-	border: none 0 #000000;
-	padding: 0;
-	line-height: 150%;
-}
-
-body {margin:9;border-style: none; padding: 0}
+/* Example:
 
 h1, h2, h3, h4, h5, h6 {
-	font-size: 120% !important;
+	font-size: 120%;
 }
 
-p {
-	margin: 0.3em 0;
-	text-indent: 1em;
-}
-
-ul, ol {
-	margin: 0.3em 0 0.3em 0;
-	padding: 0;
-}
-ul ul, ul ol, ol ul, ol ol {
-	margin-left: 1em;
-}
-li {
-	margin: 0;
-	padding: 0;
-	list-style-position: inside;
-}
-
-dl {
-	margin-left: 0.3em 0.1em;
-}
-dt {
-	margin-left: 0;
-}
-dd {
-	margin-left: 1.0em;
-}
-
-a[href] {
-	color: blue;
-	text-decoration: underline;
-}
-a[href]:visited {
-	color: red;
-}
-a[href]:active {
-	color: lime;
-}
+*/
 
 /* Sidebar で表示中の文書の URI は html 要素の xMozSbNpUri 属性の値になります。
    本来は名前空間を使って適当な属性を設定した方がいいのですが... 
@@ -100,4 +57,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 */
-/* $Date: 2003/07/06 02:00:50 $ */
+/* $Date: 2003/07/06 02:03:41 $ */
