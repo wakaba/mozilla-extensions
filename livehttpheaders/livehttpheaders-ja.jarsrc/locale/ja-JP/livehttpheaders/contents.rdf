@@ -7,7 +7,6 @@
   <!-- locale information -->
   <RDF:Description about="urn:mozilla:locale:ja-JP"
         chrome:displayName="日本語 (日本国)"
-        chrome:author="わかば"
         chrome:name="ja-JP"
         chrome:previewURL="">
     <chrome:packages>

@@ -1,10 +1,4 @@
-<!ENTITY livehttpheaders.pageinfo.tab		"頭" >
-<!ENTITY livehttpheaders.pageinfo.accesskey	"h" >
-<!ENTITY livehttpheaders.headers.request	"要求頭" >
-<!ENTITY livehttpheaders.headers.response	"応答頭" >
-<!ENTITY livehttpheaders.headers.name		"名前" >
-<!ENTITY livehttpheaders.headers.value		"本体" >
-
+<?xml version="1.0" encoding="utf-8"?>
 <!ENTITY livehttpheaders.menu.file		"ファイル" >
 <!ENTITY livehttpheaders.menu.close		"閉じる" >
 <!ENTITY livehttpheaders.menu.saveselection	"選択部を保存" >
@@ -15,8 +9,21 @@
 <!ENTITY livehttpheaders.menu.view		"表示" >
 <!ENTITY livehttpheaders.menu.post		"投稿データ" >
 
-<!ENTITY livehttpheaders.live.title		"生 HTTP 頭" >
-<!ENTITY livehttpheaders.live.headers		"HTTP 頭" >
+<!ENTITY livehttpheaders.tabs.headers           "頭部" >
+<!ENTITY livehttpheaders.tabs.about             "情報" >
+
+<!ENTITY livehttpheaders.about.version          "版情報" >
+<!ENTITY livehttpheaders.about.versiontext      "LiveHTTPHeaders 版:" >
+<!ENTITY livehttpheaders.about.currentversion   "0.6" >
+<!ENTITY livehttpheaders.about.checkforupdate   "更新を確認" >
+<!ENTITY livehttpheaders.about.homepage         "ホーム頁" >
+<!ENTITY livehttpheaders.about.homepageurl      "http://livehttpheaders.mozdev.org" >
+<!ENTITY livehttpheaders.about.author           "著者" >
+<!ENTITY livehttpheaders.about.thanks           "感謝します" >
+<!ENTITY livehttpheaders.about.suggestions      "提案を下さった全ての皆さん">
+
+<!ENTITY livehttpheaders.live.title		"生 HTTP 頭部" >
+<!ENTITY livehttpheaders.live.headers		"HTTP 頭部" >
 <!ENTITY livehttpheaders.live.clear		"全て削除" >
 <!ENTITY livehttpheaders.live.close		"閉じる" >
 <!ENTITY livehttpheaders.live.capture		"撮影" >
@@ -41,4 +48,5 @@
 <!ENTITY livehttpheaders.replay.url		"URL" >
 <!ENTITY livehttpheaders.replay.headers		"HTTP 頭" >
 <!ENTITY livehttpheaders.replay.post		"POST 内容を送る" >
+<!ENTITY livehttpheaders.replay.replay		"再生" >
 

@@ -1,3 +1,8 @@
+2003-07-05  Wakaba  <w@suika.fam.cx>
+
+	* livehttpheaders.dtd: Sync with 0.6.
+	* PageInfo.dtd: New dtd.  Sync with 0.6.
+
 2003-04-30  Wakaba  <w@offweb.ddo.jp>
 
 	* livehttpheaders.dtd: Change japanese translation of livehttpheaders.replay.post.

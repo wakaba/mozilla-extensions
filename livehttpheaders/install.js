@@ -1,6 +1,6 @@
 const X_MSG = 	   "Install Live HTTP Header";
 const X_NAME =     "/livehttpheaders";
-const X_VER  =     "0.1";
+const X_VER  =     "1.1";
 const X_JAR_FILE = "livehttpheaders-ja.jar";
 
 const X_CHROME =   "chrome";

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ENTITY livehttpheaders.pageinfo.tab		"頭部" >
+<!ENTITY livehttpheaders.pageinfo.accesskey	"h" >
+<!ENTITY livehttpheaders.pageinfo.request	"要求頭部" >
+<!ENTITY livehttpheaders.pageinfo.response	"応答頭部" >
+<!ENTITY livehttpheaders.pageinfo.name		"名前" >
+<!ENTITY livehttpheaders.pageinfo.value		"値" >
+<!ENTITY livehttpheaders.pageinfo.saveas         "名前を付けて保存..." >
+<!ENTITY livehttpheaders.pageinfo.fromcache	"注: 頭部はキャッシュからです。" >
+<!ENTITY livehttpheaders.pageinfo.fromcache.t1	"要求頭部はキャッシュされていたものではなく再生成したものなので贈られたものとは違うかも知れません。" >
+<!ENTITY livehttpheaders.pageinfo.fromcache.t2	"応答頭部はネットワークから受信した元のものです。" >
+<!ENTITY livehttpheaders.pageinfo.fromnetwork	"注: 頭部はネットワークからのものです。" >
+<!ENTITY livehttpheaders.pageinfo.fromnetwork.t1 "要求頭部はネットワークに送ったものです。" >
+<!ENTITY livehttpheaders.pageinfo.fromnetwork.t2 "応答頭部はネットワークから受信したものです。" >
+
