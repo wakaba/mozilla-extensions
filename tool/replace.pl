@@ -10,11 +10,13 @@ Getopt::Long::GetOptions (
 my %var = (percent => '%');
 my $name;
 while (<>) {
-  if (/^(.+?)(?:\[([^]]+)\])?:$/) {
+  if (/^(.+?)(?:\[([^]]+)\])?:\s*$/) {
     $name = $1;
     $var{$name}->{type} = $2;
-  } elsif (/^	(.*)/) {
-    my $s = replace_percent ($1, \%var);
+  } elsif (/^\t(.*)/) {
+    my $s = $1;
+    $s =~ tr/\x0D\x0A//d;
+    $s = replace_percent ($s, \%var);
     if ($var{$name}->{type} eq 'list') {
       push @{$var{$name}->{value}}, $s;
     } else {
@@ -98,4 +100,4 @@ Boston, MA 02111-1307, USA.
 
 =cut
 
-## $Date: 2003/07/06 11:12:48 $
+## $Date: 2003/10/25 12:00:20 $
