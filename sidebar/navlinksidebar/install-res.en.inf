@@ -1,4 +1,0 @@
-installToChrome=Do you want to make this package available to all users? (Yes -> OK, No : only you use it -> Cancel)
-noPermission=You need to have write permissions to the chrome directory "%s"
-canceldByUser=Installation is cancelled by user
-unknownError=An unknown error (%s) occured.\nLook at <http://developer.netscape.com/docs/manuals/xpinstall/err.html> for a description of the error code

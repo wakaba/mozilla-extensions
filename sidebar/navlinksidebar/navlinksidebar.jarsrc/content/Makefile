@@ -1,5 +1,5 @@
-REPPL_DIR = ../../
-REPPL_SRC = $(REPPL_DIR)package-info.src
+REPPL_DIR = ../../../tool/
+REPPL_SRC = ../../package-info.src
 REPPL_SCRIPT = $(REPPL_DIR)replace.pl
 REPPL = perl $(REPPL_SCRIPT) $(REPPL_SRC)
 

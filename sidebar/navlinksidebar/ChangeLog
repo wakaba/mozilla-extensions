@@ -1,5 +1,10 @@
 2003-07-06  Wakaba  <w@suika.fam.cx>
 
+	* install-res.en.inf, install-js.in, replace.pl: Removed.  (Moved to ../tool/.)
+	* Makefile: Updated.
+
+2003-07-06  Wakaba  <w@suika.fam.cx>
+
 	* Makefile, package-info.src, install.js.in, replace.pl: New files.
 	* install.js: Removed.
 	* install-res.en.inf: New.

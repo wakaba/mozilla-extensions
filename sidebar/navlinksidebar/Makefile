@@ -6,12 +6,12 @@ EXCLUDED_FILES = \
 	*.jarsrc/*/*/*/ *.jarsrc/*/*/*/* *.jarsrc/*/*/*/*/ *.jarsrc/*/*/*/*/* \
 	*.jarsrc/*/*/*/*/*/ *.jarsrc/*/*/*/*/*/* \
 	*.xpi
-REPPL_DIR = ./
-REPPL_SRC = $(REPPL_DIR)package-info.src
+REPPL_DIR = ../tool/
+REPPL_SRC = ./package-info.src
 REPPL_SCRIPT = $(REPPL_DIR)replace.pl
 REPPL = perl $(REPPL_SCRIPT) $(REPPL_SRC)
 
-GENERATED_FILES = ./*.xpi ./*.jar install.js
+GENERATED_FILES = ./*.xpi ./*.jar install.js install-res.en.inf
 PACKAGE_BASENAME = navlinksidebar
 
 all: $(PACKAGE_BASENAME).xpi
@@ -31,8 +31,11 @@ dummy:
 	-rm $@
 	zip -r $@ * -x $(EXCLUDED_FILES)
 
-install.js: install.js.in $(REPPL_SRC) $(REPPL_SCRIPT)
+install.js: $(REPPL_DIR)install.js.in $(REPPL_SRC) $(REPPL_SCRIPT)
 	$(REPPL) --output-type=js --input=$< > $@
+
+install-res.en.inf: $(REPPL_DIR)install-res.en.inf.in
+	$(REPPL) --output-type=moz-properties --input=$< > $@
 
 clean:
 	-rm -v $(GENERATED_FILES)
