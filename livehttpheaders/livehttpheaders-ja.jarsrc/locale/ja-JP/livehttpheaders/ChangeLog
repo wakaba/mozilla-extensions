@@ -1,3 +1,16 @@
+2004-07-10  Wakaba  <wakaba@suika.fam.cx>
+
+	* generator-help.xul.in: New.
+	* generator.dtd: New.
+
+	* Makefile: New file added.
+
+	* registerComponent.html: Sync with original 0.9's one.
+
+	* livehttpheaders.dtd.in: New entities for original 0.9 added.
+
+	* PageInfo.dtd.in: Typo fixed.
+
 2003-12-22  Wakaba  <wakaba@suika.fam.cx>
 
 	* .cvsignore: New file.

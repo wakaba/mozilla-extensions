@@ -4,15 +4,18 @@
   <RDF:Seq about="urn:mozilla:locale:root">
     <RDF:li resource="urn:mozilla:locale:ja-JP"/>
   </RDF:Seq>
-  <!-- locale information -->
+  
   <RDF:Description about="urn:mozilla:locale:ja-JP"
         chrome:displayName="日本語 (日本国)"
-        chrome:name="ja-JP"
-        chrome:previewURL="">
+        chrome:name="ja-JP">
     <chrome:packages>
       <RDF:Seq about="urn:mozilla:locale:ja-JP:packages">
-        <RDF:li resource="urn:mozilla:locale:ja-JP:%%original-package-basename%%"/>
+        <RDF:li resource="urn:mozilla:locale:ja-JP:%%urn-package-name%%"/>
       </RDF:Seq>
     </chrome:packages>
+  </RDF:Description>
+  
+  <RDF:Description about="urn:mozilla:package:%%urn-package-name%%">
+    <chrome:selectedLocale resource="urn:mozilla:locale:ja-JP:%%urn-package-name%%"/>
   </RDF:Description>
 </RDF:RDF>

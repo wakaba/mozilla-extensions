@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="iso-2022-jp"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"
+  xmlns:l="http://www.w3.org/2002/06/xhtml2">
 <head>
-<title>nsHeaderInfo 部品が正しく登録されていません</TiTLE>
+<title>nsHeaderInfo 部品が正しく登録されていません</title>
 </head>
 <body>
-<p>Mozilla/Firebird の PageInfo タブで頭部情報を表示するためには、
-nsHeaderInfo 部品が登録されていなければなりません。
-この部品はファイル Mozilla/Components/nsHeaderInfo.js にあります。</p>
-<p>通常、これは LiveHTTPHeaders の導入により自動的に行われます。
-しかし、時々上手く行かないことがあります。
-ですから、 Mozilla/Firebird がこれを見つけて登録することができるように以下の手順に従ってください。</p>
+<p><h:l>Mozilla や Firebird の PageInfo タブで頭部情報を表示するためには、
+nsHeaderInfo 部品が登録されていなければなりません。</h:l>
+<h:l>この部品はファイル Mozilla/Components/nsHeaderInfo.js にあるはずです。
+</h:l></p>
+
+<p><h:l>通常、登録は LiveHTTPHeaders の導入により自動的に行われます。</h:l>
+<h:l>しかし、これは時々うまくいかないことがあります。</h:l>
+<h:l>ですから、 Mozilla や Firebird 
+がこの部品を見つけて登録することができるように以下の手順に従ってください。</p>
 
 <ul>
 <li>ファイル <code>Mozilla/Components/compreg.dat</code> を削除</li>
 <li>ファイル <code>Mozilla/Components/xpti.dat</code> を削除</li>
 </ul>
 
-<p>この2つのファイルは Mozilla/Firebird を次に起動した時に自動的に再作成されるはずです。</p>
+<p>この2つのファイルは Mozilla や Firebird 
+を次に起動した時に自動的に再作成されるはずです。</p>
+
+<p><em>注意</em>:
+LiveHTTPHeaders を<em>プロファイル</em>に導入した場合は、
+nsHeadersInfo.js ファイルが profile/components ディレクトリにあります。
+この場合は、まずこのファイルを Mozilla/Components
+ディレクトリに複写してから前述の指示に従ってください。</p>
 </body>
 </html>

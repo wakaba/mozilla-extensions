@@ -5,14 +5,16 @@
 original-package-name:
 	LiveHTTPHeaders
 original-package-version:
-	0.8
+	0.9
 original-package-basename:
 	livehttpheaders
 
 package-name:
 	%%original-package-name%% %%original-package-version%% 日本語パック
+package-guid:
+	{FD18D3DD-6CAD-4efd-AB79-855126890FE2}
 package-version-number:
-	1.3
+	1.4
 package-update-date:
 	%%current-date-time%%
 package-version:
@@ -27,14 +29,45 @@ jar-filename:
 jar-content-dir[list]:
 jar-locale-dir[list]:
 	locale/ja-JP/%%original-package-basename%%/
+xpi-filename:
+	%%package-basename%%.xpi
+xpi-versioned-filename:
+	%%package-basename%%-%%package-version-number%%.xpi
 
-content-uri:
+supported-firefox-min-version:
+	0.8
+supported-firefox-max-version:
+	0.9+
+
+original-content-uri:
 	chrome://%%original-package-basename%%/content/
-locale-uri:
+original-locale-uri:
 	chrome://%%original-package-basename%%/locale/
+original-skin-uri:
+	chrome://%%original-package-basename%%/skin/
+content-uri:
+	%%original-content-uri%%
+locale-uri:
+	%%original-locale-uri%%
+program-config-uri:
+	%%original-content-uri%%LiveHTTPHeaders.xul
+program-icon-uri:
+	%%original-skin-uri%%LiveHTTPHeaders.jp
+program-about-uri:
+	
 
 urn-package-name:
 	%%original-package-basename%%
 
+package-description:
+	LiveHTTPHeaders の日本語メッセージ型録
 package-author-name:
 	わかば
+package-web-site-uri:
+	http://suika.fam.cx/~wakaba/-temp/wiki/wiki?LiveHTTPHeaders
+package-update-uri:
+	http://suika.fam.cx/www/mozilla/livehttpheaders/release/update.rdf
+package-release-uri:
+	http://suika.fam.cx/www/mozilla/livehttpheaders/release/%%xpi-versioned-filename%%
+
+

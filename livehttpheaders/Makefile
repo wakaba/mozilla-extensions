@@ -10,37 +10,49 @@ EXCLUDED_FILES = \
 	*.jarsrc/ *.jarsrc/* *.jarsrc/*/ *.jarsrc/*/* *.jarsrc/*/*/ \
 	*.jarsrc/*/*/* *.jarsrc/*/*/*/ *.jarsrc/*/*/*/* *.jarsrc/*/*/*/*/ \
 	*.jarsrc/*/*/*/*/* *.jarsrc/*/*/*/*/*/ *.jarsrc/*/*/*/*/*/* \
-        release/ release/* \
+        release/ release/* release/.* \
 	*.xpi
 REPPL_DIR = ../tool/
 REPPL_SRC = ./package-info.src
 REPPL_SCRIPT = $(REPPL_DIR)replace.pl
 REPPL = perl $(REPPL_SCRIPT) $(REPPL_SRC)
 
-GENERATED_FILES = ./*.xpi ./*.jar install.js install-res.en.inf
+MKDIR = mkdir
+
+GENERATED_FILES = ./*.xpi ./*.jar ./chrome/*.jar install.js install-res.en.inf \
+  install.rdf update.rdf
 ORIGINAL_PACKAGE_BASENAME = livehttpheaders
 PACKAGE_BASENAME = $(ORIGINAL_PACKAGE_BASENAME)-ja
 
-all: $(PACKAGE_BASENAME).xpi
+all: update.rdf $(PACKAGE_BASENAME).xpi
 
 dummy:
 
-%.jar: %.jarsrc dummy
+chrome:
+	$(MKDIR) chrome
+
+%.jar: %.jarsrc chrome dummy
 	cd $< && zip -r $@ * -x $(EXCLUDED_FILES)
-	mv $</$@ $@
+	mv $</$@ chrome/$@
 
 %.jarsrc: dummy
 	cd $@/locale/ja-JP/$(ORIGINAL_PACKAGE_BASENAME) && make all
 
-%.xpi: %.jar install.js install-res.en.inf
+%.xpi: %.jar install.js install-res.en.inf install.rdf
 	-rm $@
 	zip -r $@ * -x $(EXCLUDED_FILES)
 
-install.js: $(REPPL_DIR)install.js.in $(REPPL_SRC) $(REPPL_SCRIPT)
+install.js: $(REPPL_DIR)install-2004.js.in $(REPPL_SRC) $(REPPL_SCRIPT)
 	$(REPPL) --output-type=js --input=$< > $@
 
 install-res.en.inf: $(REPPL_DIR)install-res.en.inf.in
 	$(REPPL) --output-type=moz-properties --input=$< > $@
+
+install.rdf: install.rdf.in $(REPPL_SRC) $(REPPL_SCRIPT)
+	$(REPPL) --output-type=xml --input=$< > $@
+
+update.rdf: update.rdf.in $(REPPL_SRC) $(REPPL_SCRIPT)
+	$(REPPL) --output-type=xml --input=$< > $@
 
 clean:
 	-rm -v $(GENERATED_FILES)

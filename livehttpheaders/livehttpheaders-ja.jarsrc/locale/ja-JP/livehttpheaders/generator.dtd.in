@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ENTITY livehttpheaders.tabs.generator         "生成器" >
+<!ENTITY generator.title                        "生成器一覧" >
+<!ENTITY generator.capture                      "撮影" >
+<!ENTITY generator.label.show                   "提示" >
+<!ENTITY generator.label.request                "要求" >
+
+<!ENTITY generator.option.redirect              "再指向" >
+<!ENTITY generator.option.invalid               "不当" >
+<!ENTITY generator.option.image                 "画像" >
+<!ENTITY generator.option.css                   "CSS" >
+<!ENTITY generator.option.skipped               "飛ばし" >
+<!ENTITY generator.option.request               "要求" >
+
+<!ENTITY generator.popup.redirect
+         "再指向要求を最初のもののみならずすべて示します">
+<!ENTITY generator.popup.invalid 
+         "不当要求 (応答符号 4xx, 5xx) を示します">
+<!ENTITY generator.popup.image 
+         "画像を示します" >
+<!ENTITY generator.popup.css
+         "CSS 要求を示します" >
+<!ENTITY generator.popup.skipped
+         "他の選択肢により飛ばした要求をすべて示します">
+<!ENTITY generator.popup.request
+         "利用者の要求を Mozilla がキャッシュ中から応答したものであっても示します">
+
+<!ENTITY generator.button.help                  "補助" >
+<!ENTITY generator.help.title                   "生成器補助" >
