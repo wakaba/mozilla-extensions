@@ -14,8 +14,12 @@
 <!ENTITY livehttpheaders.tabs.about             "情報" >
 
 <!ENTITY livehttpheaders.config.usetab          "LiveHTTPHeaders を新しいタブで開く" >
+<!ENTITY livehttpheaders.config.usetab.tips     "LiveHTTPHeader を新しいタブ中または窓内に開きます。" >
 <!ENTITY livehttpheaders.config.usestyle        "スタイルシートを使用" >
+<!ENTITY livehttpheaders.config.usestyle.tips   "注意: これを選ぶと CPU を 100% 使ってしまうかもしれないという不具合があります。" >
 <!ENTITY livehttpheaders.config.post            "POST:" >
+<!ENTITY livehttpheaders.config.usefilter       "URL を正規表現で濾過" >
+<!ENTITY livehttpheaders.config.usefilter.tips  "この濾過は URL に対して行います。各頭に対してではありません。" >
 
 <!ENTITY livehttpheaders.about.version          "版情報" >
 <!ENTITY livehttpheaders.about.versiontext      "%%original-package-name%% 版:" >

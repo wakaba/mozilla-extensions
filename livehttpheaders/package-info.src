@@ -5,14 +5,14 @@
 original-package-name:
 	LiveHTTPHeaders
 original-package-version:
-	0.7
+	0.8
 original-package-basename:
 	livehttpheaders
 
 package-name:
 	%%original-package-name%% %%original-package-version%% 日本語パック
 package-version-number:
-	1.2
+	1.3
 package-update-date:
 	%%current-date-time%%
 package-version:
