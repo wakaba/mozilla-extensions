@@ -1,12 +1,42 @@
 AddType application/rdf+xml .rdf
-AddType application/vnd.mozilla.xul+xml
+AddCharset utf-8 .rdf
+
+AddType application/rdf+xml .rss
+
+AddType application/vnd.mozilla.xul+xml .xul
+
 AddType application/x-hlink+xml .hlink
+AddCharset iso-2022-jp .hlink
+
 AddType application/x-install .xpi
+
 AddType application/x-javascript .js
+AddCharset us-ascii .js
+
+AddType application/x-perl .pl
+AddCharset us-ascii .pl
+
 AddType application/xhtml+xml .xhtml
+AddCharset iso-2022-jp .xhtml
+
 AddType application/xml .xml
+AddCharset iso-2022-jp .xml
+
 AddType application/xml-dtd .dtd .mod
+AddCharset utf-8 .dtd .mod
+
+AddType application/zip .jar
 AddType image/png .png
+
+AddDefaultCharset iso-2022-jp
 AddType text/css .css
 AddType text/html .html
 AddType text/plain .txt
+
+## SuikaWikiConst/1.1 for Mozilla XPInstaller
+AddType text/plain .src
+AddCharset utf-8 .src
+
+## Mozilla properties file, resource file
+## Source file of something plain-text based format
+AddType text/plain .properties .in .inf
