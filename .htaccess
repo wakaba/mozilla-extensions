@@ -7,7 +7,7 @@ AddCharset us-ascii .xul
 AddType application/x-hlink+xml .hlink
 AddCharset iso-2022-jp .hlink
 
-AddType application/x-install .xpi
+AddType application/x-xpinstall .xpi
 
 AddType application/x-javascript .js
 AddCharset us-ascii .js
