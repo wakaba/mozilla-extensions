@@ -52,7 +52,7 @@ locale-uri:
 program-config-uri:
 	%%original-content-uri%%LiveHTTPHeaders.xul
 program-icon-uri:
-	%%original-skin-uri%%LiveHTTPHeaders.jp
+	%%original-skin-uri%%LiveHTTPHeaders.jpg
 program-about-uri:
 	
 

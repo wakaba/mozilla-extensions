@@ -1,5 +1,7 @@
 2004-07-10  Wakaba  <wakaba@suika.fam.cx>
 
+	* package-info.src (program-icon-uri): Typo fixed.
+
 	* Makefile: New Firefox extension style supported.
 
 2003-10-25  Wakaba  <w@suika.fam.cx>
