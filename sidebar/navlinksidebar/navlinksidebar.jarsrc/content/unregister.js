@@ -1,11 +1,11 @@
 /*
-"exUnregisterer", the automatic unregisterer (Ver.0.3.2002092501) 
+"exUnregisterer", the automatic unregisterer (Ver.0.4.2003041301) 
 
 exapmle:
 
 >var unreg = new exUnregisterer(
 >		'chrome://my_app/content/contents.rdf',
->		'jar:resource:///chrome/my_app.jar!/locale/en-US/contents.rdf'
+>		'jar:%chromeFolder%my_app.jar!/locale/en-US/contents.rdf'
 >	);
 >
 >unreg.unregister(); // unregister all files
@@ -14,25 +14,22 @@ exapmle:
 
 This class has following properties and methods:
 
-installedPath : the URI of the chrome directory in Mozilla installed.
-unregister() : executes unregisteration.
-removePrefs(aBranch) : removes all preferences which include the handled name.
-readFrom(aFile) : reads a text file and returns the content as a string.
+Chrome                   : the URI of the chrome directory in Mozilla
+                           installed.
+UChrome and UChrm        : the URI of the chrome directory in the current
+                           profile.
+unregister()             : executes unregisteration.
+removePrefs(aBranch)     : removes all preferences which include the handled
+                           name.
+readFrom(aFile)          : reads a text file and returns the content as
+                           a string.
 writeTo(aFile, aContent) : writes a text file with a string.
 
 
+When you create an instance of this class, you can use "%chromeFolder%"
+to point two "chrome" folders, in the directory Mozilla was installed in
+and in the profile directory.
 
-
-Mozilla には現在、インストールしたパッケージを自動で削除する機能が
-なく、アンインストールは手動で行わなければなりません。具体的には、
-chrome.rdfからの登録の解除と、 overlayinfo 内にある overlays.rdf か
-らの登録の解除を行うことになります。
-
-これらのファイルは RDF で記述されているので、 XPCOM の RDF 関連の機
-能で内容を編集することができます。また、 contents.rdf から登録情報を
-集めれば、上記の手順を自動化することもできます。というわけで、実際に
-contents.rdf を解釈してアンインストールを行うクラスを作ってみました。
-使い方は前述の通りです。
 
 
 */
@@ -53,7 +50,7 @@ contents.rdf を解釈してアンインストールを行うクラスを作っ�
  * The Original Code is the exUnregisterer.
  *
  * The Initial Developer of the Original Code is SHIMODA Hiroshi.
- * Portions created by the Initial Developer are Copyright (C) 2002
+ * Portions created by the Initial Developer are Copyright (C) 2002-2003
  * the Initial Developer. All Rights Reserved.
  *
  * Contributor(s): SHIMODA Hiroshi <piro@p.club.ne.jp>
@@ -96,15 +93,39 @@ exUnregisterer.prototype =
  
 	mEntriesURL : [], 
  
-	get installedPath() 
+	get Chrome() 
 	{
-		if (!this._installedPath) {
-			this._installedPath = this.getURI('AChrom');
-			if (!this._installedPath.match(/\/$/)) this._installedPath += '/';
+		if (!this._Chrome) {
+			this._Chrome = this.getURISpecFromKey('AChrom');
+			if (!this._Chrome.match(/\/$/)) this._Chrome += '/';
 		}
-		return this._installedPath;
+		return this._Chrome;
 	},
-	_installedPath : null,
+	_Chrome : null,
+
+	get UChrome()
+	{
+		if (!this._UChrome) {
+			this._UChrome = this.getURISpecFromKey('UChrm');
+			if (!this._UChrome.match(/\/$/)) this._UChrome += '/';
+		}
+		return this._UChrome;
+	},
+	_UChrome : null,
+
+	get UChrm()
+	{
+		return this.UChrome;
+	},
+ 
+	get IOService() 
+	{
+		if (!this._IOService) {
+			this._IOService = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService);
+		}
+		return this._IOService;
+	},
+	_IOService : null,
  
 	get RDF() 
 	{
@@ -135,19 +156,29 @@ exUnregisterer.prototype =
 				overlays : 'urn:mozilla:overlays'
 			},
 			dsource,
+			dsourcePaths = [],
 			i,
 			nodes,
 			node,
 			target;
 
-		for (var j = 0; j < aDsourcePaths.length; j++)
+		for (i = 0; i < aDsourcePaths.length; i++)
 		{
+			if (aDsourcePaths[i].match(/%chromeFolder%/i)) {
+				dsourcePaths.push(aDsourcePaths[i].replace(/%chromeFolder%/gi, this.Chrome));
+				dsourcePaths.push(aDsourcePaths[i].replace(/%chromeFolder%/gi, this.UChrome));
+			}
+			else
+				dsourcePaths.push(aDsourcePaths[i]);
+		}
 
+		for (var j = 0; j < dsourcePaths.length; j++)
+		{
 			try {
 				if (this.RDF.GetDataSourceBlocking)
-					dsource = this.RDF.GetDataSourceBlocking(aDsourcePaths[j]).QueryInterface(Components.interfaces.nsIRDFDataSource);
+					dsource = this.RDF.GetDataSourceBlocking(dsourcePaths[j]).QueryInterface(Components.interfaces.nsIRDFDataSource);
 				else
-					dsource = this.RDF.GetDataSource(aDsourcePaths[j]);
+					dsource = this.RDF.GetDataSource(dsourcePaths[j]);
 			}
 			catch(e) {
 				continue;
@@ -244,47 +275,80 @@ exUnregisterer.prototype =
 	},
 	
 	// Get an URI from an internal keyword 
-	getURI : function(aKeyword)
+	getURISpecFromKey : function(aKeyword)
 	{
 		const DIR = Components.classes['@mozilla.org/file/directory_service;1'].getService(Components.interfaces.nsIProperties);
 		var dir = DIR.get(aKeyword, Components.interfaces.nsIFile),
 			path;
 
-		const ioService = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService);
 		try {
-			path = ioService.newFileURI(dir).spec;
+			path = this.IOService.newFileURI(dir).spec;
 		}
 		catch(e) { // [[interchangeability for Mozilla 1.1]]
-			path = ioService.getURLSpecFromFile(dir);
+			path = this.IOService.getURLSpecFromFile(dir);
 		}
 
 		return path;
 	},
+
+	getURI : function(aKeyword) // old implementation
+	{
+		return this.getURISpecFromKey(aKeyword);
+	},
  
 	// Convert an URI to a file path 
-	getFilePathFromURI : function(aURI)
+	getFilePathFromURLSpec : function(aURL)
 	{
-		var URI = Components.classes['@mozilla.org/network/standard-url;1'].createInstance(Components.interfaces.nsIURI);
-			URI.spec = aURI;
+		var url = Components.classes['@mozilla.org/network/standard-url;1'].createInstance(Components.interfaces.nsIURI);
+			url.spec = aURL;
 
-		if (!URI.schemeIs('file')) return '';
+		if (!url.schemeIs('file')) return '';
 
 		var tempLocalFile;
-		const ioService = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService);
 		try {
-			var fileHandler = ioService.getProtocolHandler('file').QueryInterface(Components.interfaces.nsIFileProtocolHandler);
-			tempLocalFile = fileHandler.getFileFromURLSpec(aURI);
+			var fileHandler = this.IOService.getProtocolHandler('file').QueryInterface(Components.interfaces.nsIFileProtocolHandler);
+			tempLocalFile = fileHandler.getFileFromURLSpec(aURL);
 		}
 		catch(e) { // [[interchangeability for Mozilla 1.1]]
 			try {
-				tempLocalFile = ioService.getFileFromURLSpec(aURI);
+				tempLocalFile = this.IOService.getFileFromURLSpec(aURL);
 			}
 			catch(ex) { // [[interchangeability for Mozilla 1.0.x]]
 				tempLocalFile = Components.classes['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
-				ioService.initFileFromURLSpec(tempLocalFile, aURI);
+				this.IOService.initFileFromURLSpec(tempLocalFile, aURL);
 			}
 		}
 		return tempLocalFile.path;
+	},
+
+	getFilePathFromURI : function(aURI) // old implementation
+	{
+		return this.getFilePathFromURLSpec(aURI);
+	},
+ 
+	// Convert a file path to an URI 
+	getURLSpecFromFilePath : function(aPath)
+	{
+		var tempLocalFile = Components.classes['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
+		tempLocalFile.initWithPath(aPath);
+
+		try {
+			return this.IOService.newFileURI(tempLocalFile).spec;
+		}
+		catch(e) { // [[interchangeability for Mozilla 1.1]]
+			return this.IOService.getURLSpecFromFile(tempLocalFile);
+		}
+	},
+ 
+	// does exist the file? 
+	exists : function(aFilePathOrURL)
+	{
+		if (aFilePathOrURL.match(/^file:/))
+			aFilePathOrURL = this.getFilePathFromURLSpec(aFilePathOrURL);
+
+		var tempLocalFile = Components.classes['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
+		tempLocalFile.initWithPath(aFilePathOrURL);
+		return tempLocalFile.exists();
 	},
   
 	// Unregister information 
@@ -294,38 +358,45 @@ exUnregisterer.prototype =
 		// packages unregisteration
 		for (i in this.mTarget.packages)
 		{
-			this.removeResources(this.installedPath+'chrome.rdf', 'urn:mozilla:package:root', this.mTarget.packages);
-			this.removeResources(this.installedPath+'all-packages.rdf', 'urn:mozilla:package:root', this.mTarget.packages);
+			this.removeResources(this.Chrome+'chrome.rdf', 'urn:mozilla:package:root', this.mTarget.packages);
+			this.removeResources(this.UChrome+'chrome.rdf', 'urn:mozilla:package:root', this.mTarget.packages);
+			this.removeResources(this.Chrome+'all-packages.rdf', 'urn:mozilla:package:root', this.mTarget.packages);
 		}
 
 		// locales unregistration
 		for (i in this.mTarget.locales)
 		{
-			this.removeResources(this.installedPath+'chrome.rdf', i, this.mTarget.locales[i]);
-			this.removeResources(this.installedPath+'all-locales.rdf', i, this.mTarget.locales[i]);
+			this.removeResources(this.Chrome+'chrome.rdf', i, this.mTarget.locales[i]);
+			this.removeResources(this.UChrome+'chrome.rdf', i, this.mTarget.locales[i]);
+			this.removeResources(this.Chrome+'all-locales.rdf', i, this.mTarget.locales[i]);
 		}
 
 		// skins unregistration
 		for (i in this.mTarget.skins)
 		{
-			this.removeResources(this.installedPath+'chrome.rdf', i, this.mTarget.skins[i]);
-			this.removeResources(this.installedPath+'all-skins.rdf', i, this.mTarget.skins[i]);
+			this.removeResources(this.Chrome+'chrome.rdf', i, this.mTarget.skins[i]);
+			this.removeResources(this.UChrome+'chrome.rdf', i, this.mTarget.skins[i]);
+			this.removeResources(this.Chrome+'all-skins.rdf', i, this.mTarget.skins[i]);
 		}
 
 		// overlays unregistration
 		for (i in this.mTarget.overlays)
 			for (j in this.mTarget.overlays[i])
-				this.removeResources(this.installedPath+i, j, this.mTarget.overlays[i][j]);
+			{
+				this.removeResources(this.Chrome+i, j, this.mTarget.overlays[i][j]);
+				this.removeResources(this.UChrome+i, j, this.mTarget.overlays[i][j]);
+			}
 
 
 
 		// remove entries from installed-chrome.txt
 		var installedChrome = Components.classes['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
-		installedChrome.initWithPath(this.getFilePathFromURI(this.installedPath+'installed-chrome.txt'));
+		installedChrome.initWithPath(this.getFilePathFromURLSpec(this.Chrome+'installed-chrome.txt'));
 
 		var entries = this.readFrom(installedChrome);
+		var regexp  = new RegExp();
 		for (i in this.mEntriesURL)
-			entries = entries.replace(new RegExp('[^\\n\\r]+'+this.mEntriesURL[i]+'[\\n\\r]+', 'g'), '');
+			entries = entries.replace(regexp.compile('[^\\n\\r]+'+this.mEntriesURL[i]+'[\\n\\r]+', 'g'), '');
 		this.writeTo(installedChrome, entries);
 
 
@@ -335,8 +406,14 @@ exUnregisterer.prototype =
 	// Remove info from RDF files 
 	removeResources : function(aDsourcePath, aRootURI, aTargets)
 	{
-		var dsource = this.RDF.GetDataSource(aDsourcePath);
-			dsource = dsource.QueryInterface(Components.interfaces.nsIRDFDataSource);
+		var dsource;
+		try {
+			var dsource = this.RDF.GetDataSource(aDsourcePath);
+				dsource = dsource.QueryInterface(Components.interfaces.nsIRDFDataSource);
+		}
+		catch(e) {
+			return;
+		}
 
 		try {
 			this.RDFC.Init(dsource, this.RDF.GetResource(aRootURI));
@@ -394,6 +471,17 @@ exUnregisterer.prototype =
 
 		for (var i in removenodes)
 			this.RDFC.RemoveElement(removenodes[i], true);
+
+		// remove empty container from "overlays.rdf"
+		if (!this.RDFC.GetCount()) {
+			removenames = dsource.ArcLabelsOut(this.RDFC.Resource);
+			while (removenames.hasMoreElements())
+			{
+				removename = removenames.getNext().QueryInterface(Components.interfaces.nsIRDFResource);
+				removevalue = dsource.GetTarget(this.RDFC.Resource, removename, true);
+				dsource.Unassert(this.RDFC.Resource, removename, removevalue);
+			}
+		}
 
 		dsource.QueryInterface(Components.interfaces.nsIRDFRemoteDataSource).Flush();
 		return;
