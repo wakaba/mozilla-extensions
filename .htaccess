@@ -1,0 +1,12 @@
+AddType application/rdf+xml .rdf
+AddType application/vnd.mozilla.xul+xml
+AddType application/x-hlink+xml .hlink
+AddType application/x-install .xpi
+AddType application/x-javascript .js
+AddType application/xhtml+xml .xhtml
+AddType application/xml .xml
+AddType application/xml-dtd .dtd .mod
+AddType image/png .png
+AddType text/css .css
+AddType text/html .html
+AddType text/plain .txt
