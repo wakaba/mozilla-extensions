@@ -1,0 +1,13 @@
+2003-07-07  Wakaba  <w@suika.fam.cx>
+
+	* index.html, addPanel.ja.xhtml: Removed.
+	* css.ja.xhtml, css-add.ja.xhtml: New documents.
+	* ChangeLog: New file.
+
+2003-03-18  Wakaba  <w@offweb.ddo.jp>
+
+	* index.html: Revised.
+
+2003-03-12  Wakaba  <w@offweb.ddo.jp>
+
+	* addPanel.ja.xhtml, index.html: New documents.

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="iso-2022-jp"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+<title>Mozilla 用 Sidebar</title>
+<link rel="copyright" href="#license" />
+<link rel="contents" href="#toc" />
+<link rev="chapter" href="../" />
+<link rev="made" href="mailto:w@offweb.ddo.jp" />
+<script type="application/x-javascript">
+function addPanel (title, uri) {
+  window.sidebar.addPanel(title, uri, '');
+}
+
+window.addEventListener ('load', function () {
+  document.getElementById ('addCSS').addEventListener ('click', function () {
+    //addPanel ('CSS', location.href + '/../css.xml');
+    addPanel ('CSS', 'http://niigata.cool.ne.jp/wakaba2001/temp/mozilla/sidebar/css.xml');
+  }, false);
+}, false);
+</script>
+</head>
+<body>
+
+<h1 id="css" xml:lang="en">CSS Reference Sidebar</h1>
+
+<div><button id="addCSS">CSS Reference Sidebar を追加</button></div>
+
+<p>この Sidebar panel は、 CSS の仕様書等の特定の属性などの説明をすぐに読めるようにするための栞のようなものです。</p>
+
+<p>同様のものとして 
+<a href="http://devedge.netscape.com/toolbox/sidebars/">DevEdge Sidebars: CSS2 Quick Reference</a>
+にも CSS 2, CSS 2.1 用がそれぞれありますが、こちらは CSS 1 と CSS 2
+へのリンクを同時に表示すると共に、 <a href="http://is.vis.ne.jp/">CSS Laboratory</a>
+の対応表・ノートやブラウザの仕様説明なども含めています。
+(CSS 2.1, CSS 3 はいずれ追加します。仕様書以外のものは特に参考になると思われるものを選んで追加しています。)</p>
+
+<h2 id="css-download">構成ファイルの入手</h2>
+
+<p>単に Sidebar に追加するだけの場合は先程のボタンを押すだけで結構です。
+再利用する場合などは次の資源をお持ち帰り下さい。</p>
+
+<dl>
+<dt><a href="css.xml" type="application/xml" hreflang="ja">css.xml</a></dl>
+	<dd>Panel 本体。</dd>
+<dt><a href="hlink-xbl.xml" type="application/xml">hlink-xbl.xml</a></dl>
+	<dd>HLink の XBL による簡易実装
+	(<a href="http://niigata.cool.ne.jp/wakaba2001/temp/hlink/memo.ja.txt">HLink
+	メモ</a>参照)。</dd>
+<dt><a href="sblinks-hlink.xml" type="application/x-hlink+xml">sblinks-hlink.xml</a></dl>
+	<dd><code>css.xml</code> 用の HLink 定義。</dd>
+<dt><a href="sblinks-style.css" type="text/css">sblinks-style.css</a></dl>
+	<dd><code>css.xml</code> 用の CSS スタイル・シート。</dd>
+<dt><a href="sblinks-xbl.xml" hreflang="ja" type="application/xml">sblinks-xbl.xml</a></dl>
+	<dd><code>css.xml</code> 用の XBL スタイル・シート補助スクリプト。</dd>
+<dt><a href="index.html" type="application/xhtml+xml">index.html</a></dl>
+	<dd>(この文書。)</dd>
+</dl>
+
+<h2 id="restriction">制限事項</h2>
+
+<ul>
+<li>一部 reference では文書内に適切な <code class="xml">ID</code> 
+が振られていなかったために直接当該属性等の説明にまで飛べないことがあります。
+(出来るだけ近くに飛びます。)</li>
+<li><code class="css">mso-<var>*</var></code> 属性など Microsoft Office
+の拡張はあまり含んでいません。
+これは、その仕様書, リファレンスの類が無く、全体像もはっきりしないためです。
+(少なくても60個の独自拡張属性・記述子が存在していることが分かっています。)</li>
+<li>独自拡張属性等を表示しない簡単な方法は今のところありません。</li>
+<li>長い属性等名のため Sidebar の幅と文字の大きさの設定によっては横
+scroll bar が出ます。 (Mozilla の仕様)</li>
+</ul>
+
+<h2 id="css-todo">To Do</h2>
+
+<ul>
+<li>CSS 2.1, CSS 3 に対応する。</li>
+<li>文字列を外部ファイルにでも追い出して locale 対応。</li>
+<li>いい解説があれば追加。</li>
+<li>SuikaWiki 参照リンクを追加 (SuikaWiki が復活したら...)。</li>
+<li>分類を考え直す。 (主として独自拡張分)</li>
+</ul>
+
+<h2 id="css-changelog">変更履歴</h2>
+
+<dl>
+<dt>2003-03-12</dt>
+	<dd>新。</dd>
+</dl>
+
+<h1 id="license">ライセンス</h1>
+
+<p>特に明記してあるものを除き、 MPL/GPL の dual license とします。</p>
+
+<h1 id="address">連絡先</h1>
+
+<p><a href="mailto:w@offweb.ddo.jp" rev="made">電子メイル</a>または 
+<a href="http://niigata.cool.ne.jp/cgi-bin/tbbs.cgi?User=wakaba2001&amp;GetType=Simple" title="suika.robamimi 避難所">WWW 掲示板</a>まで。</p>
+
+<h1 id="toc">目次</h1>
+
+<ul>
+<li><a href="#css">CSS Reference Sidebar</a>
+	<ul>
+	<li><a href="#css-download">構成ファイルの入手</a></li>
+	<li><a href="#css-restriction">制限事項</a></li>
+	<li><a href="#css-todo">To Do</a></li>
+	<li><a href="#css-changelog">変更履歴</a></li>
+	</ul>
+</li>
+<li><a href="#license">ライセンス</a></li>
+<li><a href="#address">連絡先</a></li>
+</ul>
+
+<div>Invalid XHTML 1!</div>
+</body>
+</html>
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - <http://www.mozilla.org/MPL/>
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is CSS Sidebar code.
+   -
+   - The Initial Developer of the Original Code is Wakaba.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Wakaba <w@suika.fam.cx>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
