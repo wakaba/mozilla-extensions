@@ -1,10 +1,15 @@
 EXCLUDED_FILES = \
 	*.BAK *~ */*.BAK */*~ */*/*.BAK */*/*~ */*/*/*.BAK */*/*/*~ \
 	CVS/ CVS/* */CVS/ */CVS/* */*/CVS/ */*/CVS/* */*/*/CVS/ */*/*/CVS/* \
-	ChangeLog Makefile .cvsignore *.src *.in \
-	*.jarsrc/ *.jarsrc/* *.jarsrc/*/ *.jarsrc/*/* *.jarsrc/*/*/ *.jarsrc/*/*/* \
-	*.jarsrc/*/*/*/ *.jarsrc/*/*/*/* *.jarsrc/*/*/*/*/ *.jarsrc/*/*/*/*/* \
-	*.jarsrc/*/*/*/*/*/ *.jarsrc/*/*/*/*/*/* \
+	CVS/.* */CVS/.* */*/CVS/.* */*/*/CVS/.* */*/*/*/CVS/.* \
+	*/*/*/*/*/CVS/.* \
+	ChangeLog Makefile \
+	.cvsignore */.cvsignore */*/.cvsignore */*/*/.cvsignore \
+	*/*/*/*/.cvsignore */*/*/*/*/.cvsignore \
+	*.src *.in \
+	*.jarsrc/ *.jarsrc/* *.jarsrc/*/ *.jarsrc/*/* *.jarsrc/*/*/ \
+	*.jarsrc/*/*/* *.jarsrc/*/*/*/ *.jarsrc/*/*/*/* *.jarsrc/*/*/*/*/ \
+	*.jarsrc/*/*/*/*/* *.jarsrc/*/*/*/*/*/ *.jarsrc/*/*/*/*/*/* \
         release/ release/* \
 	*.xpi
 REPPL_DIR = ../tool/
