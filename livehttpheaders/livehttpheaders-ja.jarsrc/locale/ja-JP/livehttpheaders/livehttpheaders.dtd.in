@@ -7,10 +7,15 @@
 <!ENTITY livehttpheaders.menu.copy		"複製" >
 <!ENTITY livehttpheaders.menu.selectall		"全てを選択" >
 <!ENTITY livehttpheaders.menu.view		"表示" >
-<!ENTITY livehttpheaders.menu.post		"投稿データ" >
+<!ENTITY livehttpheaders.menu.post		"投函データ" >
 
 <!ENTITY livehttpheaders.tabs.headers           "頭部" >
+<!ENTITY livehttpheaders.tabs.config            "設定" >
 <!ENTITY livehttpheaders.tabs.about             "情報" >
+
+<!ENTITY livehttpheaders.config.usetab          "LiveHTTPHeaders を新しいタブで開く" >
+<!ENTITY livehttpheaders.config.usestyle        "スタイルシートを使用" >
+<!ENTITY livehttpheaders.config.post            "POST:" >
 
 <!ENTITY livehttpheaders.about.version          "版情報" >
 <!ENTITY livehttpheaders.about.versiontext      "%%original-package-name%% 版:" >
@@ -24,16 +29,16 @@
 
 <!ENTITY livehttpheaders.live.title		"生 HTTP 頭部" >
 <!ENTITY livehttpheaders.live.headers		"HTTP 頭部" >
-<!ENTITY livehttpheaders.live.clear		"全て削除" >
+<!ENTITY livehttpheaders.live.clear		"消去" >
 <!ENTITY livehttpheaders.live.close		"閉じる" >
 <!ENTITY livehttpheaders.live.capture		"撮影" >
-<!ENTITY livehttpheaders.live.copy		"複製" >
+<!ENTITY livehttpheaders.live.copy		"複写" >
 <!ENTITY livehttpheaders.live.selectblock	"塊を選択" >
 <!ENTITY livehttpheaders.live.selectall		"全てを選択" >
-<!ENTITY livehttpheaders.live.saveall		"全てを保存" >
-<!ENTITY livehttpheaders.live.replay		"再生" >
+<!ENTITY livehttpheaders.live.saveall		"全てを保存..." >
+<!ENTITY livehttpheaders.live.replay		"再生..." >
+<!ENTITY livehttpheaders.live.replay.tips	"再生可能な URL を選択..." >
 
-<!ENTITY livehttpheaders.live.post		"POST:" >
 <!ENTITY livehttpheaders.live.post.tips		"POST 内容の表示を設定します。" >
 <!ENTITY livehttpheaders.live.post.none		"なし" >
 <!ENTITY livehttpheaders.live.post.none.tips	"POST 内容を全く表示しません。" >
