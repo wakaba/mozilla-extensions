@@ -1,0 +1,2442 @@
+<?xml version="1.0" encoding="iso-2022-jp"?>
+<?xml-stylesheet type="text/css" href="sblinks-style.css" media="all"?>
+<!DOCTYPE root [
+  <!ENTITY uri.CSS1 "http://www.w3.org/TR/REC-CSS1#">
+  <!ENTITY uri.CSS2 "http://www.w3.org/TR/REC-CSS2/">
+  <!ENTITY uri.SVG11 "http://www.w3.org/TR/SVG11/">
+  <!ENTITY uri.labNote "http://is.vis.ne.jp/notes/">
+  <!ENTITY uri.labSupport "http://is.vis.ne.jp/charts/">
+  <!ENTITY uri.VMLprop "http://www.w3.org/TR/NOTE-VML#_Toc416858381">
+  <!ENTITY uri.MSDN "http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/">
+  <!ENTITY uri.WAPCSS "http://www1.wapforum.org/tech/terms.asp?doc=WAP-239-WCSS-20011026-a.pdf">
+  <!ENTITY uri.JISX4052 "http://www.jisc.go.jp/">
+  <!ENTITY label.CSS "CSS">
+  <!ENTITY label.errata " (Errata)">
+  <!ENTITY label.HTML4 "HTML 4">
+  <!ENTITY label.iCSS "i-CSS">
+  <!ENTITY label.iXHTML "i-XHTML">
+  <!ENTITY label.JISX4052 "JIS X 4052">
+  <!ENTITY label.Katsukun "K's">
+  <!ENTITY label.MathML2 "MathML 2.0">
+  <!ENTITY label.Mojira "もじら組">
+  <!ENTITY label.MSDN "MSDN">
+  <!ENTITY label.mvMSDN "MSDN">
+  <!ENTITY label.NC4 "NN 4">
+  <!ENTITY label.OEB1 "OEB1 CSS">
+  <!ENTITY label.Opera "Opera">
+  <!ENTITY label.SMIL2 "SMIL 2.0">
+  <!ENTITY label.VML "VML">
+  <!ENTITY label.VMLMSDN "VML (MSDN)">
+  <!ENTITY label.WAP "WAP">
+  <!ENTITY label.XBL "XBL">
+  <!ENTITY label.XML "XML">
+  <!ENTITY label.XHTMLm12n "XHTML m12n">
+  <!ENTITY label.XULPlanet "XULPlanet">
+  <!ATTLIST cat
+    id  ID  #IMPLIED
+  >
+]>
+<root xmlns="urn:x-suika-fam-cx:markup:mozilla:sidebar:links"
+      xmlns:h="http://www.w3.org/1999/xhtml"
+      xml:lang="ja">
+<header>
+  <h:link rel="stylesheet" href="sblinks-hlink.xml" type="application/x-hlink+xml"/>
+  <h:title>CSS リンク集</h:title>
+</header>
+<nav>
+  <i href="#box"/><i href="#visual"/><i href="#generate"/><i href="#page"/><i href="#colors"/><i href="#fonts"/><i href="#text"/><i href="#ruby"/><i href="#tables"/><i href="#ui"/><i href="#interactive"/><i href="#linking"/><i href="#aural"/><i href="#filters"/><i href="#descriptor"/><i href="#at"/><i href="#value"/><i href="#selector"/><i href="#misc"/>
+</nav>
+<body>
+  <cat id="box">
+    <h>箱</h>
+    <prop><h>margin</h>
+      <CSS1 uri="&uri.CSS1;margin"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-margin"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#margin"/>
+      <LabNote uri="&uri.labNote;css2_box/margin"/>
+    </prop>
+    <prop><h>margin-top</h>
+      <CSS1 uri="&uri.CSS1;margin-top"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-margin-top"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#margin-top"/>
+      <LabNote uri="&uri.labNote;css2_box/margin-top"/>
+    </prop>
+    <prop><h>margin-right</h>
+      <CSS1 uri="&uri.CSS1;margin-right"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-margin-right"/>
+      <LabNote uri="&uri.labNote;css2_box/margin-right"/>
+    </prop>
+    <prop><h>margin-bottom</h>
+      <CSS1 uri="&uri.CSS1;margin-bottom"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-margin-bottom"/>
+    </prop>
+    <prop><h>margin-left</h>
+      <CSS1 uri="&uri.CSS1;margin-left"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-margin-left"/>
+    </prop>
+    
+    <prop><h>mso-wrap-distance-bottom</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/a_mwrdib.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>mso-wrap-distance-left</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/a_mwrdil.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>mso-wrap-distance-right</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/a_mwrdir.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>mso-wrap-distance-top</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/a_mwrdit.asp">&label.VMLMSDN;</a>
+    </prop>
+    
+    <prop><h>padding</h>
+      <CSS1 uri="&uri.CSS1;padding"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-padding"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#padding"/>
+      <LabNote uri="&uri.labNote;css2_box/padding"/>
+    </prop>
+    <prop><h>padding-top</h>
+      <CSS1 uri="&uri.CSS1;padding-top"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-padding-top"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#padding-top"/>
+      <LabNote uri="&uri.labNote;css2_box/padding-top"/>
+    </prop>
+    <prop><h>padding-right</h>
+      <CSS1 uri="&uri.CSS1;padding-right"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-padding-right"/>
+    </prop>
+    <prop><h>padding-bottom</h>
+      <CSS1 uri="&uri.CSS1;padding-bottom"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-padding-bottom"/>
+    </prop>
+    <prop><h>padding-left</h>
+      <CSS1 uri="&uri.CSS1;padding-left"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-padding-left"/>
+    </prop>
+    
+    <prop><h>border</h>
+      <CSS1 uri="&uri.CSS1;border"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border"/>
+      <LabNote uri="&uri.labNote;css2_box/border"/>
+      <a uri="http://www.mozilla.gr.jp/standards/webtips0019.html">&label.Mojira;</a>
+    </prop>
+    <prop><h>border-top</h>
+      <CSS1 uri="&uri.CSS1;border-top"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-top"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border-top"/>
+      <LabNote uri="&uri.labNote;css2_box/border-top"/>
+    </prop>
+    <prop><h>border-right</h>
+      <CSS1 uri="&uri.CSS1;border-right"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-right"/>
+    </prop>
+    <prop><h>border-bottom</h>
+      <CSS1 uri="&uri.CSS1;border-bottom"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-bottom"/>
+    </prop>
+    <prop><h>border-left</h>
+      <CSS1 uri="&uri.CSS1;border-left"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-left"/>
+    </prop>
+    
+    <prop><h>border-width</h>
+      <CSS1 uri="&uri.CSS1;border-width"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-width"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border-width"/>
+      <LabNote uri="&uri.labNote;css2_box/border-width"/>
+    </prop>
+    <prop><h>border-top-width</h>
+      <CSS1 uri="&uri.CSS1;border-top-width"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-top-width"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border-top-width"/>
+      <LabNote uri="&uri.labNote;css2_box/border-top-width"/>
+    </prop>
+    <prop><h>border-right-width</h>
+      <CSS1 uri="&uri.CSS1;border-right-width"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-right-width"/>
+    </prop>
+    <prop><h>border-bottom-width</h>
+      <CSS1 uri="&uri.CSS1;border-bottom-width"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-bottom-width"/>
+    </prop>
+    <prop><h>border-width-left</h>
+      <CSS1 uri="&uri.CSS1;border-left-width"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-left-width"/>
+    </prop>
+    <prop><h>段落前アキ</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>段落後アキ</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    
+    <prop><h>border-color</h>
+      <CSS1 uri="&uri.CSS1;border-color"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-color"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border-color"/>
+      <LabNote uri="&uri.labNote;css2_box/border-color"/>
+    </prop>
+    <prop><h>border-top-color</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-top-color"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border-top-color"/>
+      <LabNote uri="&uri.labNote;css2_box/border-top-color"/>
+    </prop>
+    <prop><h>border-right-color</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-right-color"/>
+    </prop>
+    <prop><h>border-bottom-color</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-bottom-color"/>
+    </prop>
+    <prop><h>border-left-color</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-left-color"/>
+    </prop>
+    
+    <prop><h>border-style</h>
+      <CSS1 uri="&uri.CSS1;border-style"/>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-style"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border-style"/>
+      <LabNote uri="&uri.labNote;css2_box/border-style"/>
+    </prop>
+    <prop><h>border-top-style</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-top-style"/>
+      <LabSupport uri="&uri.labSupport;css2_box/#border-top-style"/>
+      <LabNote uri="&uri.labNote;css2_box/border-top-style"/>
+    </prop>
+    <prop><h>border-right-style</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-right-style"/>
+    </prop>
+    <prop><h>border-bottom-style</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-bottom-style"/>
+    </prop>
+    <prop><h>border-left-style</h>
+      <CSS2 uri="&uri.CSS2;box#propdef-border-left-style"/>
+    </prop>
+    
+    <prop><h>box-sizing</h>
+      <LabNote uri="&uri.labNote;ex_box/box-sizing"/>
+    </prop>
+    <prop><h>-moz-box-sizing</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;ex_box/box-sizing#moz"/>
+    </prop>
+    <prop><h>-moz-border-radius</h>
+      <LabNote uri="&uri.labNote;ex_box/border-radius"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-radius-topleft</h>
+      <LabNote uri="&uri.labNote;ex_box/border-radius-topleft"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-radius-topright</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-radius-bottomright</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-radius-bottomleft</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-top-colors</h>
+      <LabNote uri="&uri.labNote;ex_box/border-top-colors"/>
+    </prop>
+    <prop><h>-moz-border-right-colors</h>
+    </prop>
+    <prop><h>-moz-border-bottom-colors</h>
+    </prop>
+    <prop><h>-moz-border-left-colors</h>
+    </prop>
+    <prop><h>-moz-border-colors-bottom</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-colors-left</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-colors-right</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-border-colors-top</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-x-border-x-spacing</h>
+    </prop>
+    <prop><h>-x-border-y-spacing</h>
+    </prop>
+    <prop><h>cb--border-style</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/coolbutton/cbborderstyle.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cb--border-width</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/coolbutton/cbborderwidth.asp">&label.MSDN;</a>
+    </prop>
+    
+    <prop><h>-moz-float-edge</h>
+      <LabNote uri="&uri.labNote;ex_box/float-edge"/>
+    </prop>
+    
+    <prop><h>-moz-box-align</h>
+      <LabNote uri="&uri.labNote;ex_xul/box-align"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-box-direction</h>
+      <LabNote uri="&uri.labNote;ex_xul/box-direction"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-box-flex</h>
+      <LabNote uri="&uri.labNote;ex_xul/box-flex"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-box-flexgroup</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-box-ordinal-group</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-box-orient</h>
+      <LabNote uri="&uri.labNote;ex_xul/box-orient"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-box-pack</h>
+      <LabNote uri="&uri.labNote;ex_xul/box-pack"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>zu-bottom</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>zu-left</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>zu-right</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>zu-top</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+  </cat>
+
+  <cat id="visual">
+    <h>視覚整形</h>
+    <prop><h>display</h>
+      <CSS1 uri="&uri.CSS1;display"/>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-display"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <a uri="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/display.asp">&label.MSDN;</a>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#display"/>
+      <LabNote uri="&uri.labNote;css2_visuren/display"/>
+    </prop>
+    <prop><h>position</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-position"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#position"/>
+      <LabNote uri="&uri.labNote;css2_visuren/position"/>
+    </prop>
+    <prop><h>top</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-top"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#top"/>
+      <LabNote uri="&uri.labNote;css2_visuren/top"/>
+    </prop>
+    <prop><h>right</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-right"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#right"/>
+      <LabNote uri="&uri.labNote;css2_visuren/right"/>
+    </prop>
+    <prop><h>bottom</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-bottom"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#bottom"/>
+      <LabNote uri="&uri.labNote;css2_visuren/bottom"/>
+    </prop>
+    <prop><h>left</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-left"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#left"/>
+      <LabNote uri="&uri.labNote;css2_visuren/left"/>
+    </prop>
+    <prop><h>center-x</h>
+      <a uri="&uri.VMLprop;">&label.VML;</a>
+    </prop>
+    <prop><h>center-y</h>
+      <a uri="&uri.VMLprop;">&label.VML;</a>
+    </prop>
+    <prop><h>float</h>
+      <CSS1 uri="&uri.CSS1;float"/>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-float"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#float"/>
+      <LabNote uri="&uri.labNote;css2_visuren/float"/>
+    </prop>
+    <prop><h>clear</h>
+      <CSS1 uri="&uri.CSS1;clear"/>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-clear"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#clear"/>
+      <LabNote uri="&uri.labNote;css2_visuren/clear"/>
+    </prop>
+    <prop><h>改段</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>z-index</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-z-index"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#z-index"/>
+      <LabNote uri="&uri.labNote;css2_visuren/z-index"/>
+    </prop>
+    <prop><h>direction</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-direction"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#direction"/>
+      <LabNote uri="&uri.labNote;css2_visuren/direction"/>
+    </prop>
+    <prop><h>mso-direction-alt</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-direction-alt.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>unicode-bidi</h>
+      <CSS2 uri="&uri.CSS2;visuren#propdef-unicode-bidi"/>
+      <LabSupport uri="&uri.labSupport;css2_visuren/#unicode-bidi"/>
+      <LabNote uri="&uri.labNote;css2_visuren/unicode-bidi"/>
+    </prop>
+    
+    <h>視覚整形詳細</h>
+    <prop><h>width</h>
+      <CSS1 uri="&uri.CSS1;width"/>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-width"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#width"/>
+      <LabNote uri="&uri.labNote;css2_visuren/width"/>
+    </prop>
+    <prop><h>min-width</h>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-min-width"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#min-width"/>
+      <LabNote uri="&uri.labNote;css2_visuren/min-width"/>
+    </prop>
+    <prop><h>max-width</h>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-max-width"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#max-width"/>
+      <LabNote uri="&uri.labNote;css2_visuren/max-width"/>
+    </prop>
+    
+    <prop><h>height</h>
+      <CSS1 uri="&uri.CSS1;height"/>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-height"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#height"/>
+      <LabNote uri="&uri.labNote;css2_visuren/height"/>
+    </prop>
+    <prop><h>min-height</h>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-min-height"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#min-height"/>
+      <LabNote uri="&uri.labNote;css2_visuren/min-height"/>
+    </prop>
+    <prop><h>max-height</h>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-max-height"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#max-height"/>
+      <LabNote uri="&uri.labNote;css2_visuren/max-height"/>
+    </prop>
+    
+    <prop><h>line-height</h>
+      <CSS1 uri="&uri.CSS1;line-height"/>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-line-height"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#line-height"/>
+      <LabNote uri="&uri.labNote;css2_visuren/line-height"/>
+    </prop>
+    <prop><h>行間</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>行取り</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>vertical-align</h>
+      <CSS1 uri="&uri.CSS1;vertical-align"/>
+      <CSS2 uri="&uri.CSS2;visudet#propdef-vertical-align"/>
+      <LabSupport uri="&uri.labSupport;css2_visudet/#vertical-align"/>
+      <LabNote uri="&uri.labNote;css2_visuren/vertical-align"/>
+    </prop>
+    <prop><h>cal--currentmonth-vertical-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calcurrentmonthverticalalign.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--daytitle-vertical-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caldaytitleverticalalign.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--offmonth-vertical-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caloffmonthverticalalign.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--selectedday-vertical-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calselecteddayverticalalign.asp">&label.MSDN;</a>
+    </prop>
+    
+    <prop><h>oeb-column-number</h>
+      <a uri="http://www.openebook.org/oebps/oebps1.0.1/download/oeb101-xhtml.htm#section4.22">&label.OEB1;</a>
+    </prop>
+    <prop><h>段数</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>段間</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    
+    <h>視覚効果</h>
+    <prop><h>overflow</h>
+      <CSS2 uri="&uri.CSS2;visufx#propdef-overflow"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabSupport uri="&uri.labSupport;css2_visufx/#overflow"/>
+      <LabNote uri="&uri.labNote;css2_visufx/overflow"/>
+    </prop>
+    <prop><h>overflow-x</h>
+      <LabNote uri="&uri.labNote;ex_ui/overflow-x"/>
+    </prop>
+    <prop><h>overflow-y</h>
+      <LabNote uri="&uri.labNote;ex_ui/overflow-y"/>
+    </prop>
+    <prop><h>clip</h>
+      <CSS2 uri="&uri.CSS2;visufx#propdef-clip"/>
+      <LabSupport uri="&uri.labSupport;css2_visufx/#clip"/>
+      <LabNote uri="&uri.labNote;css2_visufx/clip"/>
+    </prop>
+    <prop><h>visibility</h>
+      <CSS2 uri="&uri.CSS2;visufx#propdef-visibility"/>
+      <LabSupport uri="&uri.labSupport;css2_visufx/#visibility"/>
+      <LabNote uri="&uri.labNote;css2_visufx/visibility"/>
+    </prop>
+    
+    <prop><h>clip-path</h>
+      <SVG11 uri="&uri.SVG11;masking#ClipPathProperty"/>
+      <LabNote uri="&uri.labNote;svg11_masking/clip-path"/>
+    </prop>
+    <prop><h>clip-rule</h>
+      <SVG11 uri="&uri.SVG11;masking#ClipRuleProperty"/>
+      <LabNote uri="&uri.labNote;svg11_masking/clip-rule"/>
+    </prop>
+    <prop><h>mask</h>
+      <SVG11 uri="&uri.SVG11;masking#MaskProperty"/>
+      <LabNote uri="&uri.labNote;svg11_masking/mask"/>
+    </prop>
+    <prop><h>opacity</h>
+      <SVG11 uri="&uri.SVG11;masking#OpacityProperty"/>
+      <LabNote uri="&uri.labNote;svg11_masking/opacity"/>
+    </prop>
+    <prop><h>-moz-opacity</h>
+      <LabNote uri="&uri.labNote;ex_color/opacity"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    
+    <prop><h>-moz-image-region</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;ex_xul/image-region"/>
+    </prop>
+    
+    <prop><h>mso-fit-shape-to-text</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-fit-shape-to-text.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>mso-fit-text-to-shape</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-fit-text-to-shape.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>mso-next-textbox</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-next-textbox.asp">&label.VMLMSDN;</a>
+    </prop>
+  </cat>
+  
+  <cat id="generate">
+    <h>生成内容</h>
+    <prop><h>content</h>
+      <CSS2 uri="&uri.CSS2;generate#propdef-content"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#content"/>
+      <LabNote uri="&uri.labNote;css2_generate/content"/>
+    </prop>
+    <prop><h>quotes</h>
+      <CSS2 uri="&uri.CSS2;generate#propdef-quotes"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#quotes"/>
+      <LabNote uri="&uri.labNote;css2_generate/quotes"/>
+    </prop>
+    <prop><h>counter-reset</h>
+      <CSS2 uri="&uri.CSS2;generate#propdef-counter-reset"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#counter-reset"/>
+      <LabNote uri="&uri.labNote;css2_generate/counter-reset"/>
+    </prop>
+    <prop><h>-moz-counter-reset</h>
+      <LabNote uri="&uri.labNote;css2_generate/counter-reset#moz"/>
+    </prop>
+    <prop><h>counter-increment</h>
+      <CSS2 uri="&uri.CSS2;generate#propdef-counter-increment"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#counter-increment"/>
+      <LabNote uri="&uri.labNote;css2_generate/counter-increment"/>
+    </prop>
+    <prop><h>-moz-counter-increment</h>
+    </prop>
+    <prop><h>marker-offset</h>
+      <CSS1 uri="&uri.CSS1;marker-offset"/>
+      <CSS2 uri="&uri.CSS2;generate#propdef-marker-offset"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#marker-offset"/>
+      <LabNote uri="&uri.labNote;css2_generate/marker-offset"/>
+    </prop>
+    <prop><h>list-style</h>
+      <CSS1 uri="&uri.CSS1;list-style"/>
+      <CSS2 uri="&uri.CSS2;generate#propdef-list-style"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#list-style"/>
+      <LabNote uri="&uri.labNote;css2_generate/list-style"/>
+    </prop>
+    <prop><h>list-style-type</h>
+      <CSS1 uri="&uri.CSS1;list-style-type"/>
+      <CSS2 uri="&uri.CSS2;generate#propdef-list-style-type"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#list-style-type"/>
+      <LabNote uri="&uri.labNote;css2_generate/list-style-type"/>
+    </prop>
+    <prop><h>list-style-image</h>
+      <CSS1 uri="&uri.CSS1;list-style-image"/>
+      <CSS2 uri="&uri.CSS2;generate#propdef-list-style-image"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#list-style-image"/>
+      <LabNote uri="&uri.labNote;css2_generate/list-style-image"/>
+    </prop>
+    <prop><h>list-style-position</h>
+      <CSS1 uri="&uri.CSS1;list-style-position"/>
+      <CSS2 uri="&uri.CSS2;generate#propdef-list-style-position"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#list-style-position"/>
+      <LabNote uri="&uri.labNote;css2_generate/list-style-position"/>
+    </prop>
+    <prop><h>括弧サイズ</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>括弧種別</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>括弧幅</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+  </cat>
+
+  <cat id="page">
+    <h>頁媒体</h>
+    <prop><h>size</h>
+      <CSS2 uri="&uri.CSS2;page#propdef-size"/>
+      <LabSupport uri="&uri.labSupport;css2_page/#size"/>
+      <LabNote uri="&uri.labNote;css2_page/size"/>
+    </prop>
+    <prop><h>marks</h>
+      <CSS2 uri="&uri.CSS2;page#propdef-marks"/>
+      <LabSupport uri="&uri.labSupport;css2_page/#marks"/>
+      <LabNote uri="&uri.labNote;css2_page/marks"/>
+    </prop>
+    <prop><h>page</h>
+      <CSS2 uri="&uri.CSS2;page#propdef-page"/>
+      <LabSupport uri="&uri.labSupport;css2_page/#page"/>
+      <LabNote uri="&uri.labNote;css2_page/page"/>
+    </prop>
+    <prop><h>page-break-after</h>
+      <CSS2 uri="&uri.CSS2;page#propdef-page-break-after"/>
+      <LabSupport uri="&uri.labSupport;css2_page/#page-break-after"/>
+      <LabNote uri="&uri.labNote;css2_page/page-break-after"/>
+    </prop>
+    <prop><h>page-break-before</h>
+      <CSS2 uri="&uri.CSS2;page#propdef-page-break-before"/>
+      <LabSupport uri="&uri.labSupport;css2_page/#page-break-before"/>
+      <LabNote uri="&uri.labNote;css2_page/page-break-before"/>
+    </prop>
+    <prop><h>orphans</h>
+      <CSS2 uri="&uri.CSS2;page#propdef-orphans"/>
+      <LabSupport uri="&uri.labSupport;css2_page/#orphans"/>
+      <LabNote uri="&uri.labNote;css2_page/orphans"/>
+    </prop>
+    <prop><h>widows</h>
+      <CSS2 uri="&uri.CSS2;page#propdef-widows"/>
+      <LabSupport uri="&uri.labSupport;css2_page/#widows"/>
+      <LabNote uri="&uri.labNote;css2_page/widows"/>
+    </prop>
+    <prop><h>用紙</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+  </cat>
+  
+  <cat id="colors">
+    <h>色</h>
+    <prop><h>color</h>
+      <CSS1 uri="&uri.CSS1;color"/>
+      <CSS2 uri="&uri.CSS2;colors#propdef-color"/>
+      <LabSupport uri="&uri.labSupport;css2_colors/#color"/>
+      <LabNote uri="&uri.labNote;css2_colors/color"/>
+    </prop>
+    <prop><h>color-profile</h>
+      <SVG11 uri="&uri.SVG11;color#ColorProfileProperty"/>
+      <LabNote uri="&uri.labNote;svg11_colorg/color-profile"/>
+    </prop>
+    
+    <h>背景</h>
+    <prop><h>background</h>
+      <CSS1 uri="&uri.CSS1;background"/>
+      <CSS2 uri="&uri.CSS2;colors#propdef-background"/>
+      <LabSupport uri="&uri.labSupport;css2_colors/#background"/>
+      <LabNote uri="&uri.labNote;css2_colors/background"/>
+    </prop>
+    <prop><h>background-color</h>
+      <CSS1 uri="&uri.CSS1;background-color"/>
+      <CSS2 uri="&uri.CSS2;colors#propdef-background-color"/>
+      <LabSupport uri="&uri.labSupport;css2_colors/#background-color"/>
+      <LabNote uri="&uri.labNote;css2_colors/background-color"/>
+    </prop>
+    <prop><h>background-image</h>
+      <CSS1 uri="&uri.CSS1;background-image"/>
+      <CSS2 uri="&uri.CSS2;colors#propdef-background-image"/>
+      <LabSupport uri="&uri.labSupport;css2_colors/#background-image"/>
+      <LabNote uri="&uri.labNote;css2_colors/background-image"/>
+    </prop>
+    <prop><h>background-repeat</h>
+      <CSS1 uri="&uri.CSS1;background-repeat"/>
+      <CSS2 uri="&uri.CSS2;colors#propdef-background-repeat"/>
+      <LabSupport uri="&uri.labSupport;css2_colors/#background-repeat"/>
+      <LabNote uri="&uri.labNote;css2_colors/background-repeat"/>
+    </prop>
+    <prop><h>background-attachment</h>
+      <CSS1 uri="&uri.CSS1;background-attachment"/>
+      <CSS2 uri="&uri.CSS2;colors#propdef-background-attachment"/>
+      <LabSupport uri="&uri.labSupport;css2_colors/#background-attachment"/>
+      <LabNote uri="&uri.labNote;css2_colors/background-attachment"/>
+    </prop>
+    <prop><h>background-position</h>
+      <CSS1 uri="&uri.CSS1;background-position"/>
+      <CSS2 uri="&uri.CSS2;colors#propdef-background-position"/>
+      <LabSupport uri="&uri.labSupport;css2_colors/#background-position"/>
+      <LabNote uri="&uri.labNote;css2_colors/background-position"/>
+    </prop>
+    <prop><h>background-position-x</h>
+      <MSDN uri="&uri.MSDN;backgroundpositionx.asp"/>
+      <LabNote uri="&uri.labNote;ex_background/background-position-x"/>
+    </prop>
+    <prop><h>background-position-y</h>
+      <MSDN uri="&uri.MSDN;backgroundpositiony.asp"/>
+      <LabNote uri="&uri.labNote;ex_background/background-position-y"/>
+    </prop>
+    <prop><h>-moz-background-clip</h>
+      <LabNote uri="&uri.labNote;ex_background/background-clip"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-background-inline-policy</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-background-origin</h>
+      <LabNote uri="&uri.labNote;ex_background/background-origin"/>
+    </prop>
+    <prop><h>-x-background-x-position</h>
+    </prop>
+    <prop><h>-x-background-y-position</h>
+    </prop>
+    <prop><h>cal--currentmonth-background-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calcurrentmonthbackgroundcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--daytitle-background-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caldaytitlebackgroundcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--offmonth-background-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caloffmonthbackgroundcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--selectedday-background-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calselecteddaybackgroundcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--currentmonth-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calcurrentmonthcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--daytitle-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caldaytitlecolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--offmonth-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caloffmonthcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--selectedday-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calselecteddaycolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--title-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caltitlecolor.asp">&label.MSDN;</a>
+    </prop>
+    
+    <h>塗り</h>
+    <prop><h>fill</h>
+      <SVG11 uri="&uri.SVG11;painting#FillProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/fill"/>
+    </prop>
+    <prop><h>fill-rule</h>
+      <SVG11 uri="&uri.SVG11;painting#FillRuleProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/fill-rule"/>
+    </prop>
+    <prop><h>fill-opacity</h>
+      <SVG11 uri="&uri.SVG11;painting#FillOpacityProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/fill-opacity"/>
+    </prop>
+    <prop><h>stroke</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke"/>
+    </prop>
+    <prop><h>stroke-width</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeWidthProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke-width"/>
+    </prop>
+    <prop><h>stroke-linecap</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeLinecapProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke-linecap"/>
+    </prop>
+    <prop><h>stroke-linejoin</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeLinejoinProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke-linejoin"/>
+    </prop>
+    <prop><h>stroke-miterlimit</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeMiterlimitProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke-miterlimit"/>
+    </prop>
+    <prop><h>stroke-dasharray</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeDasharrayProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke-dasharray"/>
+    </prop>
+    <prop><h>stroke-dashoffset</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeDashoffsetProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke-dashoffset"/>
+    </prop>
+    <prop><h>stroke-opacity</h>
+      <SVG11 uri="&uri.SVG11;painting#StrokeOpacityProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/stroke-opacity"/>
+    </prop>
+    <prop><h>marker</h>
+      <SVG11 uri="&uri.SVG11;painting#MarkerProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/marker"/>
+    </prop>
+    <prop><h>marker-start</h>
+      <SVG11 uri="&uri.SVG11;painting#MarkerStartProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/marker-start"/>
+    </prop>
+    <prop><h>marker-end</h>
+      <SVG11 uri="&uri.SVG11;painting#MarkerEndProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/marker-end"/>
+    </prop>
+    <prop><h>marker-mid</h>
+      <SVG11 uri="&uri.SVG11;painting#MarkerMidProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/marker-mid"/>
+    </prop>
+    <prop><h>color-interpolation</h>
+      <SVG11 uri="&uri.SVG11;painting#ColorInterpolationProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/color-interpolation"/>
+    </prop>
+    <prop><h>color-interpolation-filters</h>
+      <SVG11 uri="&uri.SVG11;painting#ColorInterpolationFiltersProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/color-interpolation-filters"/>
+    </prop>
+    <prop><h>color-rendering</h>
+      <SVG11 uri="&uri.SVG11;painting#ColorRenderingProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/color-rendering"/>
+    </prop>
+    <prop><h>shape-rendering</h>
+      <SVG11 uri="&uri.SVG11;painting#ShapeRenderingProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/shape-rendering"/>
+    </prop>
+    <prop><h>text-rendering</h>
+      <SVG11 uri="&uri.SVG11;painting#TextRenderingProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/text-rendering"/>
+    </prop>
+    <prop><h>image-rendering</h>
+      <SVG11 uri="&uri.SVG11;painting#ImageRenderingProperty"/>
+      <LabNote uri="&uri.labNote;svg11_painting/image-rendering"/>
+    </prop>
+    
+    <prop><h>flip</h>
+      <a uri="&uri.VMLprop;">&label.VML;</a>
+      <LabNote uri="&uri.labNote;ex_vml/flip"/>
+    </prop>
+    
+    <h>塗りサーバー</h>
+    <prop><h>stop-color</h>
+      <SVG11 uri="&uri.SVG11;pservers#StopColorProperty"/>
+      <LabNote uri="&uri.labNote;svg11_pservers/stop-color"/>
+    </prop>
+    <prop><h>stop-opacity</h>
+      <SVG11 uri="&uri.SVG11;pservers#StopOpacityProperty"/>
+      <LabNote uri="&uri.labNote;svg11_pservers/stop-opacity"/>
+    </prop>
+  </cat>
+  
+  <cat id="fonts">
+    <h>書体</h>
+    <prop><h>font</h>
+      <CSS1 uri="&uri.CSS1;font"/>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font"/>
+    </prop>
+    <prop><h>font-family</h>
+      <CSS1 uri="&uri.CSS1;font-family"/>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font-family"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font-family"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font-family"/>
+    </prop>
+    <prop><h>font-style</h>
+      <CSS1 uri="&uri.CSS1;font-style"/>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font-style"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font-style"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font-style"/>
+    </prop>
+    <prop><h>スラント</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>font-variant</h>
+      <CSS1 uri="&uri.CSS1;font-variant"/>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font-variant"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font-variant"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font-variant"/>
+    </prop>
+    <prop><h>font-weight</h>
+      <CSS1 uri="&uri.CSS1;font-weight"/>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font-weight"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font-weight"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font-weight"/>
+    </prop>
+    <prop><h>font-stretch</h>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font-stretch"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font-stretch"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font-stretch"/>
+    </prop>
+    <prop><h>v-same-letter-heights</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858398">&label.VML;</a>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textpath/text_v-same-letter-heights.asp">&label.VMLMSDN;</a>
+      <LabNote uri="&uri.labNote;ex_vml/v-same-letter-heights"/>
+    </prop>
+    <prop><h>font-size</h>
+      <CSS1 uri="&uri.CSS1;font-size"/>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font-size"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font-size"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font-size"/>
+    </prop>
+    <prop><h>font-size-adjust</h>
+      <CSS2 uri="&uri.CSS2;fonts#propdef-font-size-adjust"/>
+      <LabSupport uri="&uri.labSupport;css2_fonts/#font-size-adjust"/>
+      <LabNote uri="&uri.labNote;css2_fonts/font-size-adjust"/>
+    </prop>
+  
+    <prop><h>cal--currentmonth-font-family</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calcurrentmonthfontfamily.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--daytitle-font-family</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caldaytitlefontfamily.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--offmonth-font-family</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caloffmonthfontfamily.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--selectedday-font-family</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calselecteddayfontfamily.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--title-font-family</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caltitlefontfamily.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--currentmonth-font-size</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calcurrentmonthfontsize.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--daytitle-font-size</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caldaytitlefontsize.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--offmonth-font-size</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caloffmonthfontsize.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--selectedday-font-size</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calselecteddayfontsize.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--title-font-size</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caltitlefontsize.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--currentmonth-font-weight</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calcurrentmonthfontweight.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--daytitle-font-weight</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caldaytitlefontweight.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--offmonth-font-weight</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caloffmonthfontweight.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--selectedday-font-weight</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calselecteddayfontweight.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--title-font-weight</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caltitlefontweight.asp">&label.MSDN;</a>
+    </prop>
+  </cat>
+  
+  <cat id="text">
+    <h>文</h>
+    <prop><h>text-indent</h>
+      <CSS1 uri="&uri.CSS1;text-indent"/>
+      <CSS2 uri="&uri.CSS2;text#propdef-text-indent"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#text-indent"/>
+      <LabNote uri="&uri.labNote;css2_text/text-indent"/>
+    </prop>
+    <prop><h>段落字下げ</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>字下げ</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>字上げ</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>text-align</h>
+      <CSS1 uri="&uri.CSS1;text-align"/>
+      <CSS2 uri="&uri.CSS2;text#propdef-text-align"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#text-align"/>
+      <LabNote uri="&uri.labNote;css2_text/text-align"/>
+    </prop>
+    <prop><h>text-align-last</h>
+      <MSDN uri="&uri.MSDN;textalignlast.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/text-align-last"/>
+    </prop>
+    <prop><h>v-text-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textpath/text_v-text-align.asp">&label.VMLMSDN;</a>
+      <LabNote uri="&uri.labNote;ex_vml/v-text-align"/>
+    </prop>
+    <prop><h>v-text-align-alt</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858398">&label.VML;</a>
+    </prop>
+    <prop><h>文字ぞろえ</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>cal--currentmonth-text-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calcurrentmonthtextalign.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--daytitle-text-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caldaytitletextalign.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--offmonth-text-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caloffmonthtextalign.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--selectedday-text-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/calselecteddaytextalign.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cal--title-text-align</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/calendar/caltitletextalign.asp">&label.MSDN;</a>
+    </prop>
+    
+    <prop><h>text-decoration</h>
+      <CSS1 uri="&uri.CSS1;text-decoration"/>
+      <CSS2 uri="&uri.CSS2;text#propdef-text-decoration"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#text-decoration"/>
+      <LabNote uri="&uri.labNote;css2_text/text-decoration"/>
+      <a uri="http://www.mozilla.gr.jp/standards/webtips0002.html">&label.Mojira;</a>
+    </prop>
+    <prop><h>text-underline-position</h>
+      <MSDN uri="&uri.MSDN;textunderlineposition.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/text-underline-position"/>
+    </prop>
+    <prop><h>line-style</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>line-width</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>圏点</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>letter-spacing</h>
+      <CSS1 uri="&uri.CSS1;letter-spacing"/>
+      <CSS2 uri="&uri.CSS2;text#propdef-letter-spacing"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#letter-spacing"/>
+      <LabNote uri="&uri.labNote;css2_text/letter-spacing"/>
+    </prop>
+    <prop><h>word-spacing</h>
+      <CSS1 uri="&uri.CSS1;word-spacing"/>
+      <CSS2 uri="&uri.CSS2;text#propdef-word-spacing"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#word-spacing"/>
+      <LabNote uri="&uri.labNote;css2_text/word-spacing"/>
+    </prop>
+    <prop><h>v-text-spacing</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858398">&label.VML;</a>
+      <LabNote uri="&uri.labNote;ex_vml/v-text-spacing"/>
+    </prop>
+    <prop><h>v-text-spacing-mode</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858398">&label.VML;</a>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textpath/text_v-text-spacing-mode.asp">&label.VMLMSDN;</a>
+      <LabNote uri="&uri.labNote;ex_vml/v-text-spacing-mode"/>
+    </prop>
+    <prop><h>text-transform</h>
+      <CSS1 uri="&uri.CSS1;text-transform"/>
+      <CSS2 uri="&uri.CSS2;text#propdef-text-transform"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#text-transform"/>
+      <LabNote uri="&uri.labNote;css2_text/text-transform"/>
+    </prop>
+    <prop><h>white-space</h>
+      <CSS1 uri="&uri.CSS1;white-space"/>
+      <CSS2 uri="&uri.CSS2;text#propdef-white-space"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#white-space"/>
+      <LabNote uri="&uri.labNote;css2_text/white-space"/>
+    </prop>
+    
+    <prop><h>writing-mode</h>
+      <SVG11 uri="&uri.SVG11;text#WritingModeProperty"/>
+      <MSDN uri="&uri.MSDN;writingmode.asp"/>
+      <LabNote uri="&uri.labNote;svg11_text/writing-mode"/>
+      <LabNote uri="&uri.labNote;ex_text/writing-mode"/>
+    </prop>
+    <prop><h>組方向</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>glyph-orientation-vertical</h>
+      <SVG11 uri="&uri.SVG11;text#GlyphOrientationVerticalProperty"/>
+      <LabNote uri="&uri.labNote;svg11_text/glyph-orientation-vertical"/>
+    </prop>
+    <prop><h>glyph-orientation-horizontal</h>
+      <SVG11 uri="&uri.SVG11;text#GlyphOrientationHorizontalProperty"/>
+      <LabNote uri="&uri.labNote;svg11_text/glyph-orientation-horizontal"/>
+    </prop>
+    <prop><h>v-rotate-letters</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858398">&label.VML;</a>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textpath/text_v-rotate-letters.asp">&label.VMLMSDN;</a>
+      <LabNote uri="&uri.labNote;ex_vml/v-rotate-letters"/>
+    </prop>
+    <prop><h>v-text-reverse</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858398">&label.VML;</a>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textpath/text_v-text-reverse.asp">&label.VMLMSDN;</a>
+      <LabNote uri="&uri.labNote;ex_vml/v-text-reverse"/>
+    </prop>
+    <prop><h>mso-rotate</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-rotate.asp">&label.VMLMSDN;</a>
+    </prop>
+    
+    <prop><h>layout-flow</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858397">&label.VML;</a>
+      <LabNote uri="&uri.labNote;ex_text/layout-flow"/>
+    </prop>
+    <prop><h>mso-layout-flow</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-layout-flow.asp">&label.VMLMSDN;</a>
+    </prop>
+    
+    <prop><h>layout-grid</h>
+      <MSDN uri="&uri.MSDN;layoutgrid.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/layout-grid"/>
+    </prop>
+    <prop><h>layout-grid-char</h>
+      <MSDN uri="&uri.MSDN;layoutgridchar.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/layout-grid-char"/>
+    </prop>
+    <prop><h>layout-grid-line</h>
+      <MSDN uri="&uri.MSDN;layoutgridline.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/layout-grid-line"/>
+    </prop>
+    <prop><h>layout-grid-mode</h>
+      <MSDN uri="&uri.MSDN;layoutgridmode.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/layout-grid-mode"/>
+    </prop>
+    <prop><h>layout-grid-type</h>
+      <MSDN uri="&uri.MSDN;layoutgridtype.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/layout-grid-type"/>
+    </prop>
+    
+    <prop><h>text-anchor</h>
+      <SVG11 uri="&uri.SVG11;text#TextAnchorProperty"/>
+      <LabNote uri="&uri.labNote;svg11_text/text-anchor"/>
+    </prop>
+    <prop><h>v-text-anchor</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858397">&label.VML;</a>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textpath/text_v-text-anchor.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>dominant-baseline</h>
+      <SVG11 uri="&uri.SVG11;text#DominantBaselineProperty"/>
+      <LabNote uri="&uri.labNote;svg11_text/dominant-baseline"/>
+    </prop>
+    <prop><h>alignment-baseline</h>
+      <SVG11 uri="&uri.SVG11;text#AlignmentBaselineProperty"/>
+      <LabNote uri="&uri.labNote;svg11_text/alignment-baseline"/>
+    </prop>
+    <prop><h>baseline-shift</h>
+      <SVG11 uri="&uri.SVG11;text#BaselineShiftProperty"/>
+      <LabNote uri="&uri.labNote;svg11_text/baseline-shift"/>
+    </prop>
+    <prop><h>kerning</h>
+      <SVG11 uri="&uri.SVG11;text#KerningProperty"/>
+      <LabNote uri="&uri.labNote;svg11_text/kerning"/>
+    </prop>
+    <prop><h>v-text-kern</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858398">&label.VML;</a>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textpath/text_v-text-kern.asp">&label.VMLMSDN;</a>
+      <LabNote uri="&uri.labNote;ex_vml/v-text-kern"/>
+    </prop>
+    
+    <prop><h>line-break</h>
+      <MSDN uri="&uri.MSDN;linebreak.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/line-break"/>
+    </prop>
+    <prop><h>word-break</h>
+      <MSDN uri="&uri.MSDN;wordbreak.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/word-break"/>
+    </prop>
+    <prop><h>text-justify</h>
+      <MSDN uri="&uri.MSDN;textjustify.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/text-justify"/>
+    </prop>
+    <prop><h>text-justify-trim</h>
+      <LabNote uri="&uri.labNote;ex_text/text-justify-trim"/>
+    </prop>
+    <prop><h>text-kashida</h>
+    </prop>
+    <prop><h>text-kashida-space</h>
+      <MSDN uri="&uri.MSDN;textkashidaspace.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/text-kashida-space"/>
+    </prop>
+    <prop><h>text-autospace</h>
+      <MSDN uri="&uri.MSDN;textautospace.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/text-autospace"/>
+    </prop>
+    <prop><h>text-overflow</h>
+      <MSDN uri="&uri.MSDN;textoverflow.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/text-overflow"/>
+    </prop>
+    <prop><h>word-wrap</h>
+      <MSDN uri="&uri.MSDN;wordwrap.asp"/>
+      <LabNote uri="&uri.labNote;ex_text/word-wrap"/>
+    </prop>
+    <prop><h>v-text-wrapping</h>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858397">&label.VML;</a>
+    </prop>
+    <prop><h>mso-wrap-edited</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/a_mswred.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>mso-wrap-mode</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/a_mswrmo.asp">&label.VMLMSDN;</a>
+    </prop>
+    
+    <prop><h>mso-text-scale</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-text-scale.asp">&label.VMLMSDN;</a>
+    </prop>
+    
+    <prop><h>text-shadow</h>
+      <CSS2 uri="&uri.CSS2;text.html#text-shadow-props"/>
+      <LabSupport uri="&uri.labSupport;css2_text/#text-shadow"/>
+      <LabNote uri="&uri.labNote;css2_text/text-shadow"/>
+    </prop>
+    <prop><h>mso-text-shadow</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_mso-text-shadow.asp">&label.VMLMSDN;</a>
+    </prop>
+  </cat>
+  
+  <cat id="ruby">
+    <h>ルビ</h>
+    <prop><h>ruby-align</h>
+      <MSDN uri="&uri.MSDN;rubyalign.asp"/>
+      <LabNote uri="&uri.labNote;ex_ruby/ruby-align"/>
+    </prop>
+    <prop><h>ruby-overhang</h>
+      <MSDN uri="&uri.MSDN;rubyoverhang.asp"/>
+      <LabNote uri="&uri.labNote;ex_ruby/ruby-overhang"/>
+    </prop>
+    <prop><h>ruby-position</h>
+      <MSDN uri="&uri.MSDN;rubyposition.asp"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabNote uri="&uri.labNote;ex_ruby/ruby-position"/>
+    </prop>
+  </cat>
+  
+  <cat id="tables">
+    <h>表</h>
+    <prop><h>caption-side</h>
+      <CSS2 uri="&uri.CSS2;tables#propdef-caption-side"/>
+      <LabSupport uri="&uri.labSupport;css2_tables/#caption-side"/>
+      <LabNote uri="&uri.labNote;css2_tables/caption-side"/>
+    </prop>
+    <prop><h>table-layout</h>
+      <CSS2 uri="&uri.CSS2;tables#propdef-table-layout"/>
+      <LabSupport uri="&uri.labSupport;css2_tables/#table-layout"/>
+      <LabNote uri="&uri.labNote;css2_tables/table-layout"/>
+    </prop>
+    <prop><h>border-collapse</h>
+      <CSS2 uri="&uri.CSS2;tables#propdef-border-collapse"/>
+      <LabSupport uri="&uri.labSupport;css2_tables/#border-collapse"/>
+      <LabNote uri="&uri.labNote;css2_tables/border-collapse"/>
+    </prop>
+    <prop><h>border-spacing</h>
+      <CSS2 uri="&uri.CSS2;tables#propdef-border-spacing"/>
+      <LabSupport uri="&uri.labSupport;css2_tables/#border-spacing"/>
+      <LabNote uri="&uri.labNote;css2_tables/border-spacing"/>
+    </prop>
+    <prop><h>empty-cells</h>
+      <CSS2 uri="&uri.CSS2;tables#propdef-empty-cells"/>
+      <LabSupport uri="&uri.labSupport;css2_tables/#empty-cells"/>
+      <LabNote uri="&uri.labNote;css2_tables/empty-cells"/>
+    </prop>
+    <prop><h>speak-header</h>
+      <CSS2 uri="&uri.CSS2;tables#propdef-speak-header"/>
+      <LabNote uri="&uri.labNote;css2_tables/speak-header"/>
+    </prop>
+  </cat>
+  
+  <cat id="ui">
+    <h>利用者界面</h>
+    <prop><h>cursor</h>
+      <CSS2 uri="&uri.CSS2;ui#propdef-cursor"/>
+      <LabSupport uri="&uri.labSupport;css2_ui/#cursor"/>
+      <LabNote uri="&uri.labNote;css2_ui/cursor"/>
+      <a uri="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/cursor.asp">&label.MSDN;</a>
+      <a uri="http://hp.vector.co.jp/authors/VA022006/css/ui.html#cursor">&label.Katsukun;</a>
+    </prop>
+    <prop><h>outline</h>
+      <CSS2 uri="&uri.CSS2;ui#propdef-outline"/>
+      <LabSupport uri="&uri.labSupport;css2_ui/#outline"/>
+      <LabNote uri="&uri.labNote;css2_ui/outline"/>
+    </prop>
+    <prop><h>outline-width</h>
+      <CSS2 uri="&uri.CSS2;ui#propdef-outline-width"/>
+      <LabSupport uri="&uri.labSupport;css2_ui/#outline-width"/>
+      <LabNote uri="&uri.labNote;css2_ui/outline-width"/>
+    </prop>
+    <prop><h>outline-style</h>
+      <CSS2 uri="&uri.CSS2;ui#propdef-outline-style"/>
+      <LabSupport uri="&uri.labSupport;css2_ui/#outline-style"/>
+      <LabNote uri="&uri.labNote;css2_ui/outline-style"/>
+    </prop>
+    <prop><h>outline-color</h>
+      <CSS2 uri="&uri.CSS2;ui#propdef-outline-color"/>
+      <LabSupport uri="&uri.labSupport;css2_ui/#outline-color"/>
+      <LabNote uri="&uri.labNote;css2_ui/outline-color"/>
+    </prop>
+    <prop><h>-moz-outline</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;css2_ui/outline#moz"/>
+    </prop>
+    <prop><h>-moz-outline-width</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;css2_ui/outline-width#moz"/>
+    </prop>
+    <prop><h>-moz-outline-style</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;css2_ui/outline-style#moz"/>
+    </prop>
+    <prop><h>-moz-outline-color</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;css2_ui/outline-color#moz"/>
+    </prop>
+    <prop><h>-moz-outline-radius</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-outline-radius-topleft</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-outline-radius-topright</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-outline-radius-bottomright</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    <prop><h>-moz-outline-radius-bottomleft</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    
+    <prop><h>scrollbar-face-color</h>
+      <MSDN uri="&uri.MSDN;scrollbarfacecolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-face-color"/>
+    </prop>
+    <prop><h>scrollbar-3dlight-color</h>
+      <MSDN uri="&uri.MSDN;scrollbar3dlightcolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-3dlight-color"/>
+    </prop>
+    <prop><h>scrollbar-highlight-color</h>
+      <MSDN uri="&uri.MSDN;scrollbarhighlightcolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-highlight-color"/>
+    </prop>
+    <prop><h>scrollbar-shadow-color</h>
+      <MSDN uri="&uri.MSDN;scrollbarshadowcolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-shadow-color"/>
+    </prop>
+    <prop><h>scrollbar-darkshadow-color</h>
+      <MSDN uri="&uri.MSDN;scrollbardarkshadowcolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-darkshadow-color"/>
+    </prop>
+    <prop><h>scrollbar-arrow-color</h>
+      <MSDN uri="&uri.MSDN;scrollbararrowcolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-arrow-color"/>
+    </prop>
+    <prop><h>scrollbar-track-color</h>
+      <MSDN uri="&uri.MSDN;scrollbartrackcolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-track-color"/>
+    </prop>
+    <prop><h>scrollbar-base-color</h>
+      <MSDN uri="&uri.MSDN;scrollbarbasecolor.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/scrollbar-bace-color"/>
+    </prop>
+    <prop><h>accelerator</h>
+      <MSDN uri="&uri.MSDN;accelerator.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/accelerator"/>
+    </prop>
+    <prop><h>-wap-accesskey</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    <prop><h>ime-mode</h>
+      <MSDN uri="&uri.MSDN;imemode.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/ime-mode"/>
+    </prop>
+    <prop><h>zoom</h>
+      <MSDN uri="&uri.MSDN;zoom.asp"/>
+      <LabNote uri="&uri.labNote;ex_ui/zoom"/>
+    </prop>
+    
+    <prop><h>-moz-resizer</h>
+      <LabNote uri="&uri.labNote;ex_ui/resizer"/>
+    </prop>
+    <prop><h>-moz-key-equivalent</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;ex_ui/key-equivalent"/>
+    </prop>
+    <prop><h>-moz-user-focus</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;ex_ui/user-focus"/>
+    </prop>
+    <prop><h>-moz-user-input</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;ex_ui/user-input"/>
+    </prop>
+    <prop><h>-moz-user-modify</h>
+      <LabNote uri="&uri.labNote;ex_ui/user-modify"/>
+    </prop>
+    <prop><h>-moz-user-select</h>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+      <LabNote uri="&uri.labNote;ex_ui/user-select"/>
+    </prop>
+    
+    <prop><h>-moz-appearance</h>
+      <LabNote uri="&uri.labNote;ex_xul/appearance"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+    
+    <prop><h>-wap-input-format</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    <prop><h>-wap-input-required</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    
+    <prop><h>singleclick</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/vml/shape/textbox/box_singleclick.asp">&label.VMLMSDN;</a>
+    </prop>
+    <prop><h>mv--boundary</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvboundary.asp">&label.mvMSDN;</a>
+    </prop>
+    <prop><h>mv--boundary-bottom</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvboundarybottom.asp">&label.mvMSDN;</a>
+    </prop>
+    <prop><h>mv--boundary-left</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvboundaryleft.asp">&label.mvMSDN;</a>
+    </prop>
+    <prop><h>mv--boundary-right</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvboundaryright.asp">&label.mvMSDN;</a>
+    </prop>
+    <prop><h>mv--boundary-top</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvboundarytop.asp">&label.mvMSDN;</a>
+    </prop>
+    <prop><h>mv--grid</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvgrid.asp">&label.mvMSDN;</a>
+    </prop>
+    <prop><h>mv--grid-cols</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvgridcols.asp">&label.mvMSDN;</a>
+    </prop>
+    <prop><h>mv--grid-rows</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/movable/mvgridrows.asp">&label.mvMSDN;</a>
+    </prop>
+    
+    <prop><h>cb--hover-border</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/coolbutton/cbhoverborder.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cb--hover-background</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/coolbutton/cbhoverbackground.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cb--hover-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/coolbutton/cbhovercolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cb--selected-border</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/coolbutton/cbselectedborder.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cb--selected-background</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/coolbutton/cbselectedbackground.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>ro--hover-background</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/rowover/rohoverbackground.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>ro--hover-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/rowover/rohovercolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>ro--light-background</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/rowover/rohoverlightbackground.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>ro--selected-background</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/rowover/rohoverselectedbackground.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>ro--selected-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/rowover/rohoverselectedcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>ro--shade-background</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/rowover/rohovershadebackground.asp">&label.MSDN;</a>
+    </prop>
+    
+    <prop><h>sl--bar-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/slider/slbarcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>sl--orientation</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/slider/slorientation.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>sl--snap</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/slider/slsnap.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>sl--tick-color</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/slider/sltickcolor.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>sl--tick-style</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/slider/sltickstyle.asp">&label.MSDN;</a>
+    </prop>
+    
+    <prop><h>tb--tab-orientation</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/mpc/tdtaborientation.asp">&label.MSDN;</a>
+    </prop>
+    
+    <prop><h>cp--cell-height</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cpcellheight.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cp--cell-width</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cpcellwidth.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cp--grid-height</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cpgridheight.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cp--grid-size</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cpgridsize.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cp--grid-style</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cpgridstyle.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cp--grid-width</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cpgridwidth.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cp--hover-style</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cphoverstyle.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>cp--selected-style</h>
+      <a uri="http://msdn.microsoft.com/workshop/author/behaviors/library/colorpick/cpselectedstyle.asp">&label.MSDN;</a>
+    </prop>
+  </cat>
+  
+  <cat id="interactive">
+    <h>双方向</h>
+    <prop><h>pointer-events</h>
+      <SVG11 uri="&uri.SVG11;interact#PointerEventsProperty"/>
+      <LabNote uri="&uri.labNote;svg11_interact/pointer-events"/>
+    </prop>
+    
+    <prop><h>-wap-marquee</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    <prop><h>-wap-marquee-style</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    <prop><h>-wap-marquee-dir</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    <prop><h>-wap-marquee-loop</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    <prop><h>-wap-marquee-speed</h>
+      <a uri="&uri.WAPCSS;">&label.WAP;</a>
+    </prop>
+    
+    <prop><h>behavior</h>
+      <MSDN uri="&uri.MSDN;behavior.asp"/>
+      <LabNote uri="&uri.labNote;ex_becss/behavior"/>
+    </prop>
+    <prop><h>-moz-binding</h>
+      <a uri="http://www.w3.org/TR/xbl/#propdef-binding">&label.XBL;</a>
+      <LabNote uri="&uri.labNote;ex_becss/binding"/>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_StyleProperties.html">&label.XULPlanet;</a>
+    </prop>
+  </cat>
+  
+  <cat id="linking">
+    <h>リンク</h>
+    <prop><h>-link-set</h>
+      <a uri="http://people.opera.com/howcome/2000/css3/clink-nov-6.html">&label.Opera;</a>
+    </prop>
+    <prop><h>set-link-source</h>
+    </prop>
+    <prop><h>-set-link-source</h>
+      <LabNote uri="&uri.labNote;ex_linking/set-link-source"/>
+    </prop>
+    <prop><h>-o-set-link-source</h>
+      <a uri="http://www.opera.com/docs/specs/#css">&label.Opera;</a>
+    </prop>
+    <prop><h>-link-use</h>
+      <a uri="http://people.opera.com/howcome/2000/css3/clink-nov-6.html">&label.Opera;</a>
+    </prop>
+    <prop><h>use-link-source</h>
+    </prop>
+    <prop><h>-use-link-source</h>
+      <LabNote uri="&uri.labNote;ex_linking/use-link-source"/>
+    </prop>
+    <prop><h>-o-use-link-source</h>
+      <a uri="http://www.opera.com/docs/specs/#css">&label.Opera;</a>
+    </prop>
+    <prop><h>-replace</h>
+      <a uri="http://people.opera.com/howcome/2000/css3/clink-nov-6.html">&label.Opera;</a>
+      <LabNote uri="&uri.labNote;ex_linking/replace"/>
+    </prop>
+    <prop><h>-o-replace</h>
+      <a uri="http://www.opera.com/docs/specs/#css">&label.Opera;</a>
+    </prop>
+  </cat>
+  
+  <cat id="aural">
+    <h>音声</h>
+    <prop><h>volume</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-volume"/>
+      <LabNote uri="&uri.labNote;css2_aural/volume"/>
+    </prop>
+    <prop><h>speak</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-speak"/>
+      <LabNote uri="&uri.labNote;css2_aural/speak"/>
+    </prop>
+    <prop><h>speak-punctuation</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-speak-punctuation"/>
+      <LabNote uri="&uri.labNote;css2_aural/speak-punctuation"/>
+    </prop>
+    <prop><h>speak-numeral</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-speak-numeral"/>
+      <LabNote uri="&uri.labNote;css2_aural/speak-numeral"/>
+    </prop>
+    <prop><h>pause</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-pause"/>
+      <LabNote uri="&uri.labNote;css2_aural/pause"/>
+    </prop>
+    <prop><h>pause-after</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-pause-after"/>
+      <LabNote uri="&uri.labNote;css2_aural/pause-after"/>
+    </prop>
+    <prop><h>pause-before</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-pause-before"/>
+      <LabNote uri="&uri.labNote;css2_aural/pause-before"/>
+    </prop>
+    <prop><h>cue</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-cue"/>
+      <LabNote uri="&uri.labNote;css2_aural/cue"/>
+    </prop>
+    <prop><h>cue-after</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-cue-after"/>
+      <LabNote uri="&uri.labNote;css2_aural/cue-after"/>
+    </prop>
+    <prop><h>cue-before</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-cue-before"/>
+      <LabNote uri="&uri.labNote;css2_aural/cue-before"/>
+    </prop>
+    <prop><h>play-during</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-play-during"/>
+      <LabNote uri="&uri.labNote;css2_aural/play-during"/>
+    </prop>
+    <prop><h>azimuth</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-azimuth"/>
+      <LabNote uri="&uri.labNote;css2_aural/azimuth"/>
+    </prop>
+    <prop><h>elevation</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-elevation"/>
+      <LabNote uri="&uri.labNote;css2_aural/elevation"/>
+    </prop>
+    <prop><h>speeth-rate</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-speeth-rate"/>
+      <LabNote uri="&uri.labNote;css2_aural/speeth-rate"/>
+    </prop>
+    <prop><h>voice-family</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-voice-family"/>
+      <LabNote uri="&uri.labNote;css2_aural/voice-family"/>
+    </prop>
+    <prop><h>pitch</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-pitch"/>
+      <LabNote uri="&uri.labNote;css2_aural/pitch"/>
+    </prop>
+    <prop><h>pitch-range</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-pitch-range"/>
+      <LabNote uri="&uri.labNote;css2_aural/pitch-range"/>
+    </prop>
+    <prop><h>stress</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-stress"/>
+      <LabNote uri="&uri.labNote;css2_aural/stress"/>
+    </prop>
+    <prop><h>richness</h>
+      <CSS2 uri="&uri.CSS2;aural#propdef-richness"/>
+      <LabNote uri="&uri.labNote;css2_aural/richness"/>
+    </prop>
+  </cat>
+  
+  <cat id="filters">
+    <h>濾紙</h>
+    <prop><h>filter</h>
+      <SVG11 uri="&uri.SVG11;filters#FilterProperty"/>
+      <MSDN uri="&uri.MSDN;filter.asp"/>
+      <LabNote uri="&uri.labNote;svg11_filters/filter"/>
+      <LabNote uri="&uri.labNote;ex_filters/filter"/>
+    </prop>
+    <prop><h>enable-background</h>
+      <SVG11 uri="&uri.SVG11;filters#EnableBackgroundProperty"/>
+      <LabNote uri="&uri.labNote;svg11_filters/enable-background"/>
+    </prop>
+    <prop><h>lighting-color</h>
+      <SVG11 uri="&uri.SVG11;filters#LightingColorProperty"/>
+      <LabNote uri="&uri.labNote;svg11_filters/lighting-color"/>
+    </prop>
+    <prop><h>flood-color</h>
+      <SVG11 uri="&uri.SVG11;filters#FloodColorProperty"/>
+      <LabNote uri="&uri.labNote;svg11_filters/flood-color"/>
+    </prop>
+    <prop><h>flood-opacity</h>
+      <SVG11 uri="&uri.SVG11;filters#FloodOpacityProperty"/>
+      <LabNote uri="&uri.labNote;svg11_filters/flood-opacity"/>
+    </prop>
+    
+    <prop><h>rotation</h>
+      <a uri="&uri.VMLprop;">&label.VML;</a>
+      <LabNote uri="&uri.labNote;ex_vml/rotation"/>
+    </prop>
+  </cat>
+  
+  <cat id="descriptor">
+    <h>記述子</h>
+    <prop><h>font-family</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-font-family"/>
+    </prop>
+    <prop><h>font-style</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-font-style"/>
+    </prop>
+    <prop><h>font-variant</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-font-variant"/>
+    </prop>
+    <prop><h>font-weight</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-font-weight"/>
+    </prop>
+    <prop><h>font-stretch</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-font-stretch"/>
+    </prop>
+    <prop><h>font-size</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-font-size"/>
+    </prop>
+    <prop><h>unicode-range</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-unicode-range"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>character-set</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>units-per-em</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-units-per-em"/>
+    </prop>
+    <prop><h>name</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <SVG11 uri="&uri.SVG11;color.html#propdef-color-profile-name"/>
+    </prop>
+    <prop><h>src</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-src"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <SVG11 uri="&uri.SVG11;color.html#propdef-color-profile-src"/>
+    </prop>
+    <prop><h>panose-1</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-panose-1"/>
+    </prop>
+    <prop><h>stemv</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-stemv"/>
+    </prop>
+    <prop><h>stemh</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-stemh"/>
+    </prop>
+    <prop><h>slope</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-slope"/>
+    </prop>
+    <prop><h>cap-height</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-cap-height"/>
+    </prop>
+    <prop><h>x-height</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-x-height"/>
+    </prop>
+    <prop><h>ascent</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-ascent"/>
+    </prop>
+    <prop><h>descent</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-descent"/>
+    </prop>
+    <prop><h>widths</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-widths"/>
+    </prop>
+    <prop><h>bbox</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-bbox"/>
+    </prop>
+    <prop><h>definition-src</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-definition-src"/>
+    </prop>
+    <prop><h>baseline</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-baseline"/>
+    </prop>
+    <prop><h>centerline</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-centerline"/>
+    </prop>
+    <prop><h>mathline</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-mathline"/>
+    </prop>
+    <prop><h>topline</h>
+      <CSS2 uri="&uri.CSS2;fonts#descdef-topline"/>
+    </prop>
+    <prop><h>rendering-intent</h>
+      <SVG11 uri="&uri.SVG11;color.html#propdef-rendering-intent"/>
+    </prop>
+  </cat>
+  <cat id="at">
+    <h>@ 規則</h>
+    <prop><h>@character-class</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>@charset</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#x66"/>
+      <LabSupport uri="&uri.labSupport;css2_rules/#at_charset"/>
+      <LabNote uri="&uri.labNote;css2_syndata/at_charset"/>
+    </prop>
+    <prop><h>@color-profile</h>
+      <SVG11 uri="&uri.SVG11;color#ColorProfileAtRule"/>
+      <LabNote uri="&uri.labNote;svg11_color/at_color-profile"/>
+    </prop>
+    <prop><h>@font-face</h>
+      <CSS2 uri="&uri.CSS2;fonts#x40"/>
+      <SVG11 uri="&uri.SVG11;fonts.html#AtFontFace"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabSupport uri="&uri.labSupport;css2_rules/#at_font-face"/>
+    </prop>
+    <prop><h>@import</h>
+      <CSS1 uri="&uri.CSS1;the-cascade"/>
+      <CSS2 uri="&uri.CSS2;cascade#at-import"/>
+      <LabSupport uri="&uri.labSupport;css2_rules/#at_import"/>
+      <LabNote uri="&uri.labNote;css2_syndata/at_import"/>
+      <a uri="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/import.asp">&label.MSDN;</a>
+    </prop>
+    <prop><h>@list</h>
+    </prop>
+    <prop><h>@media</h>
+      <CSS2 uri="&uri.CSS2;media#at-media-rule"/>
+      <LabSupport uri="&uri.labSupport;css2_rules/#at_media"/>
+      <LabNote uri="&uri.labNote;css2_syndata/at_media"/>
+    </prop>
+    <prop><h>@namespace</h>
+      <LabNote uri="&uri.labNote;ex_selectors/at_namespace"/>
+    </prop>
+    <prop><h>@page</h>
+      <CSS2 uri="&uri.CSS2;page#page-box"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabSupport uri="&uri.labSupport;css2_rules/#at_page"/>
+    </prop>
+    <prop><h>@tcol</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>@textbox</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+  </cat>
+  <cat id="selector">
+    <h>選択子</h>
+    <prop><h>*</h>
+      <CSS2 uri="&uri.CSS2;selector#universal-selector"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+    </prop>
+    <prop><h>all</h>
+      <a uri="http://developer.netscape.com/docs/manuals/communicator/dynhtml/jss32.htm#1072052">&label.NC4;</a>
+    </prop>
+    <prop><h><h:var>E</h:var></h>
+      <CSS1 uri="&uri.CSS1;basic-concepts"/>
+      <CSS2 uri="&uri.CSS2;selector#type-selectors"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+    </prop>
+    <prop><h><h:var>N</h:var>|<h:var>L</h:var></h>
+    </prop>
+    <prop><h><h:var>S</h:var> , <h:var>T</h:var></h>
+      <CSS1 uri="&uri.CSS1;grouping"/>
+      <CSS2 uri="&uri.CSS2;selector#grouping"/>
+    </prop>
+    <prop><h><h:var>S</h:var> <h:var>T</h:var></h>
+      <CSS1 uri="&uri.CSS1;contextual-selectors"/>
+      <CSS2 uri="&uri.CSS2;selector#descendant-selectors"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/c_descendant"/>
+    </prop>
+    <prop><h><h:var>S</h:var> &gt; <h:var>T</h:var></h>
+      <CSS2 uri="&uri.CSS2;selector#child-selectors"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/c_child"/>
+    </prop>
+    <prop><h><h:var>S</h:var> + <h:var>T</h:var></h>
+      <CSS2 uri="&uri.CSS2;selector#adjacent-selectors"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/c_adjacent"/>
+    </prop>
+    <prop><h>[<h:var>attr</h:var>]</h>
+      <CSS2 uri="&uri.CSS2;selector#attribute-selectors"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/s_attribute"/>
+    </prop>
+    <prop><h>[<h:var>attr</h:var>=<h:var>val</h:var>]</h>
+      <CSS2 uri="&uri.CSS2;selector#x14"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/s_attribute"/>
+    </prop>
+    <prop><h>[<h:var>attr</h:var>~=<h:var>val</h:var>]</h>
+      <CSS2 uri="&uri.CSS2;selector#x16"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/s_attribute"/>
+    </prop>
+    <prop><h>[<h:var>attr</h:var>|=<h:var>val</h:var>]</h>
+      <CSS2 uri="&uri.CSS2;selector#x18"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/s_attribute"/>
+    </prop>
+    <prop><h>[<h:var>attr</h:var>^=<h:var>val</h:var>]</h>
+      <LabNote uri="&uri.labNote;css2_selectors/s_attribute"/>
+    </prop>
+    <prop><h>[<h:var>attr</h:var>$=<h:var>val</h:var>]</h>
+      <LabNote uri="&uri.labNote;css2_selectors/s_attribute"/>
+    </prop>
+    <prop><h>[<h:var>attr</h:var>*=<h:var>val</h:var>]</h>
+      <LabNote uri="&uri.labNote;css2_selectors/s_attribute"/>
+    </prop>
+    <prop><h>.<h:var>class</h:var></h>
+      <CSS1 uri="&uri.CSS1;class-as-selector"/>
+      <CSS2 uri="&uri.CSS2;selector#class-html"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/s_class"/>
+    </prop>
+    <prop><h>#<h:var>id</h:var></h>
+      <CSS1 uri="&uri.CSS1;id-as-selector"/>
+      <CSS2 uri="&uri.CSS2;selector#id-selectors"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#selectors"/>
+      <LabNote uri="&uri.labNote;css2_selectors/s_id"/>
+    </prop>
+    
+    <h>擬似級</h>
+    <prop><h>:first-child</h>
+      <CSS2 uri="&uri.CSS2;selector#first-child"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_class"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pc_first-child"/>
+    </prop>
+    <prop><h>:link</h>
+      <CSS1 uri="&uri.CSS1;selector#anchor-pseudo-classes"/>
+      <CSS2 uri="&uri.CSS2;selector#link-pseudo-classes"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_class"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pc_link"/>
+    </prop>
+    <prop><h>:visited</h>
+      <CSS1 uri="&uri.CSS1;selector#anchor-pseudo-classes"/>
+      <CSS2 uri="&uri.CSS2;selector#link-pseudo-classes"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_class"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pc_visited"/>
+    </prop>
+    <prop><h>:hover</h>
+      <CSS2 uri="&uri.CSS2;selector#dynamic-pseudo-classes"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_class"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pc_hover"/>
+      <a uri="http://www.mozilla.gr.jp/standards/webtips0012.html">&label.Mojira;</a>
+    </prop>
+    <prop><h>:active</h>
+      <CSS1 uri="&uri.CSS1;selector#anchor-pseudo-classes"/>
+      <CSS2 uri="&uri.CSS2;selector#dynamic-pseudo-classes"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_class"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pc_active"/>
+    </prop>
+    <prop><h>:focus</h>
+      <CSS2 uri="&uri.CSS2;selector#dynamic-pseudo-classes"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_class"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pc_focus"/>
+    </prop>
+    <prop><h>:lang()</h>
+      <CSS2 uri="&uri.CSS2;selector#lang"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_class"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pc_lang"/>
+    </prop>
+    
+    <prop><h>:enabled</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_enabled"/>
+    </prop>
+    <prop><h>:disabled</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_disabled"/>
+    </prop>
+    <prop><h>:root</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_disabled"/>
+    </prop>
+    <prop><h>:-moz-any-link</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_any-link"/>
+    </prop>
+    <prop><h>:checked</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_checked"/>
+    </prop>
+    <prop><h>:last-child</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_last-child"/>
+    </prop>
+    <prop><h>:empty</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_empty"/>
+    </prop>
+    <prop><h>:first-node</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_first-node"/>
+    </prop>
+    <prop><h>:last-node</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_last-node"/>
+    </prop>
+    <prop><h>:not()</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pc_not"/>
+    </prop>
+    <h>擬似要素</h>
+    <prop><h>:first-line</h>
+      <CSS1 uri="&uri.CSS1;selector#the-first-line-pseudo-element"/>
+      <CSS2 uri="&uri.CSS2;selector#first-line-pseudo"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_element"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pe_first-line"/>
+    </prop>
+    <prop><h>:first-letter</h>
+      <CSS1 uri="&uri.CSS1;selector#the-first-letter-pseudo-element"/>
+      <CSS2 uri="&uri.CSS2;selector#first-letter"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_element"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pe_first-letter"/>
+    </prop>
+    <prop><h>:before</h>
+      <CSS2 uri="&uri.CSS2;selector#before-and-after"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_element"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pe_before"/>
+    </prop>
+    <prop><h>:after</h>
+      <CSS2 uri="&uri.CSS2;selector#before-and-after"/>
+      <LabSupport uri="&uri.labSupport;css2_selectors/#pseudo_element"/>
+      <LabNote uri="&uri.labNote;css2_selectors/pe_after"/>
+    </prop>
+    
+    <prop><h>:-moz-button-content</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_button-content"/>
+    </prop>
+    <prop><h>:-moz-fieldset-content</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_fieldset-content"/>
+    </prop>
+    <prop><h>:-moz-cell-content</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_cell-content"/>
+    </prop>
+    <prop><h>:-moz-scrolled-content</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_scrolled-content"/>
+    </prop>
+    <prop><h>:-moz-radio</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_radio"/>
+    </prop>
+    <prop><h>:-moz-list-bullet</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_list-bullet"/>
+    </prop>
+    <prop><h>:-moz-list-number</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_list-number"/>
+    </prop>
+    <prop><h>:-moz-display-comboboxcontrol-frame</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_display-comboboxcontrol-frame"/>
+    </prop>
+    <prop><h>:-moz-dropdown-list</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_dropdown-list"/>
+    </prop>
+    <prop><h>:-moz-focus-inner</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_focus-inner"/>
+    </prop>
+    <prop><h>:-moz-focus-outer</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_focus-outer"/>
+    </prop>
+    <prop><h>:-moz-selection</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_selection"/>
+    </prop>
+    <prop><h>:-moz-canvas</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_canvas"/>
+    </prop>
+    <prop><h>:-moz-viewport</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_viewport"/>
+    </prop>
+    <prop><h>:-moz-viewport-scroll</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_viewport-scroll"/>
+    </prop>
+    <prop><h>:-moz-page</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_page"/>
+    </prop>
+    <prop><h>:-moz-page-sequence</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_page-sequence"/>
+    </prop>
+    <prop><h>:-moz-pagecontent</h>
+      <LabNote uri="&uri.labNote;ex_selectors/pe_pagecontent"/>
+    </prop>
+    <prop><h>:-moz-tree-cell()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-cell"/>
+    </prop>
+    <prop><h>:-moz-tree-cell-text()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-cell-text"/>
+    </prop>
+    <prop><h>:-moz-tree-twisty()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-twisty"/>
+    </prop>
+    <prop><h>:-moz-tree-image()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-image"/>
+    </prop>
+    <prop><h>:-moz-tree-row()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-row"/>
+    </prop>
+    <prop><h>:-moz-tree-indentation()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-indentation"/>
+    </prop>
+    <prop><h>:-moz-tree-column()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-column"/>
+    </prop>
+    <prop><h>:-moz-tree-line()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-line"/>
+    </prop>
+    <prop><h>:-moz-tree-separator()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-separator"/>
+    </prop>
+    <prop><h>:-moz-tree-progressmeter()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-progressmeter"/>
+    </prop>
+    <prop><h>:-moz-tree-drop-feedback()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_tree-drop-feedback"/>
+    </prop>
+    <prop><h>:-moz-drop-marker()</h>
+      <LabNote uri="&uri.labNote;ex_xul/pe_drop-marker"/>
+    </prop>
+    <prop><h>:left</h>
+      <CSS2 uri="&uri.CSS2;page.html#x11"/>
+    </prop>
+    <prop><h>:right</h>
+      <CSS2 uri="&uri.CSS2;page.html#x13"/>
+    </prop>
+    <prop><h>:first</h>
+      <CSS2 uri="&uri.CSS2;page.html#x15"/>
+    </prop>
+  </cat>
+  
+  <cat id="value">
+    <h>値</h>
+    <prop><h><h:var>keywords</h:var></h>
+      <CSS2 uri="&uri.CSS2;syndata.html#keywords"/>
+    </prop>
+    <prop><h>inherit</h>
+      <CSS2 uri="&uri.CSS2;cascade.html#value-def-inherit"/>
+      <a uri="http://hp.vector.co.jp/authors/VA022006/css/ui.html#cursor">&label.Katsukun;</a>
+    </prop>
+    <prop><h>-moz-initial</h>
+      <LabNote uri="&uri.labNote;ex_values/v_initial"/>
+    </prop>
+    
+    <h>型</h>
+    <prop><h><h:var>&lt;number&gt;</h:var></h>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-number"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#number"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_number"/>
+    </prop>
+    <prop><h><h:var>&lt;length&gt;</h:var></h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-length"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+      <a uri="http://www.mozilla.gr.jp/standards/webtips0027.html">&label.Mojira;</a>
+      <a uri="http://hp.vector.co.jp/authors/VA022006/css/data.html#lengths">&label.Katsukun;</a>
+    </prop>
+    <prop><h><h:var>&lt;percentage&gt;</h:var></h>
+      <CSS1 uri="&uri.CSS1;percentage-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#percentage-units"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#percentage"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_percentage"/>
+    </prop>
+    <prop><h><h:var>&lt;uri&gt;</h:var></h>
+      <CSS1 uri="&uri.CSS1;url"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-uri"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#uri"/>
+    </prop>
+    <prop><h><h:var>&lt;counter&gt;</h:var></h>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-counter"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#counter"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_counter"/>
+    </prop>
+    <prop><h><h:var>&lt;color&gt;</h:var></h>
+      <CSS1 uri="&uri.CSS1;color-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-color"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#color"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_color"/>
+      <a uri="http://hp.vector.co.jp/authors/VA022006/chart.html">&label.Katsukun;</a>
+    </prop>
+    <prop><h><h:var>&lt;angle&gt;</h:var></h>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-angle"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_angle"/>
+    </prop>
+    <prop><h><h:var>&lt;time&gt;</h:var></h>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-time"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_time"/>
+    </prop>
+    <prop><h><h:var>&lt;frequency&gt;</h:var></h>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-frequency"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_frequency"/>
+    </prop>
+    <prop><h><h:var>&lt;strings&gt;</h:var></h>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-string"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#string"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_string"/>
+    </prop>
+    <prop><h><h:var>&lt;shape&gt;</h:var></h>
+      <CSS2 uri="&uri.CSS2;visufx.html#value-def-shape"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#shape"/>
+    </prop>
+    
+    <h>単位</h>
+    <prop><h>em (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#em-width"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>en (<h:var>&lt;length&gt;</h:var>)</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>ex (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#ex"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>px (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#pixel-unites"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>字 (<h:var>&lt;length&gt;</h:var>)</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>行 (<h:var>&lt;length&gt;</h:var>)</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>行幅 (<h:var>&lt;length&gt;</h:var>)</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    
+    <prop><h>in (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#x41"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>cm (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#x41"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>mm (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#x41"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>pt (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#x41"/>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>jpt (<h:var>&lt;length&gt;</h:var>)</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    <prop><h>pc (<h:var>&lt;length&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;length-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#x41"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#length"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_length"/>
+    </prop>
+    <prop><h>q (<h:var>&lt;length&gt;</h:var>)</h>
+      <a uri="&uri.JISX4052;">&label.JISX4052;</a>
+    </prop>
+    
+    <prop><h>% (<h:var>&lt;percentage&gt;</h:var>)</h>
+      <CSS1 uri="&uri.CSS1;percentage-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#percentage-units"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#percentage"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_percentage"/>
+    </prop>
+    <prop><h>deg (<h:var>&lt;angle&gt;</h:var>)</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#q19"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_angle"/>
+    </prop>
+    <prop><h>grad (<h:var>&lt;angle&gt;</h:var>)</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#q19"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_angle"/>
+    </prop>
+    <prop><h>rad (<h:var>&lt;angle&gt;</h:var>)</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#q19"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_angle"/>
+    </prop>
+    <prop><h>ms (<h:var>&lt;time&gt;</h:var>)</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#q20"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_time"/>
+    </prop>
+    <prop><h>s (<h:var>&lt;time&gt;</h:var>)</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#q20"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_time"/>
+    </prop>
+    <prop><h>Hz (<h:var>&lt;frequency&gt;</h:var>)</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#q21"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_frequency"/>
+    </prop>
+    <prop><h>kHz (<h:var>&lt;frequency&gt;</h:var>)</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#q21"/>
+      <LabNote uri="&uri.labNote;css2_syndata/v_frequency"/>
+    </prop>
+    
+    <h>関数</h>
+    <prop><h>counter()</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#counter"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#counter"/>
+      <LabNote uri="&uri.labNote;css2_syndata/f_counter"/>
+    </prop>
+    <prop><h>counters()</h>
+      <CSS2 uri="&uri.CSS2;syndata.html#counter"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#counter"/>
+      <LabNote uri="&uri.labNote;css2_syndata/f_counters"/>
+    </prop>
+    <prop><h>expression()</h>
+      <LabNote uri="&uri.labNote;ex_values/f_expression"/>
+    </prop>
+    <prop><h>url()</h>
+      <CSS1 uri="&uri.CSS1;url"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#value-def-uri"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#uri"/>
+      <LabNote uri="&uri.labNote;css2_syndata/f_url"/>
+    </prop>
+    <prop><h>local()</h>
+      <SVG11 uri="&uri.SVG11;color.html#propdef-color-profile-src"/>
+    </prop>
+    <prop><h>rgb()</h>
+      <CSS1 uri="&uri.CSS1;color-units"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#color-units"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#color"/>
+      <LabNote uri="&uri.labNote;css2_syndata/f_rgb"/>
+    </prop>
+    <prop><h>icc-color()</h>
+      <CSS2 uri="&uri.SVG11;painting#SpecifyingPaint"/>
+    </prop>
+    <prop><h>rect()</h>
+      <LabSupport uri="&uri.labSupport;css2_values/#shape"/>
+    </prop>
+    <prop><h>attr()</h>
+      <CSS2 uri="&uri.CSS2;generate.html#x16"/>
+      <LabSupport uri="&uri.labSupport;css2_generate/#content"/>
+      <LabNote uri="&uri.labNote;css2_generate/f_attr"/>
+    </prop>
+    <prop><h>rect()</h>
+      <CSS2 uri="&uri.CSS2;visufx.html#value-def-shape"/>
+      <LabSupport uri="&uri.labSupport;css2_values/#shape"/>
+      <LabNote uri="&uri.labNote;css2_visufx/f_rect"/>
+    </prop>
+  </cat>
+  
+  <cat id="misc">
+    <h>その他</h>
+    <prop><h>!important</h>
+      <CSS1 uri="&uri.CSS1;important"/>
+      <CSS2 uri="&uri.CSS2;cascade.html#important-rules"/>
+      <LabSupport uri="&uri.labSupport;css2_rules/#important"/>
+      <LabNote uri="&uri.labNote;css2_syndata/q_important"/>
+    </prop>
+    <prop><h>\</h>
+      <CSS1 uri="&uri.CSS1;forward-compatible-parsing"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#escaped-characters"/>
+    </prop>
+    <prop><h>whitespace</h>
+      <CSS1 uri="&uri.CSS1;"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#whitespace"/>
+    </prop>
+    <prop><h>/* */</h>
+      <CSS1 uri="&uri.CSS1;comments"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#comments"/>
+    </prop>
+    <prop><h><![CDATA[<!-- -->]]></h>
+      <CSS1 uri="&uri.CSS1;forward-compatible-parsing"/>
+      <CSS2 uri="&uri.CSS2;syndata.html#comments"/>
+    </prop>
+    <prop><h>媒体記述子</h>
+      <CSS2 uri="&uri.CSS2;media.html#media-types"/>
+      <a uri="http://www.w3.org/TR/html4/types.html#type-media-descriptors">&label.HTML4;</a>
+      <a uri="http://hp.vector.co.jp/authors/VA022006/css/media.html">&label.Katsukun;</a>
+      <LabNote uri="&uri.labNote;ex_mediaqueries/"/>
+    </prop>
+    
+    <h xml:lang="en">SGML</h>
+    <prop><h>xml-stylesheet</h>
+      <a uri="http://www.w3.org/TR/xml-stylesheet">&label.XML;</a>
+      <a uri="http://www.w3.org/1999/06/REC-xml-stylesheet-19990629/errata">&label.XML;&label.errata;</a>
+      <LabSupport uri="&uri.labSupport;xml-stylesheet/#xml-stylesheet_pi"/>
+    </prop>
+    <prop><h>link</h>
+      <a uri="http://www.w3.org/TR/html4/struct/links.html#edef-LINK">&label.HTML4;</a>
+      <a uri="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_linkmodule">&label.XHTMLm12n;</a>
+      <LabSupport uri="&uri.labSupport;html_styles/#link_elt"/>
+      <LabSupport uri="&uri.labSupport;xhtml_styles/#link_elt"/>
+    </prop>
+    <prop><h>stylesheet</h>
+      <a uri="http://www.w3.org/TR/xbl/#stylesheet">&label.XBL;</a>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_xblstylesheet.html">&label.XULPlanet;</a>
+    </prop>
+    
+    <prop><h>style</h>
+      <a uri="http://www.w3.org/TR/html4/present/styles.html#edef-STYLE">&label.HTML4;</a>
+      <a uri="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_styleattributemodule">&label.XHTMLm12n;</a>
+      <SVG11 uri="&uri.SVG11;styling#StyleElement"/>
+      <LabSupport uri="&uri.labSupport;html_styles/#style_elt"/>
+      <LabSupport uri="&uri.labSupport;xhtml_styles/#style_elt"/>
+    </prop>
+    <prop><h>layout</h>
+      <a uri="http://www.w3.org/TR/smil20/layout#edef-layout">&label.SMIL2;</a>
+    </prop>
+    <prop><h>@contentStyleSheet</h>
+      <SVG11 uri="&uri.SVG11;styling#ContentStyleTypeAttribute"/>
+    </prop>
+    <prop><h>@style</h>
+      <a uri="http://www.w3.org/TR/html4/present/styles.html#adef-style">&label.HTML4;</a>
+      <a uri="http://www.w3.org/TR/xhtml-modularization/abstract_modules.html#s_stylemodule">&label.XHTMLm12n;</a>
+      <LabSupport uri="&uri.labSupport;html_styles/#style_attr"/>
+      <LabSupport uri="&uri.labSupport;xhtml_styles/#style_attr"/>
+      <SVG11 uri="&uri.SVG11;styling#StyleAttribute"/>
+      <a uri="http://www.w3.org/TR/MathML2/chapter2#fund_globatt">&label.MathML2;</a>
+      <a uri="http://www.xulplanet.com/references/elemref/ref_XULElement.html#attrblk">&label.XULPlanet;</a>
+      <a uri="http://www.w3.org/TR/NOTE-VML#_Toc416858384">&label.VML;</a>
+      <a uri="http://www.w3.org/TR/css-style-attr">&label.CSS;</a>
+      <a uri="http://www.nttdocomo.co.jp/mc-user/i/xhtml/hikaku.html">&label.iXHTML;</a>
+    </prop>
+    
+    <h xml:lang="en">HTTP</h>
+    <prop><h>Link:</h>
+      <a uri="urn:ietf:rfc:2068" xml:lang="en">RFC 2068</a>
+      <a uri="http://www.w3.org/TR/html4/present/styles#idx-HTTP-2">&label.HTML4;</a>
+    </prop>
+    <prop><h>Default-Style:</h>
+      <a uri="http://www.w3.org/TR/html4/present/styles#idx-HTTP-1">&label.HTML4;</a>
+      <LabSupport uri="&uri.labSupport;html_styles/#meta_elt"/>
+      <LabSupport uri="&uri.labSupport;xhtml_styles/#meta_elt"/>
+    </prop>
+    <prop><h>Content-Style-Type:</h>
+      <a uri="http://www.w3.org/TR/html4/present/styles#default-style">&label.HTML4;</a>
+      <LabSupport uri="&uri.labSupport;html_styles/#meta_elt"/>
+      <LabSupport uri="&uri.labSupport;xhtml_styles/#meta_elt"/>
+    </prop>
+  </cat>
+</body>
+</root>
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - <http://www.mozilla.org/MPL/>
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is CSS Sidebar code.
+   -
+   - The Initial Developer of the Original Code is Wakaba.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Wakaba <w@suika.fam.cx>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
