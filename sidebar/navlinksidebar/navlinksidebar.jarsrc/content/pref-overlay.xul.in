@@ -1,29 +1,36 @@
-<?xml version="1.0"?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title xml:lang="en">Uninstall</title>
-<script type="application/x-javascript" src="unregister.js"></script>
-</head>
-<body>
-<div><input type="button" id="uninstall" xml:lang="en" value="Uninstall" /></div>
-<div id="status" xml:lang="en" />
+<!DOCTYPE overlay SYSTEM "%%locale-uri%%add-panel.dtd">
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
 <script type="application/x-javascript">
-document.getElementById('uninstall').addEventListener('click', function (){
-  var unreg = new exUnregisterer('chrome://navlinksidebar/content/contents.rdf');
-  unreg.unregister();
-  document.getElementById('status').appendChild(document.createTextNode('Uninstalled.'));
-}, false);
+var nsXUL = 'http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul';
+
+function initNavLinkSidebarItem () {
+  window.removeEventListener ('load', initNavLinkSidebarItem, true);
+  var parent = document.getElementById ('navigator');
+  if (!parent) return;
+  parent = parent.getElementsByTagNameNS (nsXUL, 'treechildren')[0];
+  if (!parent) return;
+  
+  var item = document.createElementNS (nsXUL, 'treeitem');
+  var cell = item.appendChild (document.createElementNS (nsXUL, 'treerow'))
+      .appendChild (document.createElementNS (nsXUL, 'treecell'));
+  cell.setAttribute ('url', "%%content-uri%%pref-panel.xul");
+  cell.setAttribute ('label', "&navlinksidebar.pref.label;");
+  parent.appendChild (item);
+}
+window.addEventListener ('load', initNavLinkSidebarItem, true);
 </script>
-</body>
-</html>
+
+</overlay>
 <!--
 ***** BEGIN LICENSE BLOCK *****
-Version: MPL 1.1/GPL 2.0/LGPL 2.1
+Version: NPL 1.1/GPL 2.0/LGPL 2.1
 
-The contents of this file are subject to the Mozilla Public License Version
+The contents of this file are subject to the Netscape Public License Version
 1.1 (the "License"); you may not use this file except in compliance with
 the License. You may obtain a copy of the License at 
-<http://www.mozilla.org/MPL/>
+<http://www.mozilla.org/NPL/>
 
 Software distributed under the License is distributed on an "AS IS" basis,
 WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
@@ -35,7 +42,7 @@ Portions created by the Initial Developer are Copyright (C) 2003
 the Initial Developer. All Rights Reserved.
 
 Contributor(s):
-	none.
+	Wakaba <w@suika.fam.cx>
 
 Alternatively, the contents of this file may be used under the terms of
 either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -51,3 +58,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 -->
+<!-- $Date: 2004/04/14 12:16:22 $ -->

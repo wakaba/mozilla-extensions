@@ -1,19 +1,52 @@
 <?xml version="1.0"?>
-<!DOCTYPE html [
+<!DOCTYPE window [
   <!ENTITY % res SYSTEM "%%locale-uri%%add-panel.dtd">
   %res;
 ]>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>&sidebar.panel.add.title;</title>
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  orient="vertical"
+  title="&navlinksidebar.pref.title;"
+  headertitle="&navlinksidebar.pref.title;">
+
 <script type="application/x-javascript" src="chrome://inspector/content/jsutil/xpcom/XPCU.js" />
 <script type="application/x-javascript" src="RDFU.js" />
-</head>
-<body>
-<h1>&sidebar.panel.add.title;</h1>
-<p>&sidebar.panel.add.description;</p>
-<div><input type="button" id="addPanel" title="&sidebar.panel.add.button.description;" value="&sidebar.panel.add.button.label;" /></div>
-<div id="status"></div>
+<script type="application/x-javascript" src="unregister.js"></script>
+
+<groupbox orient="vertical">
+  <caption label="&sidebar.panel.add.title;"/>
+  <box orient="vertical">
+    <description>&sidebar.panel.add.description;</description>
+    <button
+            label="&sidebar.panel.add.button.label;"
+            tooltiptext="&sidebar.panel.add.button.description;"
+            oncommand="addPanel ();"/>
+    <description id="status"/>
+  </box>
+</groupbox>
+
+<groupbox orient="vertical">
+  <caption label="&navlinksidebar.pref.uninstall.title;"/>
+  <box orient="vertical">
+    <description>&navlinksidebar.pref.uninstall.description;</description>
+    <button
+            label="&navlinksidebar.pref.uninstall.button.label;"
+            oncommand="unreg ();"/>
+    <description id="remove-status"/>
+  </box>
+</groupbox>
+
+<spacer flex="1"/>
+
+<groupbox orient="vertical">
+  <caption label="&navlinksidebar.pref.about.title;"/>
+  <box orient="vertical">
+    <description>%%package-display-name%%</description>
+    <description>&navlinksidebar.pref.about.author.label;: %%package-author-name%%</description>
+    <description>&navlinksidebar.pref.about.www.label;: &lt;<a href='javascript:showPage("%%package-www-uri%%");' xmlns="http://www.w3.org/1999/xhtml">%%package-www-uri%%</a>&gt;</description>
+  </box>
+</groupbox>
+
 <script type="application/x-javascript">
 const kDirServiceCID       = "@mozilla.org/file/directory_service;1"
 const kNCURI               = "http://home.netscape.com/NC-rdf#";
@@ -81,16 +114,49 @@ SidebarPrefs.prototype = {
 
   var sidebarPref = new SidebarPrefs();
   sidebarPref.initSidebarData();
-  document.getElementById ('addPanel').addEventListener('click', function () {
-    if (sidebarPref.installSidebar()) {
-      document.getElementById('status').appendChild(document.createTextNode('&sidebar.panel.add.success;'));
-    } else {
-      document.getElementById('status').appendChild(document.createTextNode('&sidebar.panel.add.failure;'));
-    }
-  },false);
+
+function addPanel () {
+  if (sidebarPref.installSidebar()) {
+    document.getElementById('status').appendChild(document.createTextNode("&sidebar.panel.add.success;"));
+  } else {
+    document.getElementById('status').appendChild(document.createTextNode("&sidebar.panel.add.failure;"));
+  }
+}
+
+function unreg () {
+  var STRBUNDLE = Components.classes['@mozilla.org/intl/stringbundle;1'].getService(Components.interfaces.nsIStringBundleService);
+  var msg = STRBUNDLE.createBundle ("%%locale-uri%%pref-panel.properties");
+
+  if (!confirm (msg.GetStringFromName ('uninstall_confirm'))) return;
+
+  var unreg = new exUnregisterer (
+    %%jar-content-content-rdf-uri%%,
+    %%jar-locale-content-rdf-uri%%
+  );
+  unreg.unregister();
+  document.getElementById ('remove-status')
+          .appendChild (document.createTextNode("&navlinksidebar.pref.uninstall.success;"
+                                .replace (/\$s/, unreg.getFilePathFromURLSpec (
+  unreg.exists (unreg.UChrome + '%%jar-filename%%') ?
+    unreg.UChrome + '%%jar-filename%%' :
+    unreg.Chrome  + '%%jar-filename%%'))));
+}
+
+function showPage (uri) {
+  var WINMAN;
+  if (Components.classes['@mozilla.org/appshell/window-mediator;1'])
+    WINMAN = Components.classes['@mozilla.org/appshell/window-mediator;1'].getService(Components.interfaces.nsIWindowMediator);
+  else
+    WINMAN = Components.classes['@mozilla.org/rdf/datasource;1?name=window-mediator'].getService(Components.interfaces.nsIWindowMediator);
+  var opener = WINMAN.getMostRecentWindow('navigator:browser');
+
+  if (opener) opener.loadURI (uri);
+  else window.open (uri);
+}
+
 </script>
-</body>
-</html>
+
+</window>
 <!--
 ***** BEGIN LICENSE BLOCK *****
 Version: NPL 1.1/GPL 2.0/LGPL 2.1
@@ -126,4 +192,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 -->
-<!-- $Date: 2003/07/06 08:32:27 $ -->
+<!-- $Date: 2004/04/14 12:16:22 $ -->

@@ -27,7 +27,7 @@ dummy:
 	cd $@/locale/ja-JP/$(PACKAGE_BASENAME) && make all
 	cd $@/locale/en-US/$(PACKAGE_BASENAME) && make all
 
-%.xpi: %.jar install.js
+%.xpi: %.jar install.js install-res.en.inf
 	-rm $@
 	zip -r $@ * -x $(EXCLUDED_FILES)
 

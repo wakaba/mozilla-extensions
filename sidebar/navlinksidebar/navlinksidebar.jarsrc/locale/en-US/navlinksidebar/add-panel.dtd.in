@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!ENTITY navlinksidebar.pref.label "Navigation Page Panel">
+<!ENTITY navlinksidebar.pref.title "Navigation Page Sidebar Panel">
+
 <!ENTITY sidebar.panel.title             "Navigation Page">
-<!ENTITY sidebar.panel.add.title         "Add Navigation Panel (%%package-version%%)">
-<!ENTITY sidebar.panel.add.description   "Click button below to add navigation panel to your Sidebar.">
-<!ENTITY sidebar.panel.add.button.label  "Add">
-<!ENTITY sidebar.panel.add.button.description "Pushing this button make navigation sidebar panel added.">
-<!ENTITY sidebar.panel.add.success       "Navigation panel is added to your Sidebar.">
-<!ENTITY sidebar.panel.add.failure       "Navigation panel cannot be added to your Sidebar.  It might have already been there.">
+<!ENTITY sidebar.panel.add.title         "Add &sidebar.panel.title;">
+<!ENTITY sidebar.panel.add.description   "Push button below to add &sidebar.panel.title; to your Sidebar.">
+<!ENTITY sidebar.panel.add.button.label  "Add &sidebar.panel.title;">
+<!ENTITY sidebar.panel.add.button.description "Pushing this button makes &sidebar.panel.title; added.">
+<!ENTITY sidebar.panel.add.success       "&sidebar.panel.title; is added to your Sidebar.">
+<!ENTITY sidebar.panel.add.failure       "&sidebar.panel.title; cannot be added to your Sidebar.  It might have already been registered.">
+
+<!ENTITY navlinksidebar.pref.uninstall.title "Uninstall">
+<!ENTITY navlinksidebar.pref.uninstall.description "Push button below to unregister %%package-name%%.  (You should remove &sidebar.panel.title; from Sidebar before uninstalling.)">
+<!ENTITY navlinksidebar.pref.uninstall.button.label "Uninstall %%package-name%%">
+<!ENTITY navlinksidebar.pref.uninstall.success "%%package-display-name%% has been unregistered.  Close browser and remove file $s.">
+
+<!ENTITY navlinksidebar.pref.about.title "About">
+<!ENTITY navlinksidebar.pref.about.author.label "Auhtor">
+<!ENTITY navlinksidebar.pref.about.www.label "Web page">
 
 <!--
 ***** BEGIN LICENSE BLOCK *****
@@ -46,4 +58,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 -->
-<!-- $Date: 2003/07/06 10:08:27 $ -->
+<!-- $Date: 2004/04/14 12:16:22 $ -->

@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!ENTITY sidebar.panel.title             "案内頁 (%%package-version%%)">
-<!ENTITY sidebar.panel.add.title         "案内パネルの追加">
-<!ENTITY sidebar.panel.add.description   "次のボタンを押すと、 Sidebar に案内パネルを追加します。">
-<!ENTITY sidebar.panel.add.button.label  "追加">
-<!ENTITY sidebar.panel.add.button.description "このボタンを押すと、 Sidebar に案内パネルを追加します。">
-<!ENTITY sidebar.panel.add.success       "Sidebar に案内パネルを追加しました。">
-<!ENTITY sidebar.panel.add.failure       "Sidebar に案内パネルを追加できませんでした。既に追加されているのかもしれません。">
+<!ENTITY navlinksidebar.pref.label "案内頁パネル">
+<!ENTITY navlinksidebar.pref.title "案内頁 Sidebar パネル">
+
+<!ENTITY sidebar.panel.title             "案内頁">
+<!ENTITY sidebar.panel.add.title         "「&sidebar.panel.title;」パネルの追加">
+<!ENTITY sidebar.panel.add.description   "次のボタンを押すと、 Sidebar に「&sidebar.panel.title;」パネルを追加します。">
+<!ENTITY sidebar.panel.add.button.label  "「&sidebar.panel.title;」パネルの追加">
+<!ENTITY sidebar.panel.add.button.description "このボタンを押すと、 Sidebar に「&sidebar.panel.title;」パネルを追加します。">
+<!ENTITY sidebar.panel.add.success       "Sidebar に「&sidebar.panel.title;」パネルを追加しました。">
+<!ENTITY sidebar.panel.add.failure       "Sidebar に「&sidebar.panel.title;」パネルを追加できませんでした。既に追加されているのかもしれません。">
+
+<!ENTITY navlinksidebar.pref.uninstall.title "削除">
+<!ENTITY navlinksidebar.pref.uninstall.description "次のボタンを押すと、 %%package-name%% の登録を抹消します。 (あらかじめ Sidebar の設定で「&sidebar.panel.title;」パネルを削除しておいてください。)">
+<!ENTITY navlinksidebar.pref.uninstall.button.label "%%package-name%% の削除">
+<!ENTITY navlinksidebar.pref.uninstall.success "%%package-display-name%% の登録を削除しました。ブラウザを終了し、ファイル $s を削除してください。">
+
+<!ENTITY navlinksidebar.pref.about.title "版情報">
+<!ENTITY navlinksidebar.pref.about.author.label "著者">
+<!ENTITY navlinksidebar.pref.about.www.label "Web 頁">
 
 <!--
 ***** BEGIN LICENSE BLOCK *****
@@ -46,4 +58,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 -->
-<!-- $Date: 2003/07/06 10:08:27 $ -->
+<!-- $Date: 2004/04/14 12:16:22 $ -->
