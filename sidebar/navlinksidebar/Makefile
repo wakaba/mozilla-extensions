@@ -6,7 +6,7 @@ EXCLUDED_FILES = \
 	*.jarsrc/*/*/*/ *.jarsrc/*/*/*/* *.jarsrc/*/*/*/*/ *.jarsrc/*/*/*/*/* \
 	*.jarsrc/*/*/*/*/*/ *.jarsrc/*/*/*/*/*/* \
 	*.xpi
-REPPL_DIR = ../tool/
+REPPL_DIR = ../../tool/
 REPPL_SRC = ./package-info.src
 REPPL_SCRIPT = $(REPPL_DIR)replace.pl
 REPPL = perl $(REPPL_SCRIPT) $(REPPL_SRC)
