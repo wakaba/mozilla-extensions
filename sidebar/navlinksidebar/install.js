@@ -1,12 +1,12 @@
-var err = initInstall("navLinkSidebar 0.0.1", "navLinkSidebar", "0.0.1"); 
+var err = initInstall("navLinkSidebar 1.1", "navLinkSidebar", "1.1"); 
 logComment("initInstall: " + err);
 
 addFile("Navigation page Sidebar Panel",
-  "navLinkSidebar.jar",	// jar source folder 
+  "navlinksidebar.jar",	// jar source folder 
   getFolder("Chrome"),	// target folder
   "");	// target subdir 
 
-registerChrome(PACKAGE | DELAYED_CHROME, getFolder("Chrome","navLinkSidebar.jar"), "content/");
+registerChrome(PACKAGE | DELAYED_CHROME, getFolder("Chrome","navlinksidebar.jar"), "content/");
 
 if (err==SUCCESS)
   performInstall(); 

@@ -9,7 +9,7 @@
 <div id="status" xml:lang="en" />
 <script type="application/x-javascript">
 document.getElementById('uninstall').addEventListener('click', function (){
-  var unreg = new exUnregisterer('chrome://navLinkSidebar/content/contents.rdf');
+  var unreg = new exUnregisterer('chrome://navlinksidebar/content/contents.rdf');
   unreg.unregister();
   document.getElementById('status').appendChild(document.createTextNode('Uninstalled.'));
 }, false);

@@ -1,19 +1,71 @@
-<?xml version="1.0"?>
-<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
 
-<RDF:Seq about="urn:mozilla:package:root">
-  <RDF:li resource="urn:mozilla:package:navlinksidebar"/>
-</RDF:Seq>
+html {
+	margin: 0;
+	border: none 0 #000000;
+	padding: 0;
+	line-height: 150%;
+}
 
-<RDF:Description about="urn:mozilla:package:navlinksidebar"
-  chrome:displayName="Navigation page Sidebar Panel"
-  chrome:author="Wakaba"
-  chrome:name="navlinksidebar">
-</RDF:Description>
+body {margin:9;border-style: none; padding: 0}
 
-</RDF:RDF>
-<!--
+h1, h2, h3, h4, h5, h6 {
+	font-size: 120% !important;
+}
+
+p {
+	margin: 0.3em 0;
+	text-indent: 1em;
+}
+
+ul, ol {
+	margin: 0.3em 0 0.3em 0;
+	padding: 0;
+}
+ul ul, ul ol, ol ul, ol ol {
+	margin-left: 1em;
+}
+li {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+dl {
+	margin-left: 0.3em 0.1em;
+}
+dt {
+	margin-left: 0;
+}
+dd {
+	margin-left: 1.0em;
+}
+
+a[href] {
+	color: blue;
+	text-decoration: underline;
+}
+a[href]:visited {
+	color: red;
+}
+a[href]:active {
+	color: lime;
+}
+
+/* Sidebar で表示中の文書の URI は html 要素の xMozSbNpUri 属性の値になります。
+   本来は名前空間を使って適当な属性を設定した方がいいのですが... 
+
+Example:
+
+[xMozSbNpUri^="http://foo.example/"] h1 {
+	margin-left: 0;
+}
+
+XHTML 文書に対してはこのスタイル・シートそのものが適用されません。
+(そのうち直す予定。)
+
+*/
+
+/*
 ***** BEGIN LICENSE BLOCK *****
 Version: MPL 1.1/GPL 2.0/LGPL 2.1
 
@@ -32,7 +84,7 @@ Portions created by the Initial Developer are Copyright (C) 2003
 the Initial Developer. All Rights Reserved.
 
 Contributor(s):
-	none.
+	Wakaba <w@suika.fam.cx> (original author)
 
 Alternatively, the contents of this file may be used under the terms of
 either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -47,4 +99,5 @@ the provisions above, a recipient may use your version of this file under
 the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
--->
+*/
+/* $Date: 2003/07/06 02:00:50 $ */

@@ -3,18 +3,18 @@
 <head>
 <title xml:lang="en">Adding Navigation Panel</title>
 <script type="application/x-javascript" src="chrome://inspector/content/jsutil/xpcom/XPCU.js"></script>
-<script type="text/javascript" src="RDFU.js"></script>
+<script type="application/x-javascript" src="RDFU.js"></script>
 </head>
 <body>
 <div><input type="button" id="addPanel" xml:lang="en" value="Add!" /></div>
 <div id="status"></div>
-<script type="text/javascript">
+<script type="application/x-javascript">
 const kDirServiceCID       = "@mozilla.org/file/directory_service;1"
 const kNCURI               = "http://home.netscape.com/NC-rdf#";
 const kSidebarPanelId      = "UPnls";	// directory services property to find panels.rdf
 const kSidebarURNPanelList = "urn:sidebar:current-panel-list";
 const kSidebarURN3rdParty  = "urn:sidebar:3rdparty-panel";
-const kSidebarURL          = "chrome://navLinkSidebar/content/sidebar.html";
+const kSidebarURL          = "chrome://navlinksidebar/content/sidebar.html";
 const kSidebarTitle        = "Navigation Page";
 
 ///// class SidebarPrefs /////////////////////////

@@ -3,7 +3,7 @@
 <head>
 <title xml:lang="en">Navigation</title>
 <link rel="stylesheet" href="sidebar.css" type="text/css" />
-<script type="text/javascript" defer="defer">
+<script type="application/x-javascript">
   const kObserverServiceIID  = "@mozilla.org/observer-service;1";
   var NavLoadObserver = {
     observe: function(aWindow) {
@@ -15,29 +15,47 @@
       Links :
         for (var j = 0; j < linkTypes.length; j++) {
           for (var i = 0; i < hLinks.length; i++) {
-            if (hLinks[i].rel.replace(/\s+/,' ') == linkTypes[j]) {
-              rURI = hLinks[i].href; // ↑.toLowerCase した方がいいが、なぜか失敗する
+            if (hLinks[i].rel.replace(/\s+/,' ').toLowerCase() == linkTypes[j]) {
+              rURI = hLinks[i].href;
               break Links;
             }
           }
         }
       if (rURI && document.getElementById('navBrowser')) {
         var navBrowser = document.getElementById('navBrowser');
-        if (navBrowser.contentWindow.location.href != rURI)
+        if (navBrowser.contentWindow.location.href != rURI) {
           navBrowser.contentWindow.location.href = rURI;
-        navBrowser.addEventListener("load", function(){
-          var rLinks = navBrowser.contentWindow.document.links;	// A and AREA
-          if (!rLinks)
-            rLinks = navBrowser.contentWindow.document.getElementsByTagName('a');
-          var dURI = navBrowser.contentWindow.document.URL + '#';
-          for (var i = 0; i < rLinks.length; i++) { 
-            if (!rLinks[i].target) {
-              if (rLinks[i].href.indexOf(dURI) != 0)
-                rLinks[i].target = '_content';
+          navBrowser.addEventListener("load", function(){
+            var navDoc = navBrowser.contentWindow.document;
+            var rLinks = navDoc.links;	// A and AREA
+            if (!rLinks) rLinks = navDoc.getElementsByTagName('a');
+            var dURI = navBrowser.contentWindow.location.href.replace(/\#.*$/,'')
+                     + '#';
+            for (var i = 0; i < rLinks.length; i++) { 
+              if (!rLinks[i].target) {
+                //if (rLinks[i].href.indexOf(dURI) != 0)
+                  rLinks[i].target = '_content';
+              }
             }
-          }
-        },true);
+            var rForms = navDoc.getElementsByTagName('form');
+            for (var j = 0; j < rForms.length; j++) { 
+              if (!rForms[j].target) rForms[j].target = '_content';
+            }
+            navDoc.getElementsByTagName('html')[0].setAttribute('xMozSbNpUri',dURI);
+            var l = navDoc.createElement('link');
+            l.setAttribute('href',location.href+'/../sidebar-site.css');
+            /* Does not work, due to the security protection
+            const DIR = Components.classes['@mozilla.org/file/directory_service;1'].getService(Components.interfaces.nsIProperties);
+            var profDir = DIR.get('ProfD', Components.interfaces.nsIFile);
+            const ioService = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService);
+            l.setAttribute ('href', ioService.newFileURI(profDir).spec+'chrome/navlinksidebar-site.css');
+            */
+            l.setAttribute('rel','stylesheet');
+            navDoc.getElementsByTagName('head')[0].appendChild(l);
+          },true);
+        }
       }
+      return;
     }
   };
   var observerService = Components.classes[kObserverServiceIID].getService(Components.interfaces["nsIObserverService"]);
@@ -87,3 +105,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 -->
+<!-- $Date: 2003/07/06 02:00:50 $ -->
