@@ -1,0 +1,167 @@
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Preferences Toolbar 2.
+   -
+   - The Initial Developer of the Original Code is
+   - Aaron Andersen.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Andersen <aaron@xulplanet.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="help.css" type="text/css">
+
+<title>Using the Preferences Toolbar - PrefBar Help</title>
+<body>
+<a href="http://www.xulplanet.com/"><img id="xulplanet" src="xulplanet.png" alt="XUL Planet"></a>
+<img id="prefbarhelp" src="prefbarhelp.png" alt="PrefBar Help">
+
+<div id="buttons">
+<a href="index.html">Introduction</a>
+<span>Using the Preferences Toolbar</span>
+<a href="newstuff.html">What's New in 2.2?</a>
+<a href="buttons.html">Button List</a>
+<a href="faq.html">PrefBar FAQ</a>
+<a href="credits.html">Credits</a>
+<a href="feedback.html">Help/Feedback</a>
+</div>
+
+<div id="content">
+<h1>Using the Preferences Toolbar</h1>
+This is the PrefBar User's Guide.  Everything you need to know about using the PrefBar is right here in this file.  Well, maybe not <i>everything</i>, but pretty darn close.
+</p>
+<p>
+<a href="#installing">Installing the PrefBar</a>
+<br><a href="#showing">Showing the PrefBar</a>
+<br><a href="#customizing">Customizing the PrefBar</a>
+<br><a href="#knownbugs">Known Bugs</a>
+</p>
+
+<hr>
+
+
+<h2 id="installing">Installing the PrefBar</h2>
+<p>
+The Preferences Toolbar was designed to work without errors on Mozilla builds 1.0-1.2 and Phoenix release 0.5.  This version of the PrefBar does not work recent Phoenix nightly builds or Phoenix 0.7!   Use on future Mozilla or Phoenix releases should also work, unless the developers of said browsers change something major.  The PrefBar has not been tested on any Netscape releases, so it may or may not work on them.</p>
+<p>
+To install the PrefBar, click on the "Install Now" link on the <a href="http://www.xulplanet.com/downloads/prefbar/">prefbar installation page</a> at <a href="http://www.xulplanet.com">XulPlanet.com</a>.  You have to have the "JavsScript" and "Software Installation" preferences turned on in order for this to work.
+</p>
+<p>If you are on an operating system with file permissions (such as any unix variant) be sure that you have permission to write to your mozilla chrome directory when you try to install the PrefBar.  The most common installation problem with the PrefBar is linux users installing mozilla from root, and then trying to install the PrefBar as a regular user.  Don't do this.  It won't work.
+</p>
+<p>
+After installation you will need to restart mozilla before you can use the PrefBar.
+</p>
+
+<h2 id="showing">Showing the PrefBar</h2>
+<p>
+To show the Preferences Toolbar, either enable it via the "View->Show/Hide" menu (or the "View" menu in Phoenix), or by pressing the F8 key.  If the second method doesn't work, try the first.  If the PrefBar is not listed in the "View->Show/Hide" menu it probably means the install was not successful.  See the previous section.
+</p>
+
+<h2 id="customizing">Customizing the PrefBar</h2>
+<p>
+To customize the PrefBar, click the Customize button on its far right, or go into the main preferences dialog and select "Prefeferences Toolbar" from the Advanced catagory.
+</p>
+<p>
+The UI for customizing the toolbar is fairly straight forward.  The buttons currently on the toolbar are shown in the right tree, and the available buttons not on the toolbar in the left tree.  To add an existing button to the toolbar, select it in the right tree and click on "Add Item".  To remove an item from the toolbar, select it in the left tree and click on "Remove Item".  To reposition a toolbar item, selct it in either tree and click on "Move Up" or "Move Down".  To create a new toolbar item, click on "New Item".  To edit or delete an existing item, select it and click on "Edit Item" or "Delete Item"
+</p>
+<p>
+When editing existing buttons or creating new ones, you may encounter one or more of the following attributes:
+</p>
+<dl>
+<dt>Id</dt>
+<dd>
+Everything has an Id, but they are used behind the scenes so you really don't have to worry about them much.  Just use any old string.  In retrospect, you probably shouldn't have to make up or even see the Ids anywhere in the customization dialog.  Future versions of the prefbar will most likely have the Ids for new elements made up for you automagically, without there even being a UI for it.
+</dd>
+
+<dt>Label</dt>
+<dd>
+This is the label that will appear on the button and in the customization dialog.
+</dd>
+
+<dt>Onclick</dt>
+<dd>
+For a button, this is the code that is executed when someone clicks the button.  The built in buttons have built in functions and therefore have very short onclick values.  If you add your own buttons, you will likely need to compress an entire function into one line (i.e., delete all the line breaks in it) and squeeze it all into the little edit box on the new button page.
+</dd>
+
+<dt>Prefstring</dt>
+<dd>
+This is the name of the preference the widget deals with.  These aren't exactly documented anywhere, so the best way to find the prefstring of a new preference you want to add would be to look at the XUL source code for whatever preferences panel sets it normally.
+<dd>
+
+<dt>fromPref & topPref</dt>
+<dd>
+This applies only the Pref checks.  Because there are multiple types of prefs (int, bool, string, etc.) and because some of them take weird values, the prefbar maps them to the on and off state of the checkboxes using the frompref and topref attributes.
+<br><br>
+The frompref attribute is a javascript expression which, when evaluated, will return the state the checkbox is to be set to (i.e. either true or false.)   The variable ‘value' holds the current state of the preference, so common frompref values are "value" and  "!value". (Or "Boolean(value)" and "Boolean(!value)" if value is an int.  Remember, the end result must be a bool.)  Char prefs usually require weirder topref and frompref values.)
+<br><br>
+The topref attribute is the reverse of the frompref attribute.  It is used to turn the boolean checkbox state variable into the appropriate pref value.  Like frompref, topref must be a javascript expression which evaluates to the correct preference value, which must be of the same type as the preference involved.  The "value" variable holds the "true" or "false" state of the checkbox in question.  Common topref values are "value", "!value" and "2*Number(!value)".
+<br><br>
+Once again, the preferences are not very well documented, so the best way to find out what values a certain preference takes is by examining the XUL source code of the UI for that preference.  If the preference in question doesn't have a UI, then you're pretty much on your own.
+</dd>
+
+<dt>Label & Value</dt>
+<dd>
+When dealing with menulists, each option has a corresponding value which the preference defined in prefstring will be set to when that option is chosen.  If the value for an option is "" then the preference will be removed when that option is chosen.  If both the value and label for a given option are empty than the menulist in question will have one less option than it otherwise could.
+<br><br>
+If you have less than six options in your menulist, make sure it is the empty options are the last ones.  Menulists with empty options in other places will do weird things.
+</dd>
+
+
+<dt>Url</dt>
+<dd>
+For a link, this is the url you will be taken to if you click on the link.  Just like a bookmark, only less powerful.
+</dd>
+</dl>
+
+
+<!--
+<h2 id="using">Using the PrefBar</h2>
+<p>
+
+</p>
+
+-->
+
+
+<h2 id="knownbugs">Known Bugs</h2>
+<ul>
+	<li>The Kill Flash button doesn't seem to like frames very well.  I'll have to look into this one later.</li>
+	<li>Some of the preference checks don't seem to work in phoenix.  I'm not sure what's causing the problems, but we may have to fork the code into a phoenix version and a mozilla version if I can't get it working.</li>
+</ul>
+
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ENTITY toggle-prefBar-key "VK_F8">
+
+<!ENTITY prefbar-toggle-label    "設定工具棒">
+
+<!ENTITY prefbar-help-main       "設定棒のヘルプ">
+<!ENTITY prefbar-help-usersguide "利用者の手引き">
+<!ENTITY prefbar-help-whatsnew   "新着情報">
+<!ENTITY prefbar-help-buttonlist "ボタン一覧">
+<!ENTITY prefbar-help-faq        "設定棒 FAQ">
+<!ENTITY prefbar-help-credits    "Credits"><!--credits はなんと訳す?-->
+<!ENTITY prefbar-help-feedback   "反応"><!--feedback はなんと訳す?-->
+<!ENTITY prefbar-help-customize  "調整..."><!--customize はなんと訳す?-->

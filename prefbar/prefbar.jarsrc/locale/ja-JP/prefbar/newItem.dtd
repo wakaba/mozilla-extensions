@@ -1,0 +1,31 @@
+<!ENTITY new-item-title        "新しい項目">
+<!ENTITY edit-item-title       "項目の編集">
+
+<!ENTITY button-type-check     "設定 Check"> 
+<!ENTITY button-type-button    "ボタン"> 
+<!ENTITY button-type-menulist  "メニュー"> 
+<!ENTITY button-type-link      "リンク"> 
+<!ENTITY button-type-label     "文札"> 
+<!ENTITY button-type-separator "区切子"> 
+<!ENTITY button-type-spacer    "間隔子"> 
+
+<!ENTITY button-attr-type       "項目の型>
+<!ENTITY button-attr-data       "項目データ">
+
+<!ENTITY button-attr-id         "ID:">
+<!ENTITY button-attr-label      "札:">
+<!ENTITY button-attr-prefstring "設定文字列:">
+<!ENTITY button-attr-topref     "toPref:">
+<!ENTITY button-attr-frompref   "fromPref:">
+<!ENTITY button-attr-onclick    "クリック時:">
+<!ENTITY button-attr-url        "URL:">
+
+<!ENTITY button-attr-itemlabel  "札">
+<!ENTITY button-attr-itemvalue  "値">
+<!ENTITY button-attr-itemnum    "#">
+<!ENTITY button-attr-item1      "1">
+<!ENTITY button-attr-item2      "2">
+<!ENTITY button-attr-item3      "3">
+<!ENTITY button-attr-item4      "4">
+<!ENTITY button-attr-item5      "5">
+<!ENTITY button-attr-item6      "6">

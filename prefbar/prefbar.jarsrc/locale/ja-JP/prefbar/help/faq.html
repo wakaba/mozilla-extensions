@@ -1,0 +1,214 @@
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Preferences Toolbar 2.
+   -
+   - The Initial Developer of the Original Code is
+   - Aaron Andersen.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Andersen <aaron@xulplanet.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="help.css" type="text/css">
+
+<title>PrefBar FAQ - PrefBar Help</title>
+<body>
+<a href="http://www.xulplanet.com/"><img id="xulplanet" src="xulplanet.png" alt="XUL Planet"></a>
+<img id="prefbarhelp" src="prefbarhelp.png" alt="PrefBar Help">
+
+<div id="buttons">
+<a href="index.html">Introduction</a>
+<a href="use.html">Using the Preferences Toolbar</a>
+<a href="newstuff.html">What's New in 2.2?</a>
+<a href="buttons.html">Button List</a>
+<span>PrefBar FAQ</span>
+<a href="credits.html">Credits</a>
+<a href="feedback.html">Help/Feedback</a>
+</div>
+
+<div id="content">
+<h1>PrefBar FAQ</h1>
+<p>
+If you have a question, check here before sending me an email; chances are your question has already been asked and is included below.
+</p>
+
+<h3>General</h3>
+<p>
+<a href="#whatis">What is the Preferenes Toolbar?</a>
+</p>
+
+<h3>Installation</h3>
+<p>
+<a href="#popupproblem">Help! I installed the PrefBar2 over the PrefBar1 and now I can't get popups to work.</a>
+<br><a href="#uninstall">How do I uninstall the Preferences Toolbar</a>
+</p>
+
+<h3>Use</h3>
+<p>
+<a href="#resetbuttons">How do I reset the buttons on the toolbar?</a>
+<br><a href="#imagereload">Why doesn't the images pref work correctly?</a>
+<br><a href="#onloadpopups">What happened to the old onLoadPopups pref?</a>
+</p>
+
+<h3>Feature Requests</h3>
+<p>
+<a href="#disableflash">Can you add a checkbox to disable flash?</a>
+<br><a href="#onothertoolbars">Can you make the PrefBar buttons appear on the Personal Toolbar?</a>
+<br><a href="#menulistlimit">Why can't I have more than six options on a menulist?</a>
+<br><a href="#buttonvaluesask">I want to add a button to do such and such.  Do you know what the onclick value is?</a>
+<br><a href="#buttonvaluesgive">I added a button to do such and such; Do you want the values I used?</a>
+</p>
+
+<h3>Other</h3>
+<p>
+<a href="#foundabug">I discovered a bug!  What should I do?</a>
+<br><a href="#notlisted">My question isn't listed here.  Now what?</a>
+</p>
+
+
+
+
+
+
+
+
+
+<hr>
+
+<h2 id="whatis">What is the Preferenes Toolbar?</a></h2>
+<p>
+The Preferences Toolbar is a XUL overlay designed to make your web browsing experience more enjoyable and annoyance free by allowing you to quickly toggle certain navigator preferences and perform certain utility functions.
+</p>
+<p>
+For example, if you happen to find yourself visiting a site who's author thinks that red text on a yellow background constitutes an attractive color scheme, The Preferences Toolbar allows you to quickly turn off the "Custom Colors" pref, and browse that site in browser's default colors (usually white on black).
+</p>
+<p>
+Web developers will also enjoy being able to clear their browser cache with a single click, and just about everyone could use a quick user agent spoof now and then.
+</p>
+
+<h2 id="uninstall">How do I uninstall the Preferences Toolbar?</h2>
+<p>
+There is no automatic uninstall function as of yet.  To remove the preferences toolbar from your mozilla installation, follow these steps:
+<br><br>
+1.  Delete prefbar.jar from your mozilla chrome directory and prefbar.rdf from your profile directory.
+<br>
+2.  Edit installed-chrome.txt in your chrome directory, and remove the line (if one exists) referring to the prefbar.
+<br>
+3.  Delete the overlayinfo/navigator/content/overlays.rdf file (or the whole overlayinfo directory if you want) from your chrome directory and restart mozilla
+</p>
+<p>
+That only problem with that method is that the authors of certain other XUL addons for mozilla write their install scripts wrong such that they don't have a line in installed-chrome.txt and deleting the overlayinfo directory/file causes their addons to disappear from mozilla.  However, this is their problem not mine, so there's not much I can do about it.
+</p>
+<p>
+If you have installed other mozilla addons and you really want to save them, you could instead open the navigator overlayinfo file and manually delete all the references to the prefbar, but I wouldn't recommend it.
+</p>
+
+<h2 id="resetbuttons">How do I reset the buttons on the toolbar?</h2>
+<p>
+To reset all the buttons on your toolbar to the factory default, save <a href="chrome://prefbar/content/prefbar.rdf">this file</a> to your profile directory, then restart mozilla.  (Or just close mozilla and delete the prefbar.rdf file in your profile directory.)
+
+This might be useful if you have deleted something and want it back, or have edited one of the default buttons and want it restored to its original state.  (Note that doing this will destroy any changes you have made to the toolbar, including any new buttons you have created.)
+</p>
+
+<h2 id="disableflash">Can you add a checkbox to disable flash?</h2>
+<p>
+Although disabling flash turned out to be difficult, this feature was requested so often that I started promising people that I would get something in by 2.2.  What I finally came up with is the "Kill Flash" button that will remove any flash embeds from the current page.  Not quite as useful as being able to turn flash off completely, but it should be nice nonetheless.
+</p>
+
+
+<h2 id="imagereload">Why doesn't the images pref work correctly?</h2>
+<p>
+The images preference does work, it just had one weird quirk: it requires you to restart the page in order to see the effect.  If you don't restart the page you will get some strange behavior where the state of the images is exactly opposite that of the preference.  I have no idea why this happens, but I am almost certain it is a bug in mozilla, not in my prefbar code.
+</p>
+<p>
+A few people have suggested that I have the page automatically reload when you click that pref, but I think that could have some pretty bad unwanted side effects.  Plus I think users are perfectly capable of reloading the page themselves if they want to see the current page without images immediately, but most of the time I think people set that pref because they want the <i>next</I> page they plan to view to be loaded without images, so I'm not going to the prefbar do any automatic reloading.
+</p>
+
+
+<h2 id="onloadpopups">What happened to the old onLoadPopups pref?</h2>
+<p>
+The old onLoadPopups pref is still there, it is just called popups now.  It was actually the old popups pref that got removed, since it was pretty much made obsolete by the new popups pref.  (The new popups pref is the one that has a UI in the prefs dialog.  The old popups pref was a hack using capibility.policy.)  You should be able to get all of your popup blocking need with popups check currently included in the prefbar.  However, if you really want the old popups pref back, you can make a new one by using:
+</p>
+<p>
+prefstring: capability.policy.default.Window.open<br>
+topref: value ? 'allAccess' : 'noAccess'<br>
+frompref: Boolean(value == 'allAccess')
+</p>
+
+
+<h2 id="popupproblem">Help! I installed the PrefBar2 over the PrefBar1 and now I can't get popups to work.</h2>
+<p>
+If you had the old popups pref turned off, and then installed the PrefBar2, you won't be able to turn it back on again because that pref is no longer on the prefbar.  To reenable popups, either remake the old popups pref according to the instructions in the previous question, or open your prefs.js file (without mozilla running) and remove the line for "capability.policy.default.Window.open".
+</p>
+
+
+
+
+<h2 id="onothertoolbars">Can you make the PrefBar buttons appear on the Personal Toolbar?</h2>
+<p>
+Yes and no.  I could have done that. I was even planning on having that feature when I started writing the code for 2.0.  However, when I wrote the toolbar customization system I had to change the way prefbar button information is stored, and that made it much more difficult to have them on different toolbars than it would have been before.  I still could have done that, but I decided that with the PrefBar show/hide command being hooked up to the F8 key, the main reason to put the buttons on other toolbars (vertical screen space) was on longer an issue.  If you value your screen space I'd recomend leaving the PrefBar hidden until you need it, and then press F8 to show it, and F8 again to hide the toolbar after you are finished with it.
+</p>
+
+<h2 id="menulistlimit">Why can't I have more than six options on a menulist?</h2>
+<p>
+Because of what is either a design flaw in the XUL template syntax or my own stupidity, I was unable to figure out a way to write the toolbar code in such a way as to allow an arbitrary number of items in a menulist.  I therefore hard coded the templates for menulits with two through six items.  (This should probably be enough for most people, but if you think you know a way in which I could allow for that, <a href="feedback.html">let me know</a>.)
+</p>
+
+<h2 id="buttonvaluesask">I want to add a button to do such and such.  Do you know what the onclick value is?</h2>
+<p>
+No.  If I did, I likely would have included that button with the default installation.  Although I can go look up the values for this stuff, doing so is partly why it took me four months to get a phoenix compatible version of the toolbar released.  In the future, I probably will not have time to answer these sorts of questions anymore.
+</p>
+
+
+<h2 id="buttonvaluesgive">I added a button to do such and such; Do you want the values I used?</h2>
+<p>
+Yes, definitely.  A good number of the new buttons in each new version come by way of users who send in the values for them.  If someone just sends in an idea for a new button, it can take me an hour or more to go hunt down the values for it and get into the toolbar; when someone sends me those values, I can usually get it finished in less than ten minutes.
+</p>
+
+
+
+
+<h2 id="foundabug">I discovered a bug!  What should I do?</h2>
+<p>
+First check this FAQ and the <a href="use.html#knownbugs">known bugs</a> section of the <a href="use.html">User's Guide</a> to make sure I don't already know about the issue.  If you don't see anything related to your bug, <a href="feedback.html#myaddress">send me an email</a> about it and I'll see what I can do.  Be sure to include the exact version of the PrefBar you are using, as well as what operating system and mozilla build you see it with.
+
+<h2 id="notlisted">My question isn't listed here.  Now what?</h2>
+<p>
+If you've checked here and don't see your question, go ahead and <a href="feedback.html#myaddress">send me an email</a> about it.  I'll try my best to get back to you as soon as possible, although it might take a while depending on how many other emails I get that day.
+</p>
+
+
+
+
+</div>
+</body>
+</html>

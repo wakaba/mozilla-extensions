@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!ENTITY header-title "設定工具棒">
+
+<!ENTITY available-tree "利用可能な項目">
+<!ENTITY enabled-tree   "有効な項目">
+
+<!ENTITY name-col "項目名">
+<!ENTITY type-col "型">
+
+<!ENTITY button-enable "項目を追加 →">
+<!ENTITY button-disable "← 項目を削除">
+<!ENTITY button-up "上へ移動">
+<!ENTITY button-down "下へ移動">
+<!ENTITY button-new "新しい項目">
+<!ENTITY button-edit "項目を編集">
+<!ENTITY button-delete "項目を削除">
+
+
