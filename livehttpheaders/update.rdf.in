@@ -1,0 +1,9 @@
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+ 
+<RDF:Description about="urn:mozilla:extension:%%package-guid%%">
+  <em:version>%%package-version-number%%</em:version>
+  <em:updateLink>%%package-release-uri%%</em:updateLink>
+</RDF:Description>
+
+</RDF:RDF>
