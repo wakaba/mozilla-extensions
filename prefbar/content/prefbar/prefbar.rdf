@@ -111,8 +111,8 @@
     <RDF:li><RDF:resource about="urn:prefbar:buttons:spacer0"      prefbar:type="spacer" prefbar:label="(spacer)"      prefbar:enabled="true" /></RDF:li>
 
     <RDF:li><RDF:resource about="urn:prefbar:buttons:separator6"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="true" /></RDF:li>
-    <RDF:li><RDF:resource about="urn:prefbar:buttons:help"         prefbar:type="link" prefbar:url="chrome://prefbar/content/help/index.html"                                      prefbar:label="PrefBar Help"      prefbar:enabled="true" /></RDF:li>
-    <RDF:li><RDF:resource about="urn:prefbar:buttons:whatsnew"     prefbar:type="link" prefbar:url="chrome://prefbar/content/help/newstuff.html"                                  prefbar:label="What's New" prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:help"         prefbar:type="link" prefbar:url="chrome://prefbar/locale/help/index.html"                                      prefbar:label="PrefBar Help"      prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:whatsnew"     prefbar:type="link" prefbar:url="chrome://prefbar/locale/help/newstuff.html"                                  prefbar:label="What's New" prefbar:enabled="true" /></RDF:li>
 
     <RDF:li><RDF:resource about="urn:prefbar:buttons:separator3"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
     <RDF:li><RDF:resource about="urn:prefbar:buttons:xulplanet"    prefbar:type="link" prefbar:url="http://www.xulplanet.com"                                                     prefbar:label="XulPlanet.com"     prefbar:enabled="false" /></RDF:li>

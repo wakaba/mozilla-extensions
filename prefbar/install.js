@@ -3,9 +3,9 @@
 // Aaron Andersen, 20030226
 
 kappName = "Preferences Toolbar";
-kappVersion = "2.2.1";
+kappVersion = "2.2.1+ja1.0";
 kappChromeName = "prefbar";
-kappFile = "prefbar.jar";
+kappFile = "prefbar-ja.jar";
 kappPath = "content/prefbar/";
 klocalePath = "locale/en-US/prefbar/";
 ksuccessMessage = "The Preferences Toolbar has been successfully installed.  Restart your browser to continue.";
@@ -18,6 +18,7 @@ addFile(kappName, "prefbar.rdf" , getFolder("Profile") , "")
 		
 registerChrome(CONTENT | DELAYED_CHROME, getFolder("Chrome", kappFile), kappPath);
 registerChrome(LOCALE  | DELAYED_CHROME, getFolder("Chrome", kappFile), klocalePath);
+registerChrome(LOCALE  | DELAYED_CHROME, getFolder("Chrome", kappFile), "locale/ja-JP/prefbar/");
 
 var err = getLastError();
 

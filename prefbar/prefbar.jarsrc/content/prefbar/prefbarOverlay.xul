@@ -48,7 +48,7 @@
 <!-- For Phoenix: -->
 
 <keyset id="mainKeyset">
-	<key id="key_prefbar_phoenix" keycode="&toggle-prefBar:key;" command="cmd_prefbar_phoenix"/>
+	<key id="key_prefbar_phoenix" keycode="&toggle-prefBar-key;" command="cmd_prefbar_phoenix"/>
 </keyset>  
 
 <commandset id="mainCommandSet">
@@ -56,7 +56,7 @@
 </commandset>
 
 <menupopup id="menu_viewPopup">
-	<menuitem id="toggle_prefbar_phoenix" type="checkbox" checked="true" persist="checked" position="3" label="&prefbar-toggle:label;" command="cmd_prefbar_phoenix" key="key_prefbar_phoenix"/>
+	<menuitem id="toggle_prefbar_phoenix" type="checkbox" checked="true" persist="checked" position="3" label="&prefbar-toggle-label;" command="cmd_prefbar_phoenix" key="key_prefbar_phoenix"/>
 </menupopup>
 
 
@@ -64,7 +64,7 @@
 
 
 <keyset id="navigationKeys">
-	<key id="key_prefbar" keycode="&toggle-prefBar:key;" command="cmd_prefbar"/>
+	<key id="key_prefbar" keycode="&toggle-prefBar-key;" command="cmd_prefbar"/>
 </keyset>  
 
 <commandset id="commands">
@@ -73,7 +73,7 @@
 
 
 <menupopup id="view_toolbars_popup">
-  <menuitem id="viewprefsbar" position="3" checked="true" class="menuitem-iconic" type="checkbox" label="&prefbar-toggle:label;"  command="cmd_prefbar" key="key_prefbar"/>
+  <menuitem id="viewprefsbar" position="3" checked="true" class="menuitem-iconic" type="checkbox" label="&prefbar-toggle-label;"  command="cmd_prefbar" key="key_prefbar"/>
 </menupopup>
 
 

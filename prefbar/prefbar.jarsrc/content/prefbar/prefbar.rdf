@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 
 <!-- ***** BEGIN LICENSE BLOCK *****
@@ -38,15 +38,17 @@
    - ***** END LICENSE BLOCK ***** -->
 
 
-
+<!DOCTYPE RDF:RDF [
+<!ENTITY defval "chrome://prefbar/locale/defval.dtd">
+]>
 <RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:prefbar="http://www.xulplanet.com/rdf/prefbar#">
 
   <RDF:Seq about="urn:prefbar:buttons">
-    <RDF:li><RDF:resource about="urn:prefbar:buttons:back"         prefbar:type="button" prefbar:onclick="BrowserBack();"                                                      prefbar:observes="canGoBack"                                            prefbar:label="Back"          prefbar:enabled="false" /></RDF:li>
-    <RDF:li><RDF:resource about="urn:prefbar:buttons:forward"      prefbar:type="button" prefbar:onclick="BrowserForward();"                                                   prefbar:observes="canGoForward"                                         prefbar:label="Forward"       prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:back"         prefbar:type="button" prefbar:onclick="BrowserBack();"                                                      prefbar:observes="canGoBack"                                            prefbar:label="戻る"          prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:forward"      prefbar:type="button" prefbar:onclick="BrowserForward();"                                                   prefbar:observes="canGoForward"                                         prefbar:label="進む"       prefbar:enabled="false" /></RDF:li>
     <RDF:li><RDF:resource about="urn:prefbar:buttons:reload"       prefbar:type="button" prefbar:onclick="if (event.shiftKey) BrowserReloadSkipCache(); else BrowserReload();"                                                                         prefbar:label="Reload"        prefbar:enabled="false" /></RDF:li>
-    <RDF:li><RDF:resource about="urn:prefbar:buttons:stop"         prefbar:type="button" prefbar:onclick="BrowserStop();"                                                      prefbar:observes="canStop"                                              prefbar:label="Stop"          prefbar:enabled="false" /></RDF:li>                                                                                                                                                                                                                                                                                                               
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:stop"         prefbar:type="button" prefbar:onclick="BrowserStop();"                                                      prefbar:observes="canStop"                                              prefbar:label="&defval.stop;"          prefbar:enabled="false" /></RDF:li>                                                                                                                                                                                                                                                                                                               
     <RDF:li><RDF:resource about="urn:prefbar:buttons:separator0"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
 
     <RDF:li><RDF:resource about="urn:prefbar:buttons:home"         prefbar:type="button" prefbar:onclick="BrowserHome();"                                                                                                                              prefbar:label="Home"          prefbar:enabled="false" /></RDF:li>
@@ -111,8 +113,8 @@
     <RDF:li><RDF:resource about="urn:prefbar:buttons:spacer0"      prefbar:type="spacer" prefbar:label="(spacer)"      prefbar:enabled="true" /></RDF:li>
 
     <RDF:li><RDF:resource about="urn:prefbar:buttons:separator6"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="true" /></RDF:li>
-    <RDF:li><RDF:resource about="urn:prefbar:buttons:help"         prefbar:type="link" prefbar:url="chrome://prefbar/content/help/index.html"                                      prefbar:label="PrefBar Help"      prefbar:enabled="true" /></RDF:li>
-    <RDF:li><RDF:resource about="urn:prefbar:buttons:whatsnew"     prefbar:type="link" prefbar:url="chrome://prefbar/content/help/newstuff.html"                                  prefbar:label="What's New" prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:help"         prefbar:type="link" prefbar:url="chrome://prefbar/locale/help/index.html"                                      prefbar:label="PrefBar Help"      prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:whatsnew"     prefbar:type="link" prefbar:url="chrome://prefbar/locale/help/newstuff.html"                                  prefbar:label="What's New" prefbar:enabled="true" /></RDF:li>
 
     <RDF:li><RDF:resource about="urn:prefbar:buttons:separator3"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
     <RDF:li><RDF:resource about="urn:prefbar:buttons:xulplanet"    prefbar:type="link" prefbar:url="http://www.xulplanet.com"                                                     prefbar:label="XulPlanet.com"     prefbar:enabled="false" /></RDF:li>
