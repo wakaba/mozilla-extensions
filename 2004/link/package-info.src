@@ -1,0 +1,72 @@
+#?SuikaWikiConst/1.1
+
+## メモ: このファイルを編集する時には、 Makefile も同期すること。
+
+original-package-name:
+	Link Toolbar
+original-package-version:
+	20040311
+original-package-basename:
+	linktoolbar
+
+package-name:
+	%%original-package-name%% %%original-package-version%% 日本語パック
+package-guid:
+	{D091A7AB-723A-4f50-9756-2AEB4422EEEB}
+package-version-number:
+	1.0
+package-update-date:
+	%%current-date-time%%
+package-version:
+	%%package-version-number%% (%%package-update-date%%)
+package-display-name:
+	%%package-name%% %%package-version%%
+
+package-basename:
+	%%original-package-basename%%-ja
+jar-filename:
+	%%package-basename%%.jar
+jar-content-dir[list]:
+jar-locale-dir[list]:
+	locale/ja-JP/%%original-package-basename%%/
+xpi-filename:
+	%%package-basename%%.xpi
+xpi-versioned-filename:
+	%%package-basename%%-%%package-version-number%%.xpi
+
+supported-firefox-min-version:
+	0.8
+supported-firefox-max-version:
+	0.9+
+
+original-content-uri:
+	chrome://%%original-package-basename%%/content/
+original-locale-uri:
+	chrome://%%original-package-basename%%/locale/
+original-skin-uri:
+	chrome://%%original-package-basename%%/skin/
+content-uri:
+	%%original-content-uri%%
+locale-uri:
+	%%original-locale-uri%%
+program-config-uri:
+program-icon-uri:
+	%%original-skin-uri%%icon.png
+program-about-uri:
+	
+
+urn-package-name:
+	%%original-package-basename%%
+
+package-description:
+	%%original-package-name%% の日本語メッセージ型録
+package-author-name:
+	わかば
+package-web-site-uri:
+	http://suika.fam.cx/~wakaba/-temp/wiki/wiki?Link+Toolbar
+package-update-uri:
+	http://suika.fam.cx/www/mozilla/2004/link/release/update.rdf
+package-release-uri:
+	http://suika.fam.cx/www/mozilla/2004/link/release/%%xpi-versioned-filename%%
+
+

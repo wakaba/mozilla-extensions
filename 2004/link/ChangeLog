@@ -1,0 +1,11 @@
+2004-07-10  Wakaba  <wakaba@suika.fam.cx>
+
+	* package-info.src: New.
+
+	* linktoolbar-ja.jarsrc: New.
+
+	* release/, chrome/: New.
+
+	* Makefile, ChangeLog, .cvsignore: New.
+	
+

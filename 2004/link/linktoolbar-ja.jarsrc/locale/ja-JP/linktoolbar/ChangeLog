@@ -1,0 +1,6 @@
+2004-07-10  Wakaba  <wakaba@suika.fam.cx>
+
+	* contents.rdf.in: New.
+	* linkToolbar.dtd.in: New.
+	* ChangeLog, Makefile, .cvsignore: New.
+
