@@ -1,0 +1,12 @@
+2003-07-07  Wakaba  <w@suika.fam.cx>
+
+	* ChangeLog: New file.
+	* css.xml: Modify path in relative URI references.
+
+2003-04-20  Wakaba  <w@offweb.ddo.jp>
+
+	* css.xml: Revised.
+
+2003-03-11  Wakaba  <w@offweb.ddo.jp>
+
+	* css.xml: Initial version.

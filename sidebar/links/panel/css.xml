@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-2022-jp"?>
-<?xml-stylesheet type="text/css" href="sblinks-style.css" media="all"?>
+<?xml-stylesheet type="text/css" href="../lib/sblinks-style.css" media="all"?>
 <!DOCTYPE root [
   <!ENTITY uri.CSS1 "http://www.w3.org/TR/REC-CSS1#">
   <!ENTITY uri.CSS2 "http://www.w3.org/TR/REC-CSS2/">
@@ -40,7 +40,7 @@
       xmlns:h="http://www.w3.org/1999/xhtml"
       xml:lang="ja">
 <header>
-  <h:link rel="stylesheet" href="sblinks-hlink.xml" type="application/x-hlink+xml"/>
+  <h:link rel="stylesheet" href="../lib/sblinks-hlink.xml" type="application/x-hlink+xml"/>
   <h:title>CSS リンク集</h:title>
 </header>
 <nav>
