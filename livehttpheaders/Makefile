@@ -40,3 +40,5 @@ install-res.en.inf: $(REPPL_DIR)install-res.en.inf.in
 clean:
 	-rm -v $(GENERATED_FILES)
 	-rm -v ./*~ ./.*~ ./*.BAK ./.*.BAK
+	cd $(PACKAGE_BASENAME).jarsrc/locale/ja-JP/$(ORIGINAL_PACKAGE_BASENAME) && make clean
+
