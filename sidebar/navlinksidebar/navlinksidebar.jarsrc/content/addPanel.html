@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title xml:lang="en">Adding Navigation Panel</title>
+<script type="application/x-javascript" src="chrome://inspector/content/jsutil/xpcom/XPCU.js"></script>
+<script type="text/javascript" src="RDFU.js"></script>
+</head>
+<body>
+<div><input type="button" id="addPanel" xml:lang="en" value="Add!" /></div>
+<div id="status"></div>
+<script type="text/javascript">
+const kDirServiceCID       = "@mozilla.org/file/directory_service;1"
+const kNCURI               = "http://home.netscape.com/NC-rdf#";
+const kSidebarPanelId      = "UPnls";	// directory services property to find panels.rdf
+const kSidebarURNPanelList = "urn:sidebar:current-panel-list";
+const kSidebarURN3rdParty  = "urn:sidebar:3rdparty-panel";
+const kSidebarURL          = "chrome://navLinkSidebar/content/sidebar.html";
+const kSidebarTitle        = "Navigation Page";
+
+///// class SidebarPrefs /////////////////////////
+var gSidebarLoadListener = {
+  onDataSourceReady: function(aDS) {
+    sidebarPref.initSidebarData2(aDS);
+  },
+  onError: function() {
+  }
+};
+
+function SidebarPrefs()
+{
+}
+
+SidebarPrefs.prototype = {
+  initSidebarData: function() {
+    var file = this.getDirectoryFile(kSidebarPanelId);
+    if (file) RDFU.loadDataSource(file, gSidebarLoadListener);
+  },
+  initSidebarData2: function(aDS) {
+    var res = aDS.GetTarget(gRDF.GetResource(kSidebarURNPanelList), gRDF.GetResource(kNCURI + "panel-list"), true);
+    this.mDS = aDS;
+    this.mPanelSeq = RDFU.makeSeq(aDS, res);
+    this.mPanelRes = gRDF.GetResource(kSidebarURN3rdParty + ":" + kSidebarURL);
+  },
+  isSidebarInstalled: function() {
+    return this.mPanelSeq.IndexOf(this.mPanelRes) != -1;
+  },
+  installSidebar: function() {
+    if (!this.isSidebarInstalled()) {
+      this.mDS.Assert(this.mPanelRes, gRDF.GetResource(kNCURI + "title"), gRDF.GetLiteral(kSidebarTitle), true);
+      this.mDS.Assert(this.mPanelRes, gRDF.GetResource(kNCURI + "content"), gRDF.GetLiteral(kSidebarURL), true);
+      this.mPanelSeq.AppendElement(this.mPanelRes);
+      this.forceSidebarRefresh();
+      return true;
+    } else return false;
+  },
+  forceSidebarRefresh: function() {
+    var listRes = gRDF.GetResource(kSidebarURNPanelList);
+    var refreshRes = gRDF.GetResource(kNCURI + "refresh");
+    var trueRes = gRDF.GetLiteral("true");
+    this.mDS.Assert(listRes, refreshRes, trueRes, true);
+    this.mDS.Unassert(listRes, refreshRes, trueRes);
+  },
+  getDirectoryFile: function(aFileId) {
+    try {
+      var dirService = XPCU.getService(kDirServiceCID, "nsIProperties");
+      var file = dirService.get(aFileId, Components.interfaces.nsIFile);
+      if (!file.exists()) return null;
+      var ioService = XPCU.getService("@mozilla.org/network/io-service;1", "nsIIOService");
+      return ioService.newFileURI(file).spec;//getURLSpecFromFile(file);
+    } catch (ex) {
+      return null;
+    }
+  }
+};
+
+  var sidebarPref = new SidebarPrefs();
+  sidebarPref.initSidebarData();
+  document.getElementById('addPanel').addEventListener('click',function () {
+    if (sidebarPref.installSidebar()) {
+      document.getElementById('status').appendChild(document.createTextNode('The sidebar is installed.'));
+    } else {
+      document.getElementById('status').appendChild(document.createTextNode('The sidebar is NOT installed.'));
+    }
+  },false);
+</script>
+</body>
+</html>
+<!--
+***** BEGIN LICENSE BLOCK *****
+Version: NPL 1.1/GPL 2.0/LGPL 2.1
+
+The contents of this file are subject to the Netscape Public License Version
+1.1 (the "License"); you may not use this file except in compliance with
+the License. You may obtain a copy of the License at 
+<http://www.mozilla.org/NPL/>
+
+Software distributed under the License is distributed on an "AS IS" basis,
+WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+for the specific language governing rights and limitations under the
+License.
+
+The Initial Developer is Wakaba <w@suika.fam.cx>.
+Portions created by the Initial Developer are Copyright (C) 2003
+the Initial Developer. All Rights Reserved.
+
+Contributor(s):
+	Wakaba <w@suika.fam.cx> (original author)
+
+Alternatively, the contents of this file may be used under the terms of
+either the GNU General Public License Version 2 or later (the "GPL"), or
+the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+in which case the provisions of the GPL or the LGPL are applicable instead
+of those above. If you wish to allow use of your version of this file only
+under the terms of either the GPL or the LGPL, and not to allow others to
+use your version of this file under the terms of the MPL, indicate your
+decision by deleting the provisions above and replace them with the notice
+and other provisions required by the GPL or the LGPL. If you do not delete
+the provisions above, a recipient may use your version of this file under
+the terms of any one of the MPL, the GPL or the LGPL.
+
+***** END LICENSE BLOCK *****
+-->
