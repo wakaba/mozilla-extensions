@@ -3,6 +3,7 @@
 	* .cvsignore: New file.
 
 	* Makefile (REPPL_DIR): Fix path.
+	(clean): Cleaning deeper directories, too.
 
 2003-07-06  Wakaba  <w@suika.fam.cx>
 
