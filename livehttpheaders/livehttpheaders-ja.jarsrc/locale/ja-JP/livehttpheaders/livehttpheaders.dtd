@@ -1,0 +1,44 @@
+<!ENTITY livehttpheaders.pageinfo.tab		"頭" >
+<!ENTITY livehttpheaders.pageinfo.accesskey	"h" >
+<!ENTITY livehttpheaders.headers.request	"要求頭" >
+<!ENTITY livehttpheaders.headers.response	"応答頭" >
+<!ENTITY livehttpheaders.headers.name		"名前" >
+<!ENTITY livehttpheaders.headers.value		"本体" >
+
+<!ENTITY livehttpheaders.menu.file		"ファイル" >
+<!ENTITY livehttpheaders.menu.close		"閉じる" >
+<!ENTITY livehttpheaders.menu.saveselection	"選択部を保存" >
+<!ENTITY livehttpheaders.menu.saveall		"全てを保存" >
+<!ENTITY livehttpheaders.menu.edit		"編集" >
+<!ENTITY livehttpheaders.menu.copy		"複製" >
+<!ENTITY livehttpheaders.menu.selectall		"全てを選択" >
+<!ENTITY livehttpheaders.menu.view		"表示" >
+<!ENTITY livehttpheaders.menu.post		"投稿データ" >
+
+<!ENTITY livehttpheaders.live.title		"生 HTTP 頭" >
+<!ENTITY livehttpheaders.live.headers		"HTTP 頭" >
+<!ENTITY livehttpheaders.live.clear		"全て削除" >
+<!ENTITY livehttpheaders.live.close		"閉じる" >
+<!ENTITY livehttpheaders.live.capture		"撮影" >
+<!ENTITY livehttpheaders.live.copy		"複製" >
+<!ENTITY livehttpheaders.live.selectblock	"塊を選択" >
+<!ENTITY livehttpheaders.live.selectall		"全てを選択" >
+<!ENTITY livehttpheaders.live.saveall		"全てを保存" >
+<!ENTITY livehttpheaders.live.replay		"再生" >
+
+<!ENTITY livehttpheaders.live.post		"POST:" >
+<!ENTITY livehttpheaders.live.post.tips		"POST 内容の表示を設定します。" >
+<!ENTITY livehttpheaders.live.post.none		"なし" >
+<!ENTITY livehttpheaders.live.post.none.tips	"POST 内容を全く表示しません。" >
+<!ENTITY livehttpheaders.live.post.fast		"快速" >
+<!ENTITY livehttpheaders.live.post.fast.tips	"POST 内容を速い code で表示します。 File upload 時には機能しません。不具合 #188328 参照。" >
+<!ENTITY livehttpheaders.live.post.slow		"鈍行" >
+<!ENTITY livehttpheaders.live.post.slow.tips	"ゆっくりですが file upload 時も機能します。" >
+<!ENTITY livehttpheaders.live.post.max1k	"最大 1k" >
+<!ENTITY livehttpheaders.live.post.max1k.tips	"ゆっくりで、 POST 内容の最初の 1k のみ取得します。" >
+
+<!ENTITY livehttpheaders.replay.title		"生 HTTP 再生" >
+<!ENTITY livehttpheaders.replay.url		"URL" >
+<!ENTITY livehttpheaders.replay.headers		"HTTP 頭" >
+<!ENTITY livehttpheaders.replay.post		"POST 内容を送りますか。" >
+
