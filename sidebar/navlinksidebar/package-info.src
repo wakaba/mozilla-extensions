@@ -1,0 +1,35 @@
+#?SuikaWikiConst/1.1
+
+## Note: When modify this file, check Makefile too.
+
+package-name:
+	Navigation Page Sidebar Panel
+package-version-number:
+	1.2
+package-update-date:
+	%%current-date-time%%
+package-version:
+	%%package-version-number%% (%%package-update-date%%)
+package-display-name:
+	%%package-name%% %%package-version%%
+
+package-basename:
+	navlinksidebar
+jar-filename:
+	%%package-basename%%.jar
+jar-content-dir[list]:
+	content/
+jar-locale-dir[list]:
+	locale/en-US/%%package-basename%%/
+	locale/ja-JP/%%package-basename%%/
+
+content-uri:
+	chrome://%%package-basename%%/content/
+locale-uri:
+	chrome://%%package-basename%%/locale/
+
+urn-package-name:
+	%%package-basename%%
+
+package-author-name:
+	わかば

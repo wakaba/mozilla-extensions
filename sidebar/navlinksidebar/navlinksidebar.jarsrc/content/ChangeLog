@@ -1,0 +1,14 @@
+2003-07-06  Wakaba  <w@suika.fam.cx>
+
+	* Makefile: New file.
+	* add-panel.xml, sidebar.xml: Removed.  (Now generated automatically.)
+	* add-panel.xml.in, sidebar.xml.in: New template.
+	* contents.rdf: Removed.
+	* contents.rdf.in: New template.
+
+2003-07-06  Wakaba  <w@suika.fam.cx>
+
+	* ChangeLog: New file.
+	* addPanel.html, sidebar.html: Removed.
+	* Add-panel.xml, sidebar.xml: New files.  (Note that unless suffix is .xml, Mozilla does not interpret them in XML mode.)
+	* sidebar.js: New script.

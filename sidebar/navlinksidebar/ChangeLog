@@ -1,3 +1,8 @@
+2003-07-06  Wakaba  <w@suika.fam.cx>
+
+	* Makefile, package-info.src, install.js.in, replace.pl: New files.
+	* install.js: Removed.
+
 2003-03-04  Wakaba  <w@offweb.ddo.jp>
 
 	* navlinksidebar.jar!/content/sidebar.html#/html/head/script: Add link types.

@@ -1,0 +1,4 @@
+2003-07-06  Wakaba  <w@suika.fam.cx>
+
+	* ChangeLog: New file.
+	* add-panel.dtd, contents.rdf.in, Makefile, navlinksidebar.dtd: New files.

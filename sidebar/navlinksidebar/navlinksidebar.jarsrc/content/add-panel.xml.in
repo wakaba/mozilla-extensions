@@ -1,12 +1,18 @@
 <?xml version="1.0"?>
+<!DOCTYPE html [
+  <!ENTITY % res SYSTEM "%%locale-uri%%add-panel.dtd">
+  %res;
+]>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title xml:lang="en">Adding Navigation Panel</title>
-<script type="application/x-javascript" src="chrome://inspector/content/jsutil/xpcom/XPCU.js"></script>
-<script type="application/x-javascript" src="RDFU.js"></script>
+<title>&sidebar.panel.add.title;</title>
+<script type="application/x-javascript" src="chrome://inspector/content/jsutil/xpcom/XPCU.js" />
+<script type="application/x-javascript" src="RDFU.js" />
 </head>
 <body>
-<div><input type="button" id="addPanel" xml:lang="en" value="Add!" /></div>
+<h1>&sidebar.panel.add.title;</h1>
+<p>&sidebar.panel.add.description;</p>
+<div><input type="button" id="addPanel" title="&sidebar.panel.add.button.description;" value="&sidebar.panel.add.button.label;" /></div>
 <div id="status"></div>
 <script type="application/x-javascript">
 const kDirServiceCID       = "@mozilla.org/file/directory_service;1"
@@ -14,8 +20,8 @@ const kNCURI               = "http://home.netscape.com/NC-rdf#";
 const kSidebarPanelId      = "UPnls";	// directory services property to find panels.rdf
 const kSidebarURNPanelList = "urn:sidebar:current-panel-list";
 const kSidebarURN3rdParty  = "urn:sidebar:3rdparty-panel";
-const kSidebarURL          = "chrome://navlinksidebar/content/sidebar.html";
-const kSidebarTitle        = "Navigation Page";
+const kSidebarURL          = "%%content-uri%%sidebar.xml";
+const kSidebarTitle        = "&sidebar.panel.title;";
 
 ///// class SidebarPrefs /////////////////////////
 var gSidebarLoadListener = {
@@ -75,11 +81,11 @@ SidebarPrefs.prototype = {
 
   var sidebarPref = new SidebarPrefs();
   sidebarPref.initSidebarData();
-  document.getElementById('addPanel').addEventListener('click',function () {
+  document.getElementById ('addPanel').addEventListener('click', function () {
     if (sidebarPref.installSidebar()) {
-      document.getElementById('status').appendChild(document.createTextNode('The sidebar is installed.'));
+      document.getElementById('status').appendChild(document.createTextNode('&sidebar.panel.add.success;'));
     } else {
-      document.getElementById('status').appendChild(document.createTextNode('The sidebar is NOT installed.'));
+      document.getElementById('status').appendChild(document.createTextNode('&sidebar.panel.add.failure;'));
     }
   },false);
 </script>
@@ -104,7 +110,7 @@ Portions created by the Initial Developer are Copyright (C) 2003
 the Initial Developer. All Rights Reserved.
 
 Contributor(s):
-	Wakaba <w@suika.fam.cx> (original author)
+	Wakaba <w@suika.fam.cx>
 
 Alternatively, the contents of this file may be used under the terms of
 either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -120,3 +126,4 @@ the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
 -->
+<!-- $Date: 2003/07/06 08:32:27 $ -->

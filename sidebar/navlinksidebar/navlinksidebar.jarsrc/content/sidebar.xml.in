@@ -1,5 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+<?xml-stylesheet href="sidebar.css" type="text/css"?>
+<!--<?xul-overlay href="chrome://communicator/content/contentAreaContextOverlay.xul"?>-->
+<!DOCTYPE window SYSTEM "%%locale-uri%%navlinksidebar.dtd">
+<window
+      title="&sidebar.panel.title;"
+      onload="init();"
+      xmlns:h="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<h:script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
+<h:script type="application/x-javascript" src="chrome://global/content/nsTransferable.js"/>
+<h:script type="application/x-javascript" src="sidebar.js" />
+<popupset id="contentAreaContextSet"/>
 
-/*
+<vbox flex="0" id="option">
+  <checkbox checked="false" id="pageFixed"
+            label="&sidebar.panel.fix;"/>
+</vbox>
+<vbox id="navigation" flex="1">
+  <browser id="navBrowser" class="navBrowser" flex="1" type="content"
+           content="about:blank"
+           context="contentAreaContextMenu"
+           ondragdrop="nsDragAndDrop.drop (event, contentHolderDNDObserver);"
+           />
+</vbox>
+</window>
+<!--
 ***** BEGIN LICENSE BLOCK *****
 Version: MPL 1.1/GPL 2.0/LGPL 2.1
 
@@ -13,7 +39,10 @@ WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
 for the specific language governing rights and limitations under the
 License.
 
-The Initial Developer is Wakaba <w@suika.fam.cx>.
+The Original Code is navLinkSidebar code.
+
+The Initial Developer of the Original Code is 
+Wakaba <w@suika.fam.cx>.
 Portions created by the Initial Developer are Copyright (C) 2003
 the Initial Developer. All Rights Reserved.
 
@@ -33,4 +62,5 @@ the provisions above, a recipient may use your version of this file under
 the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
-*/
+-->
+<!-- $Date: 2003/07/06 08:32:27 $ -->

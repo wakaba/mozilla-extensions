@@ -1,5 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 
-/*
+<!ENTITY sidebar.panel.title             "案内頁">
+<!ENTITY sidebar.panel.add.title         "案内パネルの追加">
+<!ENTITY sidebar.panel.add.description   "次のボタンを押すと、 Sidebar に案内パネルを追加します。">
+<!ENTITY sidebar.panel.add.button.label  "追加">
+<!ENTITY sidebar.panel.add.button.description "このボタンを押すと、 Sidebar に案内パネルを追加します。">
+<!ENTITY sidebar.panel.add.success       "Sidebar に案内パネルを追加しました。">
+<!ENTITY sidebar.panel.add.failure       "Sidebar に案内パネルを追加できませんでした。既に追加されているのかもしれません。">
+
+<!--
 ***** BEGIN LICENSE BLOCK *****
 Version: MPL 1.1/GPL 2.0/LGPL 2.1
 
@@ -13,7 +22,10 @@ WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
 for the specific language governing rights and limitations under the
 License.
 
-The Initial Developer is Wakaba <w@suika.fam.cx>.
+The Original Code is navLinkSidebar code.
+
+The Initial Developer of the Original Code is 
+Wakaba <w@suika.fam.cx>.
 Portions created by the Initial Developer are Copyright (C) 2003
 the Initial Developer. All Rights Reserved.
 
@@ -33,4 +45,5 @@ the provisions above, a recipient may use your version of this file under
 the terms of any one of the MPL, the GPL or the LGPL.
 
 ***** END LICENSE BLOCK *****
-*/
+-->
+<!-- $Date: 2003/07/06 08:32:28 $ -->
