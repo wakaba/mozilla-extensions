@@ -25,6 +25,9 @@ ORIGINAL_PACKAGE_BASENAME = linktoolbar
 PACKAGE_BASENAME = $(ORIGINAL_PACKAGE_BASENAME)-ja
 
 all: update.rdf $(PACKAGE_BASENAME).xpi
+	@echo ""
+	@echo "Update release/$(PACKAGE_BASENAME)-(version).xpi, "
+	@echo "release/$(PACKAGE_BASENAME).xpi and release/update.rdf."
 
 dummy:
 

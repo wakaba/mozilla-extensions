@@ -1,0 +1,7 @@
+IndexOptions +DescriptionWidth=*
+AddDescription "Japanese Language Pack: Latest Version" linktoolbar-ja.xpi
+AddDescription "Japanese Language Pack 1.0 (for 20040311)" linktoolbar-ja-1.0.xpi
+
+AddType application/xml .rdf
+AddCharset us-ascii .rdf
+

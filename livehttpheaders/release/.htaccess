@@ -1,0 +1,8 @@
+IndexOptions +DescriptionWidth=*
+AddDescription "Japanese Language Pack: Latest Version" livehttpheaders-ja.xpi
+AddDescription "Japanese Language Pack 1.2 (for 0.7)" livehttpheaders-ja-1.2.xpi
+AddDescription "Japanese Language Pack 1.3 (for 0.8)" livehttpheaders-ja-1.3.xpi
+
+AddType application/xml .rdf
+AddCharset us-ascii .rdf
+

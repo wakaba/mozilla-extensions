@@ -1,0 +1,9 @@
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+ 
+<RDF:Description about="urn:mozilla:extension:{D091A7AB-723A-4f50-9756-2AEB4422EEEB}">
+  <em:version>1.0.1</em:version>
+  <em:updateLink>http://suika.fam.cx/www/mozilla/2004/link/release/linktoolbar-ja-1.0.1.xpi</em:updateLink>
+</RDF:Description>
+
+</RDF:RDF>
