@@ -13,8 +13,8 @@
 <!ENTITY livehttpheaders.tabs.about             "情報" >
 
 <!ENTITY livehttpheaders.about.version          "版情報" >
-<!ENTITY livehttpheaders.about.versiontext      "LiveHTTPHeaders 版:" >
-<!ENTITY livehttpheaders.about.currentversion   "0.6" >
+<!ENTITY livehttpheaders.about.versiontext      "%%original-package-name%% 版:" >
+<!ENTITY livehttpheaders.about.currentversion   "%%original-package-version%% (日本語パック %%package-version%%)" >
 <!ENTITY livehttpheaders.about.checkforupdate   "更新を確認" >
 <!ENTITY livehttpheaders.about.homepage         "ホーム頁" >
 <!ENTITY livehttpheaders.about.homepageurl      "http://livehttpheaders.mozdev.org" >

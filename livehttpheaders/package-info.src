@@ -1,0 +1,40 @@
+#?SuikaWikiConst/1.1
+
+## メモ: このファイルを編集する時には、 Makefile も同期すること。
+
+original-package-name:
+	LiveHTTPHeaders
+original-package-version:
+	0.6
+original-package-basename:
+	livehttpheaders
+
+package-name:
+	%%original-package-name%% %%original-package-version%% 日本語パック
+package-version-number:
+	1.1
+package-update-date:
+	%%current-date-time%%
+package-version:
+	%%package-version-number%% (%%package-update-date%%)
+package-display-name:
+	%%package-name%% %%package-version%%
+
+package-basename:
+	%%original-package-basename%%-ja
+jar-filename:
+	%%package-basename%%.jar
+jar-content-dir[list]:
+jar-locale-dir[list]:
+	locale/ja-JP/%%original-package-basename%%/
+
+content-uri:
+	chrome://%%original-package-basename%%/content/
+locale-uri:
+	chrome://%%original-package-basename%%/locale/
+
+urn-package-name:
+	%%original-package-basename%%
+
+package-author-name:
+	わかば

@@ -1,0 +1,4 @@
+2003-07-06  Wakaba  <w@suika.fam.cx>
+
+	* Makefile, ChangeLog, package-info.src: New files.
+	* install.js: Removed.

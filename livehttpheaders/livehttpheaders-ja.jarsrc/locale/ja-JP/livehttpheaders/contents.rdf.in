@@ -11,7 +11,7 @@
         chrome:previewURL="">
     <chrome:packages>
       <RDF:Seq about="urn:mozilla:locale:ja-JP:packages">
-        <RDF:li resource="urn:mozilla:locale:ja-JP:livehttpheaders"/>
+        <RDF:li resource="urn:mozilla:locale:ja-JP:%%original-package-basename%%"/>
       </RDF:Seq>
     </chrome:packages>
   </RDF:Description>
