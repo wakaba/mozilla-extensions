@@ -10,7 +10,7 @@ AddCharset iso-2022-jp .hlink
 AddType application/x-xpinstall .xpi
 
 AddType application/x-javascript .js
-AddCharset us-ascii .js
+AddCharset utf-8 .js
 
 AddType application/x-perl .pl
 AddCharset us-ascii .pl
