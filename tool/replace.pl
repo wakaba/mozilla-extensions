@@ -57,7 +57,13 @@ sub replace_percent ($$) {
   $s =~ s{%%([^%]+)%%}{
     my ($r, $type) = _get_replacement_text ($1, $l);
     if ($type eq 'list') {
-      $r = join (', ', map {qq("$_")} @$r);
+      ## Note: Expansion of list needs more study.
+      warn "List $1 is expanded\n";
+      if ($opt{type} eq 'xml') {
+        $r = join (' ', @$r);
+      } else {
+        $r = join (', ', map {qq("$_")} @$r);
+      }
     }
     $r;
   }ge;
@@ -112,4 +118,4 @@ Boston, MA 02111-1307, USA.
 
 =cut
 
-## $Date: 2004/04/14 12:17:38 $
+## $Date: 2004/07/10 06:47:26 $
