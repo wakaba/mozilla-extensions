@@ -40,5 +40,5 @@
 <!ENTITY livehttpheaders.replay.title		"生 HTTP 再生" >
 <!ENTITY livehttpheaders.replay.url		"URL" >
 <!ENTITY livehttpheaders.replay.headers		"HTTP 頭" >
-<!ENTITY livehttpheaders.replay.post		"POST 内容を送りますか。" >
+<!ENTITY livehttpheaders.replay.post		"POST 内容を送る" >
 
