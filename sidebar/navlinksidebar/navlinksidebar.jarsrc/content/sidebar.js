@@ -39,12 +39,12 @@ function init() {
             navDoc.getElementsByTagName('html')[0].setAttribute('xMozSbNpUri',dURI);
             var l = navDoc.createElement('link');
             l.setAttribute('href',location.href+'/../sidebar-site.css');
-            /* Does not work, due to the security protection
+            /* Does not work, due to the security protection*/
             const DIR = Components.classes['@mozilla.org/file/directory_service;1'].getService(Components.interfaces.nsIProperties);
             var profDir = DIR.get('ProfD', Components.interfaces.nsIFile);
             const ioService = Components.classes['@mozilla.org/network/io-service;1'].getService(Components.interfaces.nsIIOService);
             l.setAttribute ('href', ioService.newFileURI(profDir).spec+'chrome/navlinksidebar-site.css');
-            */
+            /**/
             l.setAttribute('rel','stylesheet');
             navDoc.getElementsByTagName('head')[0].appendChild(l);
           },true);
