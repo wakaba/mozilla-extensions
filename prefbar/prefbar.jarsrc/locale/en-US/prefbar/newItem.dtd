@@ -1,0 +1,31 @@
+<!ENTITY new-item-title        "New Item">
+<!ENTITY edit-item-title       "Edit Item">
+
+<!ENTITY button-type-check     "Pref Check"> 
+<!ENTITY button-type-button    "Button"> 
+<!ENTITY button-type-menulist  "Menulist"> 
+<!ENTITY button-type-link      "Link"> 
+<!ENTITY button-type-label     "Text Label"> 
+<!ENTITY button-type-separator "Separator"> 
+<!ENTITY button-type-spacer    "Spacer"> 
+
+<!ENTITY button-attr-type       "Item Type">
+<!ENTITY button-attr-data       "Item Data">
+
+<!ENTITY button-attr-id         "Id:">
+<!ENTITY button-attr-label      "Label:">
+<!ENTITY button-attr-prefstring "Prefstring:">
+<!ENTITY button-attr-topref     "toPref:">
+<!ENTITY button-attr-frompref   "fromPref:">
+<!ENTITY button-attr-onclick    "onclick:">
+<!ENTITY button-attr-url        "Url:">
+
+<!ENTITY button-attr-itemlabel  "Label">
+<!ENTITY button-attr-itemvalue  "Value">
+<!ENTITY button-attr-itemnum    "#">
+<!ENTITY button-attr-item1      "1">
+<!ENTITY button-attr-item2      "2">
+<!ENTITY button-attr-item3      "3">
+<!ENTITY button-attr-item4      "4">
+<!ENTITY button-attr-item5      "5">
+<!ENTITY button-attr-item6      "6">

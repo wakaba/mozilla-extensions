@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Preferences Toolbar 2.
+   -
+   - The Initial Developer of the Original Code is
+   - Aaron Andersen.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Andersen <aaron@xulplanet.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+
+<!DOCTYPE window [
+<!ENTITY % platformDTD SYSTEM "chrome://global-platform/locale/platformDialogOverlay.dtd" >
+%platformDTD;
+<!ENTITY % prefbarDTD SYSTEM "chrome://prefbar/locale/preferencesPanel.dtd">
+%prefbarDTD;
+]>
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      headertitle="&header-title;" onload="setupEverything();" onblur="writeToDisk();" orient="horizontal">
+
+<script type="text/javascript" src="prefbarRDF.js"/>
+<script type="application/x-javascript" src="preferencesPanel.js"/>
+<script type="application/x-javascript" src="chrome://global/content/globalOverlay.js"/>
+
+<vbox flex="1">
+<label value="&available-tree;"/>
+
+<tree id="allTree" datasources="rdf:null" ref="urn:prefbar:buttons" flex="1" seltype="single" onselect="selectAllTree()" ondblclick="itemEnable()">
+  <treecols>
+    <treecol id="all-tree-name"    label="&name-col;" flex="2"/>
+    <splitter class="tree-splitter"/>
+    <treecol id="all-tree-type"    label="&type-col;" flex="1"/>
+  </treecols>
+
+  <template>
+    <rule isempty="false">
+      <conditions>
+        <content uri="?cont"/>
+        <member container="?cont" child="?name"/>
+        <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="false"/>
+      </conditions>
+      <bindings>
+        <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="?type"/>
+        <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+      </bindings>
+      <action>
+        <treechildren>
+          <treeitem uri="?name">
+            <treerow>
+              <treecell label="?label"/>
+              <treecell label="?type"/>
+            </treerow>
+          </treeitem> 
+        </treechildren>
+      </action>
+    </rule>
+  </template>
+</tree>
+
+</vbox>
+
+
+
+<vbox pack="center">
+<spacer flex="2"/>
+<button id="itemEnable"   label="&button-enable;"  oncommand="itemEnable()"   disabled="true"/>
+<button id="itemDisable"  label="&button-disable;" oncommand="itemDisable()"  disabled="true"/>
+<spacer flex="2"/>
+<button id="itemMoveUp"   label="&button-up;"   class="up"   oncommand="itemMoveUp()"   disabled="true"/>
+<button id="itemMoveDown" label="&button-down;" class="down" oncommand="itemMoveDown()" disabled="true"/>
+<spacer flex="2"/>
+<button id="itemNew"      label="&button-new;"                    oncommand="itemNew()"/>
+<button id="itemEdit"     label="&button-edit;"   disabled="true" oncommand="itemEdit()"/>
+<button id="itemDelete"   label="&button-delete;" disabled="true" oncommand="itemDelete()"/>
+</vbox>
+
+
+
+
+<vbox flex="1">
+<label value="&enabled-tree;"/>
+
+<tree id="enabledTree" datasources="rdf:null" ref="urn:prefbar:buttons" flex="1" seltype="single" onselect="selectEnabledTree()" ondblclick="itemDisable()">
+  <treecols>
+    <treecol id="enabled-tree-name"    label="&name-col;" flex="2"/>
+    <splitter class="tree-splitter"/>
+    <treecol id="enabled-tree-type"    label="&type-col;"      flex="1"/>
+  </treecols>
+  <template>
+    <rule isempty="false">
+      <conditions>
+        <content uri="?cont"/>
+        <member container="?cont" child="?name"/>
+        <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="true"/>
+      </conditions>
+      <bindings>
+        <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="?type"/>
+        <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+      </bindings>
+      <action>
+        <treechildren>
+          <treeitem uri="?name">
+            <treerow>
+              <treecell label="?label"/>
+              <treecell label="?type"/>
+            </treerow>
+          </treeitem> 
+        </treechildren>
+      </action>
+    </rule>
+  </template>
+</tree>
+
+</vbox>
+
+</page>

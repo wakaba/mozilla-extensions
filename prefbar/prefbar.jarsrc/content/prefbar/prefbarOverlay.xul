@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Preferences Toolbar 2.
+   -
+   - The Initial Developer of the Original Code is
+   - Aaron Andersen.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Andersen <aaron@xulplanet.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE window SYSTEM "chrome://prefbar/locale/prefbarOverlay.dtd">
+
+<overlay id="prefbarOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="text/javascript" src="prefbarRDF.js"/>
+<script type="text/javascript" src="prefbarOverlay.js"/>
+<script type="text/javascript" src="buttonCommands.js"/>
+<script type="text/javascript" src="debug.js"/>
+
+<!-- For Phoenix: -->
+
+<keyset id="mainKeyset">
+	<key id="key_prefbar_phoenix" keycode="&toggle-prefBar:key;" command="cmd_prefbar_phoenix"/>
+</keyset>  
+
+<commandset id="mainCommandSet">
+	<command id="cmd_prefbar_phoenix" oncommand="togglePrefBarPhoenix();"/>
+</commandset>
+
+<menupopup id="menu_viewPopup">
+	<menuitem id="toggle_prefbar_phoenix" type="checkbox" checked="true" persist="checked" position="3" label="&prefbar-toggle:label;" command="cmd_prefbar_phoenix" key="key_prefbar_phoenix"/>
+</menupopup>
+
+
+<!-- End Phoenix -->
+
+
+<keyset id="navigationKeys">
+	<key id="key_prefbar" keycode="&toggle-prefBar:key;" command="cmd_prefbar"/>
+</keyset>  
+
+<commandset id="commands">
+	<command id="cmd_prefbar" oncommand="togglePrefBarMozilla()"/>
+</commandset>
+
+
+<menupopup id="view_toolbars_popup">
+  <menuitem id="viewprefsbar" position="3" checked="true" class="menuitem-iconic" type="checkbox" label="&prefbar-toggle:label;"  command="cmd_prefbar" key="key_prefbar"/>
+</menupopup>
+
+
+
+<window id="main-window">
+	<popupset id="prefbarpopup">
+		<menupopup id="prefbar-contextmenu">
+			<menuitem id="prefbar-help"       label="&prefbar-help-main;"       oncommand="goLink('chrome://prefbar/content/help/index.html');"   />
+			<menuitem id="prefbar-usersguide" label="&prefbar-help-usersguide;" oncommand="goLink('chrome://prefbar/content/help/use.html');"/>
+			<menuitem id="prefbar-whatsnew"   label="&prefbar-help-whatsnew;"   oncommand="goLink('chrome://prefbar/content/help/newstuff.html');"/>
+			<menuitem id="prefbar-buttonlist" label="&prefbar-help-buttonlist;" oncommand="goLink('chrome://prefbar/content/help/buttons.html');"/>
+			<menuitem id="prefbar-faq"        label="&prefbar-help-faq;"        oncommand="goLink('chrome://prefbar/content/help/faq.html');"/>
+			<menuitem id="prefbar-credits"    label="&prefbar-help-credits;"    oncommand="goLink('chrome://prefbar/content/help/credits.html');"/>
+			<menuitem id="prefbar-feedback"   label="&prefbar-help-feedback;"   oncommand="goLink('chrome://prefbar/content/help/feedback.html');"/>
+
+			<menuseparator/>
+			<menuitem id="prefbar-customize" label="&prefbar-help-customize;"   oncommand="goPreferences('navigator.xul', 'chrome://prefbar/content/preferencesPanel.xul', 'prefbarPanel');"/>
+ 		</menupopup>
+	</popupset>
+</window>
+
+<toolbox id="navigator-toolbox">
+  <toolbar id="prefbar" persist="hidden collapsed" hidden="false" context="prefbar-contextmenu" grippytooltiptext="Prefbar" datasources="rdf:null" ref="urn:prefbar:buttons" tbalign="stretch">
+    <template>
+      <rule isempty="false">       <!-- ************ Checkbox ************ -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="check"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#prefstring" object="?prefstring"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#topref"     object="?topref"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#frompref"   object="?frompref"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+        </bindings>
+        <action>
+            <checkbox
+               uri        = "?name" 
+               onclick    = "changePref(event)" 
+               prefstring = "?prefstring" 
+               topref     = "?topref"
+               frompref   = "?frompref"
+               label      = "?label"/>
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- ************* Button ************* -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"   object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"      object="button"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#onclick"  object="?onclick"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"    object="?label"/>
+        </bindings>
+        <action>
+          <hbox align="center" uri="?name">
+            <toolbarbutton
+               onclick    = "?onclick" 
+               label      = "?label" />
+          </hbox>
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- ************** Link *************** -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"   object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"      object="link"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#url"      object="?url"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"    object="?label"/>
+        </bindings>
+        <action>
+            <toolbarbutton
+               uri        = "?name"
+               class      = "bookmark-item"
+               onclick    = "goLink(' ?url ');"
+               label      = "?label" />
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- ************** Text *************** -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"   object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"      object="text"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"    object="?label"/>
+        </bindings>
+        <action>
+            <hbox align="center" uri="?name"><description crop="end" value="?label"/></hbox>
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- *********** Separator ************* -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"   object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"      object="separator"/>
+        </conditions>
+        <action>
+            <toolbarseparator uri="?name"/>
+        </action>
+      </rule>
+
+
+      <rule isempty="false">       <!-- ************* Spacer ************** -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"   object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"      object="spacer"/>
+        </conditions>
+        <action>
+            <spacer uri="?name" flex="1"/>
+        </action>
+      </rule>
+
+
+                                 <!-- ******** Menulists (ugly hacks) ******** -->
+            <!-- There has got to be a better way to do this.  Please let me know if you know of one. -->
+
+
+      <rule isempty="false">       <!-- *********** 6-Item menulist ************ -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="menulist"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel6" object="?optionlabel6"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue6" object="?optionvalue6"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel1" object="?optionlabel1"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue1" object="?optionvalue1"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel2" object="?optionlabel2"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue2" object="?optionvalue2"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel3" object="?optionlabel3"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue3" object="?optionvalue3"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel4" object="?optionlabel4"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue4" object="?optionvalue4"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel5" object="?optionlabel5"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue5" object="?optionvalue5"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#prefstring" object="?prefstring"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#default"    object="?default"/>
+        </bindings>
+        <action>
+          <menulist uri="?name" label="?label" prefstring="?prefstring" topref="?topref" frompref="?frompref" default="?default" oncommand="processMenulist(this)">
+            <menupopup>
+              <menuitem label="?optionlabel1" value="?optionvalue1" position="0"/>
+              <menuitem label="?optionlabel2" value="?optionvalue2" position="1"/>
+              <menuitem label="?optionlabel3" value="?optionvalue3" position="2"/>
+              <menuitem label="?optionlabel4" value="?optionvalue4" position="3"/>
+              <menuitem label="?optionlabel5" value="?optionvalue5" position="4"/>
+              <menuitem label="?optionlabel6" value="?optionvalue6" position="5"/>
+            </menupopup>
+          </menulist>
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- *********** 5-Item menulist ************ -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="menulist"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel5" object="?optionlabel5"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue5" object="?optionvalue5"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel1" object="?optionlabel1"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue1" object="?optionvalue1"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel2" object="?optionlabel2"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue2" object="?optionvalue2"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel3" object="?optionlabel3"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue3" object="?optionvalue3"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel4" object="?optionlabel4"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue4" object="?optionvalue4"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#prefstring" object="?prefstring"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#default"    object="?default"/>
+        </bindings>
+        <action>
+          <menulist uri="?name" label="?label" prefstring="?prefstring" topref="?topref" frompref="?frompref" default="?default" oncommand="processMenulist(this)">
+            <menupopup>
+              <menuitem label="?optionlabel1" value="?optionvalue1" position="0"/>
+              <menuitem label="?optionlabel2" value="?optionvalue2" position="1"/>
+              <menuitem label="?optionlabel3" value="?optionvalue3" position="2"/>
+              <menuitem label="?optionlabel4" value="?optionvalue4" position="3"/>
+              <menuitem label="?optionlabel5" value="?optionvalue5" position="4"/>
+            </menupopup>
+          </menulist>
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- *********** 4-Item menulist ************ -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="menulist"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel4" object="?optionlabel4"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue4" object="?optionvalue4"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel1" object="?optionlabel1"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue1" object="?optionvalue1"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel2" object="?optionlabel2"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue2" object="?optionvalue2"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel3" object="?optionlabel3"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue3" object="?optionvalue3"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#prefstring" object="?prefstring"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#default"    object="?default"/>
+        </bindings>
+        <action>
+          <menulist uri="?name" label="?label" prefstring="?prefstring" topref="?topref" frompref="?frompref" default="?default" oncommand="processMenulist(this)">
+            <menupopup>
+              <menuitem label="?optionlabel1" value="?optionvalue1" position="0"/>
+              <menuitem label="?optionlabel2" value="?optionvalue2" position="1"/>
+              <menuitem label="?optionlabel3" value="?optionvalue3" position="2"/>
+              <menuitem label="?optionlabel4" value="?optionvalue4" position="3"/>
+            </menupopup>
+          </menulist>
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- *********** 3-Item menulist ************ -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="menulist"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel3" object="?optionlabel3"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue3" object="?optionvalue3"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel1" object="?optionlabel1"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue1" object="?optionvalue1"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel2" object="?optionlabel2"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue2" object="?optionvalue2"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#prefstring" object="?prefstring"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#default"    object="?default"/>
+        </bindings>
+        <action>
+          <menulist uri="?name" label="?label" prefstring="?prefstring" topref="?topref" frompref="?frompref" default="?default" oncommand="processMenulist(this)">
+            <menupopup>
+              <menuitem label="?optionlabel1" value="?optionvalue1" position="0"/>
+              <menuitem label="?optionlabel2" value="?optionvalue2" position="1"/>
+              <menuitem label="?optionlabel3" value="?optionvalue3" position="2"/>
+            </menupopup>
+          </menulist>
+        </action>
+      </rule>
+
+      <rule isempty="false">       <!-- *********** 2-Item menulist ************ -->
+        <conditions>
+          <content uri="?cont"/>
+          <member container="?cont" child="?name"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#enabled"    object="true"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#type"       object="menulist"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel1" object="?optionlabel1"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue1" object="?optionvalue1"/>
+
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionlabel2" object="?optionlabel2"/>
+          <triple subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#optionvalue2" object="?optionvalue2"/>
+        </conditions>
+        <bindings>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#prefstring" object="?prefstring"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#label"      object="?label"/>
+          <binding subject="?name" predicate="http://www.xulplanet.com/rdf/prefbar#default"    object="?default"/>
+        </bindings>
+        <action>
+          <menulist uri="?name" label="?label" prefstring="?prefstring" topref="?topref" frompref="?frompref" default="?default" oncommand="processMenulist(this)">
+            <menupopup>
+              <menuitem label="?optionlabel1" value="?optionvalue1" position="0"/>
+              <menuitem label="?optionlabel2" value="?optionvalue2" position="1"/>
+            </menupopup>
+          </menulist>
+        </action>
+      </rule>
+    </template>
+  </toolbar>
+</toolbox>
+
+</overlay>

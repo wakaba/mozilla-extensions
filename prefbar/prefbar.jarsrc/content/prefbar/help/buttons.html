@@ -1,0 +1,702 @@
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Preferences Toolbar 2.
+   -
+   - The Initial Developer of the Original Code is
+   - Aaron Andersen.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Andersen <aaron@xulplanet.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="help.css" type="text/css">
+<link rel="stylesheet" href="buttons.css" type="text/css">
+
+<title>Button List - PrefBar Help</title>
+<body>
+<a href="http://www.xulplanet.com/"><img id="xulplanet" src="xulplanet.png" alt="XUL Planet"></a>
+<img id="prefbarhelp" src="prefbarhelp.png" alt="PrefBar Help">
+
+<div id="buttons">
+<a href="index.html">Introduction</a>
+<a href="use.html">Using the Preferences Toolbar</a>
+<a href="newstuff.html">What's New in 2.2?</a>
+<span>Button List</span>
+<a href="faq.html">PrefBar FAQ</a>
+<a href="credits.html">Credits</a>
+<a href="feedback.html">Help/Feedback</a>
+</div>
+
+<div id="content">
+
+<h1>Button List</h1>
+<p>
+This file contains a list of every button (checkbox, button, link, menulist, etc.) available in the default Prefbar installation, along with information on using each.  All items are listed in the order in which they appear when first installed.
+</p>
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr><td>Nav Buttons:</td><td><a href="#back">Back</a> | <a href="#forward">Forward</a> | <a href="#reload">Reload</a> | <a href="#stop">Stop</a> | <a href="#home">Home</a></td></tr>
+
+<tr><td>Pref Checks:</td><td><a href="#fonts">Fonts</a> | <a href="#colors">Colors</a> | <a href="#systemcolors">System Colors</a> | <a href="#images">Images</a> | <a href="#javascript">JavaScript</a> | <a href="#java">Java</a> | <a href="#popups">Popups</a> | <a href="#proxies">Proxies</a> | <a href="#proxymenulist">Proxy Menulist</a> | <a href="#cookies">Cookies</a> | <a href="#cookiewarning">Cookie Warning</a></td></tr>
+
+<tr><td>Dev Checks:</td><td><a href="#pipelining">Pipelining</a> | <a href="#diskcache">Disk Cache</a> | <a href="#memcache">Mem Cache</a> | <a href="#xulcache">XUL Cache</a> | <a href="#xulboxes">Debug XUL Boxes</a> | <a href="#sendreferrer">Send Referrer</a></td></tr>
+
+<tr><td>Dev Buttons:</td><td><a href="#clearmemcache">Clear Mem Cache</a> | <a href="#cleardiskcache">Clear Disk Cache</a> | <a href="#clearallcache">Clear Cache</a> | <a href="#clearhist">Clear History</a> | <a href="#clearurlbar">Clear Location Bar</a> | <a href="#clearall">Clear All</a></td></tr>
+
+<tr><td>Size Buttons:</td><td><a href="#size640x480">Resize 640x480</a> | <a href="#size800x600">Resize 800x600</a> | <a href="#size1024x768">Resize 1024x768</a></td></tr>
+
+<tr><td>New Tab:</td><td><a href="#newtab">New Tab</a></td></tr>
+
+<tr><td>Kill Flash:</td><td><a href="#killflash">Kill Flash</a></td></tr>
+
+<tr><td>Font Size:</td><td><a href="#fontdown">Font -</a> | <a href="#fontup">Font +</a></td></tr>
+
+
+<tr><td>UA Menulist:&nbsp;</td><td><a href="#useragent">User Agent</a></td></tr>
+
+<tr><td>Help Links:</td><td><a href="#help">Help</a> | <a href="#whatsnew">What's New</a></td></tr>
+
+<tr><td>Web Links:</td><td><a href="#xulplanet.com">XulPlanet.com</a> | <a href="#mozilla.org">Mozilla.org</a> | <a href="#mozillazine.org">MozillaZine.org</a> | <a href="#mozillanews.org">MozillaNews.org</a></td></tr>
+
+<tr><td>Cust Button:</td><td><a href="#customize">Customize</a></td></tr>
+
+<tr><td>Hide Button:</td><td><a href="#hidetoolbar">Hide Toolbar</a></td></tr>
+</table>
+
+
+
+<hr>
+
+
+<!--
+<h2 id=""></h2>
+<div class="buttonstats">
+Type: 
+<br>Default Status: 
+</div>
+<p>
+
+</p>
+-->
+
+<h2 id="back">Back</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+This is a very simple back button that takes you to the previous page in your browser history, just like the back button on the navigation toolbar.  Unlike the back button on the navigation toolbar however, this button doesn't have a history drop down menu, doesn't have an icon, and doesn't become disabled when there is no page to go back to.  Like I said, it's just a simpe back button.
+</p>
+
+<h2 id="forward">Forward</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+This is a very simple forward button, just like the very simple back button described above.  All limitations mentioned there also apply here.
+</p>
+
+<h2 id="reload">Reload</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+This is a very simple reload button, to go with the very simple back button and the very simple forward button.  Unlike the aforementioned other two, this button actually has all the functionality of its navigation bar equivlent, meaning that you can click it with shift to get a cacheless reload, or just click it for a regular reload.
+</P>
+
+<h2 id="stop">Stop</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+A very simple stop button to finish off the group.  This doesn't have observers setup either, so it will be enabled even when navigator is not currently doing anything (at which time clicking it will have absolutely no effect whatsoever).
+</P>
+
+<h2 id="navsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Hidden
+</div>
+<p>
+This is a separator to go between the navigation buttons and the home button (or whatever else you put to the the right of the navigation buttons).  There are several separators defined in the prefbar button list, one for each group of items.  They do take a small amound of horizontal space on the toolbar, but they make things look so nice that I'd recomend having them enabled, unless you have a really small moniter (or just want to enabled a large number of buttons at once.)
+</P>
+
+
+<hr>
+
+
+<h2 id="home">Home</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Although this button doesn't look as nice as the real home button (it doesn't have the icon, at least not yet) clicking it will bring you to your homepage just as fast.
+</P>
+
+<h2 id="homesep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Hidden
+</div>
+<p>
+A separator designed to go to the right of the home button.  You can (of course) move this to where ever place on the toolbar you want.
+</P>
+
+
+<hr>
+
+
+
+<h2 id="fonts">Fonts</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+This toggles the "Allow documents to use other fonts" prefernces.  When you encounter a webpage with really horrible font settings, turn this off to have the page rendered with normal fonts instead.
+</p>
+
+<h2 id="colors">Colors</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Visible
+</div>
+<p>
+Perhaps the most useful checkbox of them all, this turns off author specified colors, rendering everything with you defaults instead.  Just because some moron thinks that yellow text on a red background looks good doesn't mean you should have to read it like that.  From now on, you don't.
+</p>
+
+<h2 id="systemcolors">System Colors</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+Toggles between the colors chosen in the prefs dialog and your system colors.  Only useful when the Colors pref is turned off.
+</p>
+
+<h2 id="images">Images</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Visible
+</div>
+<p>
+This switches the image loading pref from "Accept all images" when enabled, to "Don't load any images" when disabled. You have to either set this before loading a page or reload the page after changing the pref.  (I have no idea why this one doesn't work automatically like the fonts and colors prefs; it's probably a bug, but I don't know the number.)
+</p>
+
+<h2 id="javascript">JavaScript</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Visible
+</div>
+<p>
+Enables or disables JavaScript.  This can be very useful at times.  Note that--like all preferences--this is global, so turning it off in one browser window or tab will disable JavaScript for the entire product.
+</p>
+
+<h2 id="java">Java</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+Enables of disables Java.  Personally, I like to leave java off most of the time, and only turn it on when I encounter a java applet that I really need.  That way I don't have to deal with java based advertisements, or wait for java to load before viewing a page containing one.
+</p>
+
+<h2 id="popups">Popups</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+Toggles the "Open unrequested windows" pref.  I have heard that there are still some popups that can get through this, but I don't know any details.  This was called "onLoad Popups" in the original PrefBar (version 1.x).
+</p>
+
+<h2 id="proxies">Proxies</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+This switches the proxy settings between "No Proxies" (disabled) and "Manual Proxy Configuration" (enabled).  You need to have the proxy info setup in the preferences dialog in order to use this.  If you need to use an automatic proxy configuration, see the next item.
+</p>
+
+<h2 id="proxymenulist">Proxy Menulist</h2>
+<div class="buttonstats">
+Type: Menulist
+<br>Default Status: Hidden
+</div>
+<p>
+This allows you to chose which type of proxy you currently need.  You need to have the info setup in the preferences dialog for whatever type(s) of proxies you plan to use.
+</p>
+<div class="menulistoptions">Options:
+No Proxies      (Proxies are disbaled
+Manual Proxy    (Manual proxy setup used)
+Automatic Proxy (Automatic proxy configuration url used)
+</div>
+
+<h2 id="cookies">Cookies</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+This toggles the cookie preferences from "Enable all cookies" (enabled) to "Disable cookies" (disabled).
+</p>
+
+<h2 id="cookiewarning">Cookie Warning</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+When turned on, mozilla will put up a warning dialog before any site it allowed to store a cookie or modify a cookie.
+<p>
+
+<h2 id="pipelining">Pipelining</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+Enables or disables http pipelining.  This is supposed to speed up page loads over dialup, but not all servers support it.
+</p>
+
+<h2 id="diskcache">Disk Cache</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+This toggles the disk cache on and off.  This might require a restart to work.
+</p>
+
+<h2 id="memcache">Mem Cache</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+Toggles the memory cache on and off.  This might require a restart to work.
+</p>
+
+<h2 id="xulcache">XUL Cache</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+This toggles XUL cache.  Leave this alone if you are not a XUL developer testing a XUL application.
+</p>
+
+<h2 id="xulboxes">Debug XUL Boxes</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+Don't even think about turning this on unless you know what you're doing.
+</p>
+
+<h2 id="sendreferrer">Send Referrer</h2>
+<div class="buttonstats">
+Type: Checkbox
+<br>Default Status: Hidden
+</div>
+<p>
+When disabled, mozilla will not send referrer url information with page requests.
+</p>
+
+<h2 id="checksep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+Another separator.
+</P>
+
+
+<hr>
+
+
+<h2 id="clearmemcache">Clear Mem Cache</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+This clears mozilla's memory cache, except for XUL chrome items.
+</p>
+
+<h2 id="cleardiskcache">Clear Disk Cache</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+This clears mozilla's disk cache.  Good for testing web pages.
+</p>
+
+<h2 id="clearallcache">Clear Cache</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Visible
+</div>
+<p>
+This clears mozilla's memory chache and disk cache, just like clicking "Clear Mem Cache" and then clicking "Clear Disk Cache".
+</p>
+
+<h2 id="clearhist">Clear History</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default tatus: Disabled
+</div>
+<p>
+Clears mozilla's global browser history.
+</p>
+
+<h2 id="clearurlbar">Clear Location Bar</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Clears the history of urls you typed into the location bar.
+</p>
+
+<h2 id="clearall">Clear All</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Clears The History, The Location Bar, Disk Cache, and Memory Cache.
+</p>
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+Another separator.
+</P>
+
+
+<hr>
+
+<h2 id="size640x480">Resize 640x480</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Resizes the browser window to 640px by 480px.
+</p>
+
+<h2 id="size800x600">Resize 800x600</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Resizes the browser window to 800px by 600px.
+</p>
+
+<h2 id="size1024x768">Resize 1024x768</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Resizes the browser window to 1024px by 768px.
+</p>
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+Another separator.
+</P>
+
+<hr>
+
+
+<h2 id="newtab">New Tab</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Opens a new browser tab.  I don't really know how useful this would be, but somebody wanted it so I put it in.
+</p>
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+Another separator.
+</P>
+
+<hr>
+
+
+<h2 id="killflash">Kill Flash</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Click this button to remove all flash embeds in the current page.  This was the number one requested feature in 2.0.  It has a few problems with frames (actually, I don't think it works at all with frames) but otherwise it is extremely useful.
+
+</p>
+
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+Another separator.
+</P>
+
+<hr>
+
+<h2 id="fontdown">Font -</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Decrease the font size.
+</p>
+
+<h2 id="fontup">Font +</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+Increase the font size.
+</p>
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+Another separator.
+</P>
+
+<hr>
+
+
+<h2 id="useragent">User Agent</h2>
+<div class="buttonstats">
+Type: Menulist
+<br>Default Status: Visible
+</div>
+<p>
+This allows you to quickly change mozilla's user agent string, which is useful when viewing sites that attempt to block non-IE browsers.  This works for all server side and some client side detectors.
+</p>
+<p>
+The PrefBar automatically resets your user agent to the default (correct) value when you exit mozilla.  This prevents you from running into <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=83376">bug 83376</a> (unless mozilla crashes), and makes sure you don't forgot that you changed the UA string and leave it spoofed for three weeks.
+</p>
+<div class="menulistoptions">Options:
+Real UA       [The correct value for whatever mozilla build you are using]
+Moz 1.0 Win98 [Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.0.0) Gecko/20020530]
+NS 4.7 Mac    [Mozilla/4.78 (Macintosh; U; PPC)]
+NS 6.2 Lin    [Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.4) Gecko/20011022 Netscape6/6.2]
+IE 5.0 Mac    [Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)]
+IE 6.0 WinXP  [Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)]
+</div>
+
+<h2 id="uaspacer">Spacer</h2>
+<div class="buttonstats">
+Type: Spacer
+<br>Default Status: Visible
+</div>
+<p>
+This widget doesn't display anything, but expands as big as it can, taking up all the extra space available and forcing everything to its right to the far right edge of the toolbar.
+</p>
+
+
+<hr>
+
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+A separator for the left edge of the help links (after the spacer).
+</P>
+
+<h2 id="help">Help</h2>
+<div class="buttonstats">
+Type: Link
+<br>Default Status: Visible
+</div>
+<p>
+A link to the index page of this help system.
+</p>
+
+<h2 id="whatsnew">What's New</h2>
+<div class="buttonstats">
+Type: Link
+<br>Default Status: Visible
+</div>
+<p>
+A link to the <i>What's New in 2.0</i> page in this help system.
+</p>
+
+
+<hr>
+
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+A separator for the left edge of the web links.
+</P>
+
+<h2 id="xulplanet.com">XulPlanet.com</h2>
+<div class="buttonstats">
+Type: Link
+<br>Default Status: Hidden
+</div>
+<p>
+A link to XulPlanet.com, where you can learn to make cool XUL apps (like this one).
+</p>
+
+<h2 id="mozilla.org">Mozilla.org</h2>
+<div class="buttonstats">
+Type: Link
+<br>Default Status: Hidden
+</div>
+<p>
+A link to mozilla.org, homepage of the mozilla project.
+</p>
+
+<h2 id="mozillazine.org">MozillaZine.org</h2>
+<div class="buttonstats">
+Type: Link
+<br>Default Status: Hidden
+</div>
+<p>
+A link to MozillaZine.org, gathering place for mozila developers and users.
+</p>
+
+<h2 id="mozillanews.org">MozillaNews.org</h2>
+<div class="buttonstats">
+Type: Link
+<br>Default Status: Hidden
+</div>
+<p>
+A link to MozillaNews.org, for the latest mozilla related news from around the web. :)
+</p>
+
+<hr>
+
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Visible
+</div>
+<p>
+A separator for the left edge of the customize button.
+</P>
+
+<h2 id="customize">Customize</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Visible
+</div>
+<p>
+This will quickly take you to the preferences toolbar customization panel in the preferences dialog.
+</p>
+
+
+<hr>
+
+
+<h2 id="clearbuttonsep">Separator</h2>
+<div class="buttonstats">
+Type: Separator
+<br>Default Status: Hidden
+</div>
+<p>
+Another separator.
+</P>
+
+
+<h2 id="hidetoolbar">Hide Toolbar</h2>
+<div class="buttonstats">
+Type: Button
+<br>Default Status: Hidden
+</div>
+<p>
+A button to hide the preferences toolbar.  Does the same thing as pressing F8.
+</P>
+
+
+
+<hr>
+<br>
+
+That should be all of them.  If you notice any errors in this file, be sure to <a href="feedback.html">let me know.</a>
+
+
+
+
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Preferences Toolbar 2.
+   -
+   - The Initial Developer of the Original Code is
+   - Aaron Andersen.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Andersen <aaron@xulplanet.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:prefbar="http://www.xulplanet.com/rdf/prefbar#">
+
+  <RDF:Seq about="urn:prefbar:buttons">
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:back"         prefbar:type="button" prefbar:onclick="BrowserBack();"                                                      prefbar:observes="canGoBack"                                            prefbar:label="Back"          prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:forward"      prefbar:type="button" prefbar:onclick="BrowserForward();"                                                   prefbar:observes="canGoForward"                                         prefbar:label="Forward"       prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:reload"       prefbar:type="button" prefbar:onclick="if (event.shiftKey) BrowserReloadSkipCache(); else BrowserReload();"                                                                         prefbar:label="Reload"        prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:stop"         prefbar:type="button" prefbar:onclick="BrowserStop();"                                                      prefbar:observes="canStop"                                              prefbar:label="Stop"          prefbar:enabled="false" /></RDF:li>                                                                                                                                                                                                                                                                                                               
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator0"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:home"         prefbar:type="button" prefbar:onclick="BrowserHome();"                                                                                                                              prefbar:label="Home"          prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator1"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:fonts"        prefbar:type="check"  prefbar:prefstring="browser.display.use_document_fonts"    prefbar:topref="Number(value)"                    prefbar:frompref="Boolean(value)"                prefbar:label="Fonts"         prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:colors"       prefbar:type="check"  prefbar:prefstring="browser.display.use_document_colors"   prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="Colors"        prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:systemcolors" prefbar:type="check"  prefbar:prefstring="browser.display.use_system_colors"     prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="System Colors" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:images"       prefbar:type="check"  prefbar:prefstring="network.image.imageBehavior"           prefbar:topref="2*Number(!value)"                 prefbar:frompref="Boolean(!value)"               prefbar:label="Images"        prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:javascript"   prefbar:type="check"  prefbar:prefstring="javascript.enabled"                    prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="JavaScript"    prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:java"         prefbar:type="check"  prefbar:prefstring="security.enable_java"                  prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="Java"          prefbar:enabled="false"/></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:popups"       prefbar:type="check"  prefbar:prefstring="dom.disable_open_during_load"          prefbar:topref="!value"                           prefbar:frompref="!value"                        prefbar:label="Popups"        prefbar:enabled="false"/></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:proxycheck"   prefbar:type="check"  prefbar:prefstring="network.proxy.type"                    prefbar:topref="Number(value)"                    prefbar:frompref="Boolean(value)"                prefbar:label="Proxies"       prefbar:enabled="false"/></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:proxymenu"    prefbar:type="menulist" prefbar:prefstring="network.proxy.type" prefbar:default="0" prefbar:label="Proxy Menulist" prefbar:enabled="false"
+                                 prefbar:optionlabel1="No Proxies"       prefbar:optionvalue1="0"
+                                 prefbar:optionlabel2="Manual Proxy"     prefbar:optionvalue2="1"
+                                 prefbar:optionlabel3="Automatic Proxy"  prefbar:optionvalue3="2" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:cookies"      prefbar:type="check"  prefbar:prefstring="network.cookie.cookieBehavior"         prefbar:topref="2*Number(!value)"                 prefbar:frompref="Boolean(!value)"               prefbar:label="Cookies"       prefbar:enabled="false"/></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:cookieask"    prefbar:type="check"  prefbar:prefstring="network.cookie.warnAboutCookies"       prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="Cookie Warning" prefbar:enabled="false"/></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:pipelining"   prefbar:type="check"  prefbar:prefstring="network.http.pipelining"               prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="Pipelining"    prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:diskcache"    prefbar:type="check"  prefbar:prefstring="browser.cache.disk.enable"             prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="Disk Cache"    prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:memcache"     prefbar:type="check"  prefbar:prefstring="browser.cache.memory.enable"           prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="Mem Cache"     prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:xulcache"     prefbar:type="check"  prefbar:prefstring="nglayout.debug.disable_xul_cache"      prefbar:topref="!value"                           prefbar:frompref="!value"                        prefbar:label="XUL Cache"     prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:xulboxes"     prefbar:type="check"  prefbar:prefstring="xul.debug.box"                         prefbar:topref="value"                            prefbar:frompref="value"                         prefbar:label="Debug XUL Boxes" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:referrer"     prefbar:type="check"  prefbar:prefstring="network.http.sendRefererHeader"        prefbar:topref="2*Number(value)"                  prefbar:frompref="Boolean(value)"                prefbar:label="Send Referrer" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator2"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator10"  prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="true" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:clearmemcache"  prefbar:type="button" prefbar:onclick="clearMemCache()"       prefbar:label="Clear Mem Cache"    prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:cleardiskcache" prefbar:type="button" prefbar:onclick="clearDiskCache()"      prefbar:label="Clear Disk Cache"   prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:clearallcache" prefbar:type="button" prefbar:onclick="clearAllCache()"        prefbar:label="Clear Cache"        prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:clearhist"    prefbar:type="button" prefbar:onclick="clearHistory()"          prefbar:label="Clear History"      prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:clearurlbar"  prefbar:type="button" prefbar:onclick="clearLocationBar()"      prefbar:label="Clear Location Bar" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:clearall"     prefbar:type="button" prefbar:onclick="clearLocationBar(); clearHistory(); clearAllCache();"      prefbar:label="Clear All" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator5"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:resize640"    prefbar:type="button" prefbar:onclick="resizeTo(640,480);"      prefbar:label="Resize 640x480"  prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:resize800"    prefbar:type="button" prefbar:onclick="resizeTo(800,600);"      prefbar:label="Resize 800x600"  prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:resize1024"   prefbar:type="button" prefbar:onclick="resizeTo(1024,768);"     prefbar:label="Resize 1024x768" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator9"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:newtab"       prefbar:type="button" prefbar:onclick="BrowserOpenTab();"                             prefbar:label="New Tab" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator11"  prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="true" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:killflash"    prefbar:type="button" prefbar:onclick="killFlash()"                             prefbar:label="Kill Flash" prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator12"  prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:fontdown"     prefbar:type="button" prefbar:onclick="ZoomManager.prototype.getInstance().reduce()"  prefbar:label="Font -" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:fontup"       prefbar:type="button" prefbar:onclick="ZoomManager.prototype.getInstance().enlarge()" prefbar:label="Font +" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator8"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="true" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:useragent"    prefbar:type="menulist" prefbar:prefstring="general.useragent.override" prefbar:default="0" prefbar:label="User Agent" prefbar:enabled="true"
+                                 prefbar:optionlabel1="Real UA"    prefbar:optionvalue1=""
+                                 prefbar:optionlabel2="Moz 1.0 Win98" prefbar:optionvalue2="Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.0.0) Gecko/20020530"
+                                 prefbar:optionlabel3="NS 4.7 Mac"    prefbar:optionvalue3="Mozilla/4.78 (Macintosh; U; PPC)"
+                                 prefbar:optionlabel4="NS 6.2 Lin"    prefbar:optionvalue4="Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.4) Gecko/20011022 Netscape6/6.2"
+                                 prefbar:optionlabel5="IE 5.0 Mac"    prefbar:optionvalue5="Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)"
+                                 prefbar:optionlabel6="IE 6.0 WinXP"  prefbar:optionvalue6="Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:spacer0"      prefbar:type="spacer" prefbar:label="(spacer)"      prefbar:enabled="true" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator6"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:help"         prefbar:type="link" prefbar:url="chrome://prefbar/content/help/index.html"                                      prefbar:label="PrefBar Help"      prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:whatsnew"     prefbar:type="link" prefbar:url="chrome://prefbar/content/help/newstuff.html"                                  prefbar:label="What's New" prefbar:enabled="true" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator3"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:xulplanet"    prefbar:type="link" prefbar:url="http://www.xulplanet.com"                                                     prefbar:label="XulPlanet.com"     prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:mozilla.org"  prefbar:type="link" prefbar:url="http://www.mozilla.org"                                                       prefbar:label="mozilla.org"       prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:mozillazine.org"  prefbar:type="link" prefbar:url="http://www.mozillazine.org"                                                       prefbar:label="MozillaZine.org"       prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:mozillanews.org"  prefbar:type="link" prefbar:url="http://www.mozillanews.org"                                                       prefbar:label="MozillaNews.org"       prefbar:enabled="false" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator4"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="true" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:customize"    prefbar:type="button" prefbar:onclick="goPreferences('navigator.xul', 'chrome://prefbar/content/preferencesPanel.xul', 'prefbarPanel');"                                            prefbar:label="Customize"     prefbar:enabled="true" /></RDF:li>
+
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:separator7"   prefbar:type="separator"                                                                                                                                                       prefbar:label="------------------" prefbar:enabled="false" /></RDF:li>
+    <RDF:li><RDF:resource about="urn:prefbar:buttons:hidetoolbar"  prefbar:type="button" prefbar:onclick="togglePrefBar()"          prefbar:label="Hide Toolbar" prefbar:enabled="false" /></RDF:li>
+  </RDF:Seq>
+                                                                                                                                                                                                                                                                                                                    
+</RDF:RDF>

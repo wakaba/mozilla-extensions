@@ -1,0 +1,18 @@
+
+<!ENTITY header-title "Preferences Toolbar">
+
+<!ENTITY available-tree "Available Items">
+<!ENTITY enabled-tree   "Enabled Items">
+
+<!ENTITY name-col "Item Name">
+<!ENTITY type-col "Type">
+
+<!ENTITY button-enable "Add Item -&gt;">
+<!ENTITY button-disable "&lt;- Remove Item">
+<!ENTITY button-up "Move Up">
+<!ENTITY button-down "Move Down">
+<!ENTITY button-new "New Item">
+<!ENTITY button-edit "Edit Item">
+<!ENTITY button-delete "Delete Item">
+
+

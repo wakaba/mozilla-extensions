@@ -1,0 +1,122 @@
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Preferences Toolbar 2.
+   -
+   - The Initial Developer of the Original Code is
+   - Aaron Andersen.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Andersen <aaron@xulplanet.com>
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="help.css" type="text/css">
+
+<title>What's New - PrefBar Help</title>
+<body>
+<a href="http://www.xulplanet.com/"><img id="xulplanet" src="xulplanet.png" alt="XUL Planet"></a>
+<img id="prefbarhelp" src="prefbarhelp.png" alt="PrefBar Help">
+
+<div id="buttons">
+<a href="index.html">Introduction</a>
+<a href="use.html">Using the Preferences Toolbar</a>
+<span>What's New in 2.2?</span>
+<a href="buttons.html">Button List</a>
+<a href="faq.html">PrefBar FAQ</a>
+<a href="credits.html">Credits</a>
+<a href="feedback.html">Help/Feedback</a>
+</div>
+
+<div id="content">
+<h1>What's New in 2.2?</h1>
+<p>There are lots of new and exciting features in the current of the Preferences Toolbar.  This page lists them all with explanations about how to use each one.
+</p>
+
+<p>
+<a href="#v2.2">Changelog 2.2</a>
+<br><a href="#v2.1">Changelog 2.1</a>
+<br><a href="#newbuttons">New Toolbar Buttons</a>
+<br><a href="#customization">Customizable Toolbar</a>
+<br><a href="#shortcutkey">Shortcut Key</a>
+<br><a href="#documentation">Documentation</a>
+<br><a href="#license">License</a>
+</p>
+
+<hr>
+
+<h2 id="v2.2">Changelog 2.2</h2>
+<ul>
+	<li>2.2.2: Fixed a bug in the referrer check code and a typo in the documentation.
+	<li>Phoenix Support!  The PrefBar now works in Phoenix release 0.5! Sorry it took me so long to get this in.</li>
+	<li>Flash killing!  There is now a button to kill all flash embeds in the current page.</lu>
+	<li>New buttons.  The following buttons have been added: <a href="#systemcolors">System Colors</a>, <a href="#cookiewarning">Cookie Warning</a>, <a href="#sendreferrer">Send Referrer</a>, <a href="#clearall">Clear All</a>, <a href="#size640x480">Resize 640x480</a>, <a href="#size800x600">Resize 640x480</a>, <a href="#size1024x768">Resize 1024x768</a>, <a href="#newtab">New Tab</a>, <a href="#killflash">Kill Flash</a>, <a href="#fontdown">Font -</a>, <a href="#fontup">Font +</a>.  See the <a href="buttons.html">button list</a> for more information</li>
+	<li>Localization Support.  All the text strings have been moved to .dtd files in order to make the prefbar localizable.  I have already had three people volunteer to do the translations.
+
+
+
+
+
+<h2 id="v2.1">Changelog 2.1</h2>
+<ul>
+	<li>Enabled rebuilding of missing config files, allowing the prefbar to be used easier with multiple profiles.</li>
+	<li>Fixed the bug that was preventing the PrefBar from working on 1.2a.</li>
+	<li>Made the edit button and new button dialogs reziable, and sized in ems rather than pixels.</li>
+	<li>Fixed a bunch of typos in the documentation.</li>
+	<li>Fixed a dozen or so small bugs pointed out to me by users.</li>
+</ul>
+
+<h2 id="newbuttons">New Toolbar Buttons</h2>
+<p>
+There are a whole bunch of new toolbar buttons in the prefbar2 that weren't avaiable in previous versions.  This includes the new user agent menulist, navigation buttons, developer buttons, and several new pref checks.  See the <a href="buttons.html">Button List</a> for more information.
+
+<h2 id="customization">Customizable Toolbar</h2>
+<p>
+The toolbar is now completely customizable, with not only the ability to show only the buttons that you want, but the ability to display the buttons in any order you want, and even edit existing buttons or add new ones.  Click the customize button on your toolbar to access the PrefBar customization panel, or find it in the "Advanced" catagory of the main preferences window.
+</p>
+
+<h2 id="shortcutkey">Shortcut Key</h2>
+<p>You can now quickly show or hide the Preferences Toolbar whenever you need to by pressing the F8 key.  I was told that mac users would flame me for stealing one of their F keys, so I hope that doesn't happen.
+</p>
+
+<h2 id="documentation">Documentation</h2>
+<p>I actually took the time to write a full featured documentation set for the PrefBar this time around (part of which you are currently viewing.)  This should make it a lot easier to use the PrefBar than previous versions, in which users pretty much had to figure everything out on their own.
+
+<h2 id="license">License</h2>
+<p>
+The original Preferences Toolbar was licensed under the "assume it's MPL unless told otherwise" license that is quite common among small XUL applications.  The Preferences Toolbar 2 is now officially MPL/GPL/LGPL tri-licensed, including that huge bandwidth wasting license block at the first of every file.  Feel free to rejoice now.
+</p>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!ENTITY toggle-prefBar:key "VK_F8">
+
+<!ENTITY prefbar-toggle:label    "Preferences Toolbar">
+
+<!ENTITY prefbar-help-main       "PrefBar Help">
+<!ENTITY prefbar-help-usersguide "User's Guide">
+<!ENTITY prefbar-help-whatsnew   "What's New">
+<!ENTITY prefbar-help-buttonlist "Button List">
+<!ENTITY prefbar-help-faq        "PrefBar FAQ">
+<!ENTITY prefbar-help-credits    "Credits">
+<!ENTITY prefbar-help-feedback   "Feedback">
+<!ENTITY prefbar-help-customize  "Customize...">
