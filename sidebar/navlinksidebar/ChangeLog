@@ -1,5 +1,7 @@
 2004-04-14  Wakaba  <wakaba@suika.fam.cx>
 
+	* replace.pl: Removed.
+
 	* package-info.src: Some new variables.
 
 	* Makefile (%.xpi): Make install-res.en.inf.
