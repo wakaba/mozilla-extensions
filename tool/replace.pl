@@ -7,7 +7,7 @@ Getopt::Long::GetOptions (
   'output-type=s'	=> \$opt{type},
 );
 
-my %var = (percent => '%');
+my %var = (percent => {value => '%'});
 my $name;
 while (<>) {
   if (/^(.+?)(?:\[([^]]+)\])?:\s*$/) {
@@ -34,11 +34,23 @@ open SRC, $opt{input} or die "$0: $opt{input}: $!";
                           .qq(Do not edit by hand!\n))
         unless $opt{type} eq 'xml';
   while (<SRC>) {
-    print scalar replace_percent ($_, \%var);
+    print scalar escape (replace_percent ($_, \%var));
   }
 close SRC;
 
 exit;
+
+sub escape ($) {
+  my $s = shift;
+  if ($opt{type} eq 'moz-properties') {
+    require Encode;
+    $s = Encode::decode ('utf8', $s);
+    ## TODO: How to encode U+10000 - U-7F000000 ?
+    $s =~ s/([^\x0A\x0D\x20-\x22\x24-\x5B\x5D-\x7E])/sprintf '\u%04X', ord $1/ge
+      unless $s =~ /^\s*\#/;
+  }
+  $s;
+}
 
 sub replace_percent ($$) {
   my ($s, $l) = @_;
@@ -72,7 +84,7 @@ sub commentize ($) {
   } elsif ($opt{type} eq 'xml') {
     $s =~ s!^!   - !mg;
     return "<!--\n" . $s . "   -->\n";
-  } else {
+  } else { # moz-properties
     $s =~ s!^!## !mg;
     return $s."\n";
   }
@@ -81,7 +93,7 @@ sub commentize ($) {
 
 =head1 LICENSE
 
-Copyright 2003 Wakaba <w@suika.fam.cx>.
+Copyright 2003-2004 Wakaba <w@suika.fam.cx>.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -100,4 +112,4 @@ Boston, MA 02111-1307, USA.
 
 =cut
 
-## $Date: 2003/10/25 12:00:20 $
+## $Date: 2004/04/14 12:17:38 $

@@ -1,3 +1,8 @@
+2004-04-14  Wakaba  <wakaba@suika.fam.cx>
+
+	* replace.pl (%var): Bug fixed.
+	(escape): New.
+
 2003-10-25  Wakaba  <wakaba@suika.fam.cx>
 
 	* replace.pl (parsing SuikaWikiConfig/1.1): Ignore \s+ before end of line.
