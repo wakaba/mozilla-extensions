@@ -1,0 +1,14 @@
+2003-07-06  Wakaba  <w@suika.fam.cx>
+
+	* navLinkSidebar-note.ja.html, navLinkSidebar-window.en.ja.png: Removed.
+	* note.ja.html, snapshot-1.png: New (renamed).
+	* ChangeLog: New file.
+
+2003-02-18  Wakaba  <w@offweb.ddo.jp>
+
+	* navLinkSidebar-note.ja.html: Updated.
+
+2003-02-05  Wakaba  <w@offweb.ddo.jp>
+
+	* navLinkSidebar-note.ja.html: New document.
+	* navLinkSidebar-window.en.ja.png: New image.

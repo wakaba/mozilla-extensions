@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="iso-2022-jp"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://suika.fam.cx/~wakaba/-temp/wiki/wiki?WikiHTMLMetaProfile">
+<title>Mozilla で案内頁・目次頁を表示する Sidebar Panel</title>
+<link rel="contents" href="#toc" />
+<link rev="made" href="mailto:w@suika.fam.cx" />
+<link rel="copyright" href="data:,Public%20Domain%2E" title="Public Domain." />
+<meta name="author" content="若葉" />
+</head>
+<body>
+<h1>Mozilla で案内頁・目次頁を表示する Sidebar Panel</h1>
+
+<h2 id="abstract">概要</h2>
+
+<p>Sidebar にミニ・ブラウザを作って、そこに<ruby><rb>案内</rb><rp>(</rp><rt>ナビゲーション</rt><rp>)</rp></ruby>頁又は目次頁又は索引頁を表示します。</p>
+
+<h2 id="screenshot">画面写真</h2>
+
+<ul>
+<li><a href="navLinkSidebar-window.en.ja.png" type="image/png" hreflang="en" title="Mozilla で Navigation Page Sidebar Panel を表示しつつ、 SuikaWiki の「Mozilla」という名前の WikiPage を眺めている状態の画面写真。">画面写真 0</a></li>
+</ul>
+
+<h2 id="install">導入</h2>
+
+<ol>
+<li><a href="navLinkSidebar-1.1.xpi" type="application/x-xpinstall">navLinkSidebar-1.1.xpi (15.1<abbr xml:lang="en" title="kilo octets">ko</abbr>)</a>
+を導入。 (<del>Mozilla の場合はリンクをたどるだけ、 Mozilla 以外から入手の場合は</del><ins>サーバーの設定がなされていないので、一旦</ins>保存して
+Mozilla で開く。)</li>
+<li>&lt;<a href="chrome://navLinkSidebar/content/addPanel.html">chrome://navLinkSidebar/content/addPanel.html</a>&gt;
+に移動し、「Add!」ボタンを押す。</li>
+<li>以上で完了のはずなのですが、 Mozilla を再起動すると追加した panel
+が消えてしまうことがあります (Mozilla の bug なのか、 panel 追加 script
+の bug なのかよくわかりません)。
+これを回避するため、次の手順で<em>おまじない</em>をします。
+	<ol>
+	<li>Sidebar の Tabs→Customize Sidebar を選択。</li>
+	<li>Tabs in Sidebar の欄の一番下に Navigation Page が追加されている。
+	これを選択し、 Up を押す。</li>
+	<li>OK を押す。</li>
+	<li>Mozilla を再起動。</li>
+	<li>必要なら順序を適当に変更。</li>
+	</ol>
+</li>
+</ol>
+
+<h2 id="uninstall">削除</h2>
+
+<ol>
+<li>Sidebar の Tabs->Customize Sidebar の画面で、 Navigation Page を削除。</li>
+<li>&lt;<a href="chrome://navLinkSidebar/content/uninstall.html">chrome://navLinkSidebar/content/uninstall.html</a>&gt;
+に移動し、
+Uninstall を押す。</li>
+<li><code><var>(Mozilla の場所)</var>/chrome/navLinkSidebar.jar</code>
+を削除。</li>
+</ol>
+
+<h2 id="license">License</h2>
+
+<ul>
+<li>基本的には MPL 1.1/GPL 2.0/LGPL 2.1 です。</li>
+<li>他の Mozilla 関連ソフトウェアから流用したファイルは NPL 1.1/GPL 2.0/LGPL 2.1
+だったりします。</li>
+<li>この説明文書は Public Domain です (著作権を主張しません)。</li>
+<li>「画面写真 0」の著作権はよくわかりません。 Mozilla は Mozilla
+の license (MPL/GPL/LGPL など), 映っている文書 (SuikaWiki の一部) の内容は GFDL,
+映っている文書のスタイルは GPL です。
+なお編集著作権は主張しません。</li>
+</ul>
+
+<h2 id="technical">技術的説明</h2>
+
+<p>Navigator の主窓で新しい頁を開いた際に、その頁 (HTML 又は XHTML1 文書。
+<span class="non-implemented">XHTML2 には未対応。</span>)
+に <code>link</code> 要素があって、次の <code>rel</code>
+属性を持っていた場合、そのリンク先 (<code>href</code> 属性の値)
+を Sidebar 内の小窓に表示します。
+<span class="non-implemented">(HTTP の <code>Link:</code>
+header field には対応していません。)</span></p>
+<ol>
+<li><code>sidebar navigator</code> <span class="non-implemented">(<code>navigator sidebar</code> では (手抜きのため) 認識しません。)</span></li>
+<li><code>navigator</code></li>
+<li><code>contents</code></li>
+<li><code>toc</code></li>
+<li><code>index</code></li>
+</ol>
+<p>但し、後の方ほど優先順位が下がります。同じ <code>rel</code>
+属性の値を持つ複数の <code>link</code> 要素がある場合、一番最初のものが使われます。
+<span class="non-implemented"><code>media</code> 
+属性などは見ていません (手抜きです)。</span></p>
+
+<p>なお、値 <code>navigator</code> は HTML4 draft にあったものを流用しました。
+値 <code>sidebar</code> は独自のものです。
+<span class="non-implemented">(Mozilla に依存しない 
+<abbr title="User Agent" xml:lang="en">UA</abbr>
+に対して中立な名前にしたかったのですが、思いつかないので。)</span>
+Stricter は <code>head</code> 要素の <code>profile</code> 
+属性の値も何か指定しておきましょう。
+(よろしければ
+&lt;http://suika.fam.cx/~wakaba/-temp/wiki/wiki?WikiHTMLMetaProfile&gt;
+をお使い下さい。)</p>
+
+<p>Mozilla.org の文書や DOM Inspector などを眺めながら書きましたが、
+Mozilla の構造とかをきちんと理解しているわけではないので、変なことをしているかもしれません。
+何かあったら教えてください。
+ただし、このソフトウェアを用いた結果どんなことになっても責任は取れませんのでご了承下さい。</p>
+
+<h2 id="todo">制限事項, TO DO</h2>
+
+<ul>
+<li>Context menu (右クリック・メニュー) が効かない。
+(Mozilla の制限。)</li>
+<li>複数の頁 (目次及び索引とか。) を同時に表示できない。
+そもそも、利用者が何を表示するかを選択できない。</li>
+<li><abbr xml:lang="en" title="User Interface">UI</abbr> を XUL で書きなおす。</li>
+<li>Sidebar の他の panel に切り替えた後、再びこの panel
+に戻した時に以前の状態を復元する。
+	<p><code><var>(profile の場所 (Windows XP では標準では <code>C:\Documents and Settings\<var>名前</var>\Application Data\Mozilla\Profiles\</code>))</var>\<var>名前</var>\<var>...</var>\panel.rdf</code>
+	の <code>RDF:Description[@about="urn:sidebar:3rdparty-panel:chrome://navLinkSidebar/content/sidebar.html"]</code>
+	に属性 <code>@NC:persist="true"</code> を与えればいい。</p>
+</li>
+<li>小窓内のリンクはすべて主窓で開くようにしている
+(同じ頁内へのリンクを除く。) が、 <code>target</code>
+属性がある場合はどうするのがいいか。</li>
+<li>頁内の <code>h<var>n</var></code> 要素を集めて目次を自動生成できたらよさげ。
+<!-- ついでに図表目次も作ったら、不思議マーク付けな Web Page ですばらしいことになりそうな予感。 --></li>
+<li>表示する URI に断片 (<code class="URI">#<var>hoge</var></code>)
+がついている場合、その文書に対するスタイル指定などの関係で正しい位置が表示されない
+(前後にずれる) ことがあります。 (Mozilla の不具合?)</li>
+</ul>
+
+<h2 id="change">変更履歴</h2>
+
+<dl>
+<dt>2003-02-05  わかば &lt;<a href="mailto:w@suika.fam.cx">w@suika.fam.cx</a>&gt;</dt>
+	<dd>最初の公開版 (1.0 版)。 Mozilla 1.3a 向け。</dd>
+<dt>2003-02-18  わかば &lt;<a href="mailto:w@suika.fam.cx">w@suika.fam.cx</a>&gt;</dt>
+	<dd>Mozilla 1.3b で動作するように修正 (1.1 版)。</dd>
+	<dd>Sidebar 内で表示される頁に<a href="chrome://navlinksidebar/content/sidebar-site.css" type="text/css">専用のスタイル・シート</a>が適用されるようにした
+	(<code class="filename"><var>%ProfD%</var>/chrome/navlinksidebar-site.css</code>
+	辺りに置ければ良いのですが、 Mozilla の安全上の制限を突破する方法がわかりません)。</dd>
+</dl>
+
+<h2 id="dev">開発</h2>
+
+<p>西瓜サーバーの CVS Repository を利用する予定ですが、西瓜サーバーが止まっているので以下略。</p>
+
+<h2 id="author">作者の連絡先</h2>
+
+<p>メイル・サーバーが使えない状態なので、 
+<a href="http://niigata.cool.ne.jp/cgi-bin/tbbs.cgi?User=wakaba2001&GetType=Simple">suika.robamimi
+避難所</a>にご連絡下さい。</p>
+
+<h2 id="toc">目次</h2>
+
+<ol>
+<li><a href="#abstract">概要</a></li>
+<li><a href="#screenshot">画面写真</a></li>
+<li><a href="#install">導入</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#technical">技術的説明</a></li>
+<li><a href="#todo">制限事項・TO DO</a></li>
+<li><a href="#change">変更履歴</a></li>
+<li><a href="#dev">開発</a></li>
+<li><a href="#author">作者の連絡先</a></li>
+</ol>
+
+<div class="navigation">
+<!--[<a href="/" title="このサーバーの首頁">/</a>
+<a href="/map" title="このサーバーの案内" rel="index">地図</a>
+<a href="/search/" title="このサーバーの検索">検索</a>]
+<a href="http://validator.w3.org/check/referer" xml:lang="en">
+<img src="http://www.w3.org/Icons/valid-xhtml11" id="w3c-html"
+  alt="Valid XHTML 1.1!" style="height: 31px; width: 88px" />
+</a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer" xml:lang="en">
+<img style="width: 88px; height: 31px" id="w3c-css"
+  src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+</a>-->
+</div>
+<div class="update">2003-02-05; 2003-02-18; $Date: 2003/07/06 10:15:13 $</div>
+<ul class="myuri">
+<li>&lt;URL (予定):<a href="http://suika.fam.cx/~wakaba/tool/mozilla/navLinkSidebar-note">http://suika.fam.cx/~wakaba/tool/mozilla/navLinkSidebar-note</a>&gt;</li>
+<!--<li>&lt;CVS:<a href="http://suika.fam.cx/gate/cvs/webroot/foo/">suika.fam.cx:/home/cvs/webroot/foo/</a>&gt;</li>-->
+<li>注意: この文書の現在の URI (&lt;http://niigata.cool.ne.jp/<var>云々</var>&gt;)
+は仮のものであり、その永続性は一切保証しません。ごめんなさい。</li>
+</ul>
+</body></html>
