@@ -1,0 +1,7 @@
+Redirect permanent /www/mozilla/sidebar/links/doc/css.xml http://suika.fam.cx/www/mozilla/sidebar/links/panel/css.xml
+Redirect permanent /www/mozilla/sidebar/links/doc/hlink-xbl.xml http://suika.fam.cx/gate/cvs/*checkout*/markup/hlink/implementation/hlink-xbl.xml?rev=1.2
+Redirect permanent /www/mozilla/sidebar/links/doc/sblinks-hlink.xml http://suika.fam.cx/www/mozilla/sidebar/links/lib/sblinks-hlink.xml
+Redirect permanent /www/mozilla/sidebar/links/doc/sblinks-style.css http://suika.fam.cx/www/mozilla/sidebar/links/lib/sblinks-style.css
+Redirect permanent /www/mozilla/sidebar/links/doc/sblinks-xbl.xml http://suika.fam.cx/www/mozilla/sidebar/links/lib/sblinks-xbl.xml
+Redirect permanent /www/mozilla/sidebar/links/doc/index.html http://suika.fam.cx/www/mozilla/sidebar/links/doc/css.ja.xhtml
+
