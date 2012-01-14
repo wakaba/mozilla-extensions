@@ -44,3 +44,6 @@ AddCharset utf-8 .src
 AddType text/plain .properties .in .inf
 
 DirectoryIndex dummy-index-document
+ReadmeName README
+
+## License: Public Domain.

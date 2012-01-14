@@ -25,6 +25,10 @@ tool/
 
   Mozilla extension packaging utility scripts, 2003-2004.
 
+xbl/
+
+  XBL bindings.
+
 * Repository
 
 There is a git repository:
