@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+<?xml-stylesheet href="chrome://livehttpheaders/skin/livehttpheaders.css" type="text/css"?>
+<!DOCTYPE window [
+  <!ENTITY % generatorHelpDTD SYSTEM "chrome://livehttpheaders/locale/generator.dtd" >
+  %generatorHelpDTD;
+  <!ENTITY space "<xul:box width='5px' />" >
+]>
+<window title="&generator.button.help;"
+  id="GeneratorHelp"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  width="500"
+  height="500"
+  xml:lang="ja"
+>
+
+<!--
+どうして間隔が次の文書の同じ場所で落とされるのか分かりません。
+なので %space; でほげってます。
+-->
+
+
+<h1>生成器工具</h1>
+
+<p>
+<dfn>生成器</dfn>工具は <dfn xml:lang="en">LiveHTTPHeaders</dfn>
+の拡張です。生成器工具は
+<a href="http://httpd.apache.org/test/flood/" target="to-browser"
+   xml:lang="en">Apache-Flood</a>
+や他の<em>ウェブを基にした<ruby><rb>単位試験</rb>
+<rp> (</rp><rt xml:lang="en">ユニット・テスト</rt><rp>) </rp>
+</ruby></em>の類の工具のような読込み試験の工具に供給するために使用することができます。
+</p>
+<p>
+着想は、 Mozilla で読んだ頁を単純な行を基にした ASCII ファイルに標本化して、
+このファイルを指示した読込み試験工具に自分の外部スクリプトを使って転送するというところです。
+つまり・・・試験設計をコード化する代わりにブラウザを使って生成します。
+もちろん生成した試験設計を更に属性付けしてもかまいません。
+</p>
+<p>
+<em>不具合</em>:
+現在<ruby><rb>再指向</rb><rp> (</rp><rt xml:lang="en">リダイレクト</rt><rp>) 
+</rp></ruby>要求は相互に連結されません。
+このため後述する濾過器の不具合が起こります。
+</p>
+
+
+<h2>選択肢の一覧</h2>
+
+<dl>
+
+  <dt>&generator.option.redirect;</dt>
+  <dd>&generator.popup.redirect;。
+    <p>
+    通常は (少なくても自作の backend が再指向に対応しているのなら) 
+    チェックしなくてよいでしょう。
+    </p>
+  </dd>
+
+  <dt>&generator.option.invalid;</dt>
+  <dd>&generator.popup.invalid;。
+    <p>
+    このような状態符号はクライアントと鯖の誤りを示しています。
+    <a href="http://www.faqs.org/rfcs/rfc2616.html" target="to-browser"
+       xml:lang="en">RFC 2616</a> をみてください。
+    </p>
+    <p><em>不具合</em>: これは要求が再指向されたときには正しく動作しません。</p>
+  </dd>
+
+  <dt>&generator.option.image;</dt>
+  <dd>&generator.popup.image;。
+    <p><em>不具合</em>: これは要求が再指向されたときには正しく動作しません。</p>
+  </dd>
+
+  <dt>&generator.option.css;</dt>
+  <dd>&generator.popup.css;。
+    <p><em>不具合</em>: これは要求が再指向されたときには正しく動作しません。</p>
+  </dd>
+
+  <dt>&generator.option.skipped;</dt>
+  <dd>&generator.popup.skipped;。
+    <p>飛ばす要求は <samp>#<var>なんたら</var>#</samp>
+    のように行のはじめに注釈形で書いて表示して、
+    後から簡単に濾過できるようにします。
+    </p>
+  </dd>
+
+  <dt>&generator.option.request;</dt>
+  <dd>&generator.popup.request;。
+    <p>濾過器は現在 HTTP 応答に付加していますから、
+    HTTP 応答に関心があります。しかし、 Mozilla
+    は時々、たとえすべてのキャッシュが空で消されていても、
+    自分の内部キャッシュを見ています。</p>
+    <p><em>警告</em>:
+    この選択肢は常に注釈形で表示します。 &generator.option.skipped;
+    選択肢には影響されません。
+    </p>
+  </dd>
+
+</dl>
+
+
+<h2>書式</h2>
+
+<p>すべての要求は一つの行で次の書式で表示します。</p>
+
+<pre>
+[注釈] method url [データ]
+</pre>
+
+<p>行中の要素は空白で分離します。要素の説明:</p>
+
+<dl>
+<dt>注釈</dt><dd>
+注釈は <q>&generator.option.skipped;</q> または
+<q>&generator.option.request;</q> がチェックされているときに表示されます。
+書式は <code>#<var>なんたら</var>#</code>
+で、 <var>なんたら</var> がこの要求の分類を示します。
+</dd>
+<dt>method</dt><dd>
+  HTTP method で、通常は GET か POST です。
+</dd>
+<dt>url</dt><dd>
+  要求した URL です。
+
+  <p><em>注意</em>:
+  これは <code>http://</code> で始まるかもしれませんし、
+  そうでないかもしれません。これはブラウザと、
+  串を使っているかどうかに依存します。
+  </p>
+</dd>
+<dt>データ</dt><dd>
+  POST method では追加のデータ部があります。
+  これは <code>選択肢1&amp;選択肢2&amp;...</code>
+  のように符号化されます。
+</dd>
+</dl>
+
+
+<h2>著者</h2>
+
+<p>
+Stefan Trcek, ABAS Software AG
+</p>
+
+
+<h2>ライセンス</h2>
+
+<p>
+  Copyright(c) 2004 &space;<a href="http://www.abas.de" target="to-browser">ABAS Software AG</a><br/>
+  based on LiveHTTPHeaders Copyright(c) 2002-2003 Daniel Savard.
+</p>
+<p>
+  This program is free software; you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free
+  Software Foundation; either version 2 of the License, or (at your option) 
+  any later version.
+</p>
+
+<p><em>前段落の和訳</em> (参考):
+このプログラムは自由ソフトウェアです。あなたは、
+自由ソフトウェア財団の出版する GNU 一般公衆利用許諾契約書
+(第2版か、希望によってはそれ以降の版のうちのいずれか)
+の定める条件の下でこのプログラムを再頒布および/または修正することができます。
+</p>
+
+</window>

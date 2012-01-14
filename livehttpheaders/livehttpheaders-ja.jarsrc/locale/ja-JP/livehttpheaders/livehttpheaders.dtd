@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ENTITY livehttpheaders.menu.file		"ファイル" >
+<!ENTITY livehttpheaders.menu.close		"閉じる" >
+<!ENTITY livehttpheaders.menu.saveselection	"選択部を保存..." >
+<!ENTITY livehttpheaders.menu.saveall		"全てを保存..." >
+<!ENTITY livehttpheaders.menu.edit		"編集" >
+<!ENTITY livehttpheaders.menu.copy		"複製" >
+<!ENTITY livehttpheaders.menu.selectall		"すべてを選択" >
+<!ENTITY livehttpheaders.menu.view		"表示" >
+<!ENTITY livehttpheaders.menu.post		"投函データ" >
+
+<!ENTITY livehttpheaders.tabs.headers           "頭部" >
+<!ENTITY livehttpheaders.tabs.config            "設定" >
+<!ENTITY livehttpheaders.tabs.about             "情報" >
+
+<!ENTITY livehttpheaders.config.usetab          "LiveHTTPHeaders を新しいタブで開く" >
+<!ENTITY livehttpheaders.config.usetab.tips     "LiveHTTPHeader を新しいタブ中または新しい窓内に開きます。" >
+<!ENTITY livehttpheaders.config.usestyle        "スタイル・シートを使用" >
+<!ENTITY livehttpheaders.config.usestyle.tips   "注意: これを選ぶと CPU を 100&#x25; 使ってしまうかもしれないという不具合があります。" >
+<!ENTITY livehttpheaders.config.post            "投函:" >
+<!ENTITY livehttpheaders.config.usefilter       "URL を正規表現で濾過" >
+<!ENTITY livehttpheaders.config.usefilter.tips  "この濾過は URL に対して行います。各頭に対してではありません。" >
+<!ENTITY livehttpheaders.config.useexclude      "URL を正規表現で除外" >
+<!ENTITY livehttpheaders.config.useexclude.tips "この除外は URL に対して行います。各頭に対してではありません。" >
+<!ENTITY livehttpheaders.config.addsidebar	"LiveHTTPHeaders を sidebar に追加">
+<!ENTITY livehttpheaders.config.addsidebar.tips	"LiveHTTPHeaders を sidebar に追加します。 Sidebar をみるには、 F9 を押してください。">
+<!ENTITY livehttpheaders.config.addsidebar.added "Sidebar への追加に成功しました。">
+<!ENTITY livehttpheaders.config.addsidebar.present "既に sidebar 中にあります。">
+
+<!ENTITY livehttpheaders.about.version          "版情報" >
+<!ENTITY livehttpheaders.about.versiontext      "LiveHTTPHeaders 版:" >
+<!ENTITY livehttpheaders.about.currentversion   "0.9 (日本語パック 1.4 (2004-07-10T07:33:50Z))" >
+<!ENTITY livehttpheaders.about.checkforupdate   "更新を確認" >
+<!ENTITY livehttpheaders.about.homepage         "ホーム頁" >
+<!ENTITY livehttpheaders.about.homepageurl      "http://livehttpheaders.mozdev.org" >
+<!ENTITY livehttpheaders.about.author           "著者" >
+<!ENTITY livehttpheaders.about.thanks           "感謝します" >
+<!ENTITY livehttpheaders.about.suggestions      "提案を下さった全ての皆さん">
+
+<!ENTITY livehttpheaders.live.title		"生 HTTP 頭部" >
+<!ENTITY livehttpheaders.live.headers		"HTTP 頭部" >
+<!ENTITY livehttpheaders.live.clear		"消去" >
+<!ENTITY livehttpheaders.live.close		"閉じる" >
+<!ENTITY livehttpheaders.live.capture		"撮影" >
+<!ENTITY livehttpheaders.live.copy		"複写" >
+<!ENTITY livehttpheaders.live.selectblock	"塊を選択" >
+<!ENTITY livehttpheaders.live.selectall		"全てを選択" >
+<!ENTITY livehttpheaders.live.saveall		"全てを保存..." >
+<!ENTITY livehttpheaders.live.replay		"再生..." >
+<!ENTITY livehttpheaders.live.replay.tips	"再生可能な URL を選択..." >
+
+<!ENTITY livehttpheaders.live.post.tips		"投函内容の表示を設定します。" >
+<!ENTITY livehttpheaders.live.post.none		"なし" >
+<!ENTITY livehttpheaders.live.post.none.tips	"投函内容を全く表示しません。" >
+<!ENTITY livehttpheaders.live.post.fast		"快速" >
+<!ENTITY livehttpheaders.live.post.fast.tips	"投函内容を速いコードで表示します。ファイルの upload 時には機能しません。不具合 #188328 参照。" >
+<!ENTITY livehttpheaders.live.post.slow		"鈍行" >
+<!ENTITY livehttpheaders.live.post.slow.tips	"ゆっくりですがファイルの upload 時も機能します。" >
+<!ENTITY livehttpheaders.live.post.max1k	"最大 1k" >
+<!ENTITY livehttpheaders.live.post.max1k.tips	"ゆっくりで、投函内容の最初の 1k のみ取得します。" >
+
+<!ENTITY livehttpheaders.replay.title		"生 HTTP 再生" >
+<!ENTITY livehttpheaders.replay.url		"URL" >
+<!ENTITY livehttpheaders.replay.headers		"HTTP 頭" >
+<!ENTITY livehttpheaders.replay.post		"投函内容を送る" >
+<!ENTITY livehttpheaders.replay.replay		"再生" >
+

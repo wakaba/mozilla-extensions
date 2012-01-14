@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">    
+    <em:name>LiveHTTPHeaders 0.9 日本語パック</em:name>
+    <em:id>{FD18D3DD-6CAD-4efd-AB79-855126890FE2}</em:id>
+    <em:version>1.4</em:version>
+    <em:description>LiveHTTPHeaders の日本語メッセージ型録</em:description>
+    
+    <em:creator>わかば</em:creator>
+    <!-- em:contributor -->
+    <em:homepageURL>http://suika.fam.cx/~wakaba/-temp/wiki/wiki?LiveHTTPHeaders</em:homepageURL>
+    <em:updateURL>http://suika.fam.cx/www/mozilla/livehttpheaders/release/update.rdf</em:updateURL>
+
+    <em:targetApplication>
+      <Description>
+        <!-- Mozilla Firefox -->
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>0.8</em:minVersion>
+        <em:maxVersion>0.9+</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:iconURL>chrome://livehttpheaders/skin/LiveHTTPHeaders.jpg</em:iconURL>
+    <em:optionsURL>chrome://livehttpheaders/content/LiveHTTPHeaders.xul</em:optionsURL>
+    <!-- <em:aboutURL></em:aboutURL> -->
+
+    <em:file>
+      <Description about="urn:mozilla:extension:file:livehttpheaders-ja.jar">
+        <em:locale>locale/ja-JP/livehttpheaders/</em:locale>
+      </Description>
+    </em:file>
+  </Description>
+</RDF>

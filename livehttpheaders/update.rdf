@@ -1,0 +1,9 @@
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+ 
+<RDF:Description about="urn:mozilla:extension:{FD18D3DD-6CAD-4efd-AB79-855126890FE2}">
+  <em:version>1.4</em:version>
+  <em:updateLink>http://suika.fam.cx/www/mozilla/livehttpheaders/release/livehttpheaders-ja-1.4.xpi</em:updateLink>
+</RDF:Description>
+
+</RDF:RDF>
