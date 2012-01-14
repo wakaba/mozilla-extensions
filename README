@@ -1,0 +1,35 @@
+mozilla-extensions
+~~~~~~~~~~~~~~~~~~
+
+Browser extensions for Mozilla Suite and support scripts for them.
+
+2004/link/
+
+  Japanese Language Pack for Link Toolbar, 2004.
+
+livehttpheaders/
+
+  Japanese Language Pack for LiveHTTPHeaders, 2003-2004.
+
+sidebar/links/
+
+  A sidebar framework for reference manual link collections, with an
+  example implementation of "CSS property links sidebar", 2003.
+
+sidebar/navlinksidebar/
+
+  navLinkSidebar, a secodary browsing context in the sidebar,
+  2003-2004. 
+
+tool/
+
+  Mozilla extension packaging utility scripts, 2003-2004.
+
+* Repository
+
+There is a git repository:
+<http://suika.fam.cx/gate/git/wi/web/mozilla-extensions.git/tree>.
+
+* Contact
+
+Wakaba <w@suika.fam.cx>.
