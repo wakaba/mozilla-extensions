@@ -46,4 +46,6 @@ AddType text/plain .properties .in .inf
 DirectoryIndex dummy-index-document
 ReadmeName README
 
+Redirect 301 /www/mozilla/xbl/ /www/style/xbl/
+
 ## License: Public Domain.
