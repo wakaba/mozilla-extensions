@@ -7,7 +7,7 @@ root {
 
 header {
 	display: block; width: 0; height: 0;
-	-moz-binding: url(http://suika.fam.cx/gate/cvs/*checkout*/markup/hlink/implementation/hlink-xbl.xml?rev=1.2#link-hlink);
+	-moz-binding: url(https://suika.suikawiki.org/gate/cvs/*checkout*/markup/hlink/implementation/hlink-xbl.xml?rev=1.2#link-hlink);
 }
 header * {
 	display: none;
